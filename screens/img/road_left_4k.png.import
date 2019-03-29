@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Adventure1.png-b780efc2986a41f9f8c038a5f42134ae.stex"
+path="res://.import/road_left_4k.png-7cf1cc1b5008732b56845658ab3d3a6b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art_sources/Adventure1.png"
-dest_files=[ "res://.import/Adventure1.png-b780efc2986a41f9f8c038a5f42134ae.stex" ]
+source_file="res://screens/img/road_left_4k.png"
+dest_files=[ "res://.import/road_left_4k.png-7cf1cc1b5008732b56845658ab3d3a6b.stex" ]
 
 [params]
 

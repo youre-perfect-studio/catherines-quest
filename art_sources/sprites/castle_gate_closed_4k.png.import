@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Adventure1.png-b780efc2986a41f9f8c038a5f42134ae.stex"
+path="res://.import/castle_gate_closed_4k.png-aafd19be28628dfc1723feff8d069ef9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art_sources/Adventure1.png"
-dest_files=[ "res://.import/Adventure1.png-b780efc2986a41f9f8c038a5f42134ae.stex" ]
+source_file="res://art_sources/sprites/castle_gate_closed_4k.png"
+dest_files=[ "res://.import/castle_gate_closed_4k.png-aafd19be28628dfc1723feff8d069ef9.stex" ]
 
 [params]
 
