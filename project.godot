@@ -16,7 +16,15 @@ _global_script_class_icons={
 [application]
 
 config/name="Catherine's Quest"
+run/main_scene="res://testStuff/testRoom.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1080
+window/size/height=720
+window/size/test_width=600
+window/size/test_height=400
 
 [importer_defaults]
 
