@@ -1,2 +1,3 @@
-extends StaticBody2D
+extends "res://items/itemBase.gd"
 
+ 
