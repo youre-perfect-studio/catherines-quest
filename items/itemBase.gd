@@ -1,5 +1,5 @@
-extends KinematicBody2D
+extends RigidBody2D
 
-export(int) var speed
+var speed = 35
 
 var type = "item"
