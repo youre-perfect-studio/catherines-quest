@@ -10,11 +10,11 @@ extents = Vector2( 5, 16 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 6, 16 )
 
-[node name="bridge" type="KinematicBody2D"]
+[node name="bridge" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 0
+gravity_scale = 0.0
 script = ExtResource( 1 )
-speed = 25
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
