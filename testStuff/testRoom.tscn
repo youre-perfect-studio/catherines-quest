@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://testStuff/tiles/wall.tres" type="TileSet" id=1]
 [ext_resource path="res://items/bridge.tscn" type="PackedScene" id=2]
 [ext_resource path="res://testStuff/player/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://engine/cam.tscn" type="PackedScene" id=4]
+[ext_resource path="res://items/magnet.tscn" type="PackedScene" id=5]
 
 [node name="Node" type="Node"]
 
@@ -14,11 +15,14 @@ format = 1
 tile_data = PoolIntArray( 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0 )
 
 [node name="bridge" parent="." instance=ExtResource( 2 )]
-position = Vector2( 67.0906, 27.2449 )
+position = Vector2( 28.981, 158.637 )
 
 [node name="player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 68.4529, 58.5766 )
 
 [node name="cam" parent="." instance=ExtResource( 4 )]
 current = true
+
+[node name="magnet" parent="." instance=ExtResource( 5 )]
+position = Vector2( 122.861, 163.245 )
 

@@ -1,11 +1,11 @@
 extends Camera2D
 
-const screen_size = Vector2(160, 128)
+const screen_size = Vector2(200, 200)
 var grid_pos = Vector2.ZERO
 
 func _ready():
-	$area.connect("body_entered", self, "on_body_entered")
-	$area.connect("body_exited", self, "on_body_exited")
+	$area.connect("area_entered", self, "on_area_entered")
+	$area.connect("area_exited", self, "on_area_exited")
 
 func _process(delta):
 	var player_grid_pos = get_grid_pos(get_node("../player").global_position)
@@ -17,17 +17,11 @@ func get_grid_pos(pos):
 	var y = floor(pos.y / screen_size.y)
 	return Vector2(x,y)
 	
-func get_items():
-	var items = []
-	for body in $area.get_overlapping_bodies():
-		if body.get("type") == "item" && items.find(body) == -1:
-			items.append(body)
-	return items.size()
-	
-func on_body_entered(body):
-	if body.get("type") == "item":
-		body.set_physics_process(true)
-		
-func on_body_exited(body):
-	if body.get("type") == "item":
-		body.set_physics_process(false)
+func on_area_entered(area):
+	if area.get("type") == "item":
+		print(area)
+		area.set_physics_process(true)
+			
+func on_body_exited(area):
+	if area.get("type") == "item":
+		area.set_physics_process(false)
