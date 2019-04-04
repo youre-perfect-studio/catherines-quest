@@ -18,10 +18,10 @@ func get_grid_pos(pos):
 	return Vector2(x,y)
 	
 func on_area_entered(area):
-	if area.get("type") == "item":
-		print(area)
+	if area.get_parent().get("type") == "item":
 		area.set_physics_process(true)
 			
-func on_body_exited(area):
+func on_area_exited(area):
+	print("test disable")
 	if area.get("type") == "item":
 		area.set_physics_process(false)
