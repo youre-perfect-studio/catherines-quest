@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/catherine_placeholder.png-6b766a6d73bf21b471ce0f89f194ca50.stex"
+path="res://.import/dragon_placeholder.png-64ff0d3c538a17940e9a3e76cd46a715.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/catherine/catherine_placeholder.png"
-dest_files=[ "res://.import/catherine_placeholder.png-6b766a6d73bf21b471ce0f89f194ca50.stex" ]
+source_file="res://characters/img/dragon_placeholder.png"
+dest_files=[ "res://.import/dragon_placeholder.png-64ff0d3c538a17940e9a3e76cd46a715.stex" ]
 
 [params]
 
