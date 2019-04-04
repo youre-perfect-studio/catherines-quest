@@ -13,6 +13,7 @@ extents = Vector2( 6, 16 )
 [node name="bridge" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 0
+mode = 1
 gravity_scale = 0.0
 script = ExtResource( 1 )
 
@@ -27,10 +28,10 @@ shape = SubResource( 1 )
 position = Vector2( 10.9551, 0 )
 shape = SubResource( 1 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="walkway" type="Area2D" parent="."]
 collision_mask = 0
 script = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walkway"]
 shape = SubResource( 2 )
 

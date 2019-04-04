@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var movedir = Vector2.ZERO
-var speed = 40
+var speed = 80
 
 #warning-ignore:unused_argument
 func _process(delta):
