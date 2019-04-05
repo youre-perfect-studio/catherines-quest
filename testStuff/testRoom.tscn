@@ -5,7 +5,7 @@
 [ext_resource path="res://testStuff/player/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://engine/cam.tscn" type="PackedScene" id=4]
 [ext_resource path="res://items/magnet.tscn" type="PackedScene" id=5]
-[ext_resource path="res://screens/img/yellow_castle_interior_4k.png" type="Texture" id=6]
+[ext_resource path="res://art_sources/screens/Painterly_Adventure__Test.png" type="Texture" id=6]
 [ext_resource path="res://characters/img/catherine_placeholder.png" type="Texture" id=7]
 [ext_resource path="res://characters/img/dragon_placeholder.png" type="Texture" id=8]
 
@@ -34,7 +34,7 @@ position = Vector2( 122.861, 163.245 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 1.75, 1.75 )
 texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
