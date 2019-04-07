@@ -10,7 +10,8 @@ extents = Vector2( 8, 8 )
 extents = Vector2( 6, 3 )
 
 [node name="magnet" type="RigidBody2D"]
-mode = 1
+collision_mask = 3
+mode = 2
 gravity_scale = 0.0
 script = ExtResource( 1 )
 
@@ -21,8 +22,8 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="pullZone" type="Area2D" parent="."]
+position = Vector2( 0, 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pullZone"]
-position = Vector2( 0, 10 )
 shape = SubResource( 2 )
 

@@ -15,10 +15,10 @@
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0 )
 
 [node name="bridge" parent="." instance=ExtResource( 2 )]
 position = Vector2( 28.981, 158.637 )
+sleeping = true
 
 [node name="player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 68.4529, 58.5766 )
