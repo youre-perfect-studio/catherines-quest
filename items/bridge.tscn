@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://items/bridge.gd" type="Script" id=1]
 [ext_resource path="res://items/bridgeTemp.png" type="Texture" id=2]
@@ -10,10 +10,13 @@ extents = Vector2( 5, 16 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 6, 16 )
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1, 1 )
+
 [node name="bridge" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 0
-mode = 1
+mode = 2
 gravity_scale = 0.0
 script = ExtResource( 1 )
 
@@ -34,4 +37,10 @@ script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walkway"]
 shape = SubResource( 2 )
+
+[node name="magnetic" type="Area2D" parent="."]
+position = Vector2( 0, -15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="magnetic"]
+shape = SubResource( 3 )
 
