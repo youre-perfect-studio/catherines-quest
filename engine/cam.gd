@@ -19,10 +19,8 @@ func get_grid_pos(pos):
 	
 func onAreaEntered(area):
 	if area.get_parent().get("type") == "item":
-		print(name)
 		area.get_parent().set_physics_process(true)
 			
 func onAreaExited(area):
-	print("test disable")
 	if area.get("type") == "item":
 		area.get_parent().set_physics_process(false)
