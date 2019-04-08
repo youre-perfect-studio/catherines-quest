@@ -1,10 +1,6 @@
-extends KinematicBody2D
+extends "res://testStuff/entity.gd"
 
-var movedir = Vector2.ZERO
-var speed = 80
-
-#warning-ignore:unused_argument
-func _process(delta):
+func _physics_process(delta):
 	controlLoop()
 	movementLoop()
 	
@@ -17,7 +13,3 @@ func controlLoop():
 	movedir.x = -int(left) + int(right)
 	movedir.y = -int(up) + int(down)
 	
-func movementLoop():
-	var motion
-	motion = movedir.normalized() * speed
-	move_and_slide(motion, Vector2.ZERO)
