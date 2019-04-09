@@ -2,8 +2,6 @@ extends RigidBody2D
 
 var speed = 35
 
-onready var magnet = get_node("../magnet")
-
 const type = "item"
 
 var inMagnet = false
