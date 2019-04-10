@@ -11,7 +11,7 @@ func _get_output_sequence_port_count():
 	return 1
 
 func _get_input_value_port_count():
-	return 3
+	return 2
 
 func _get_input_value_port_name(idx):
 	match idx:
