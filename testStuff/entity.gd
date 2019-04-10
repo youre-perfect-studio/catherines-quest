@@ -11,8 +11,8 @@ func movementLoop():
 	if name == "bat":
 		move_and_slide(motion, Vector2.ZERO)
 	elif name == "dragon":
-		
-	
+		pass
+
 func pickDirection():
 	var distance = randi() % 4
 	var x = rand_range(-500, 500)
