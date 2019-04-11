@@ -1,29 +1,28 @@
 extends KinematicBody2D
 
 export(String) var type = "enemy"
+export(String) var subType
 
 var movedir = Vector2.ZERO
+
+var chasing = false
+
 export(int) var speed = 80
 
 func movementLoop():
 	var motion
 	motion = movedir.normalized() * speed
-	if name == "bat":
-		move_and_slide(motion, Vector2.ZERO)
-	elif name == "dragon":
-		pass
+	move_and_slide(motion, Vector2.ZERO)
 
 func pickDirection():
-	var distance = randi() % 4
-	var x = rand_range(-500, 500)
-	var y = rand_range(-300, 300)
+	var direction = randi() % 3
+	var x = round(rand_range(-1, 1))
+	var y = round(rand_range(-1, 1))
 	
-	match distance:
+	match direction:
 		0:
-			return Vector2.ZERO
-		1:
 			return Vector2(0, y)
-		2:
+		1:
 			return Vector2(x, 0)
-		3:
+		2:
 			return Vector2(x, y)
