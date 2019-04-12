@@ -29,3 +29,6 @@ func onAreaEntered(area):
 func onAreaExited(area):
 	if area.get("type") == "item":
 		area.get_parent().set_physics_process(false)
+		
+	elif area.get("subType") == "dragon":
+		area.get_parent().chasing == false
