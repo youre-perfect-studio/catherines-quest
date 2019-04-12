@@ -1,8 +1,13 @@
 extends "res://testStuff/entity.gd"
 
+var state = "default"
+
 func _physics_process(delta):
-	controlLoop()
-	movementLoop()
+	match state:
+		"default":
+			state_default()
+		"swing":
+			state_swing()
 	
 func controlLoop():
 	var left = Input.is_action_pressed("ui_left")
@@ -13,3 +18,16 @@ func controlLoop():
 	movedir.x = -int(left) + int(right)
 	movedir.y = -int(up) + int(down)
 	
+func state_default():
+	controlLoop()
+	movementLoop()
+	spritedirLoop()
+	if movedir != Vector2.ZERO:
+		anim_switch("walk")
+
+func state_swing():
+	anim_switch("attack")
+	movementLoop()
+	movedir = Vector2.ZERO
+	damageLoop()
+	 
