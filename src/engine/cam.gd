@@ -1,6 +1,6 @@
 extends Camera2D
 
-const screenSize = Vector2(960,540)#room size (still scrolls if going left one time, unsure as to why yet)
+const screenSize = Vector2(1920,1080)#room size (still scrolls if going left one time, unsure as to why yet)
 var gridPos = Vector2.ZERO
 
 func _ready():
@@ -13,10 +13,11 @@ func _process(delta):
 	var playerGridPos = get_grid_pos(get_node("../player").global_position)
 	global_position = playerGridPos * screenSize
 	gridPos = playerGridPos
+	print(global_position)
 	
 func get_grid_pos(pos):
 	var x = floor(pos.x / screenSize.x)
-	var y = floor(pos.y / screenSize.y)
+	var y = floor(pos.y / screenSize.y) 
 	return Vector2(x,y)
 	
 func onAreaEntered(area):

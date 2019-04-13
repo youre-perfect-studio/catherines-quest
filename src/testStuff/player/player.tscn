@@ -1,8 +1,13 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://testStuff/player/player.gd" type="Script" id=1]
 [ext_resource path="res://testStuff/player/player.png" type="Texture" id=2]
 [ext_resource path="res://items/aura.png" type="Texture" id=3]
+[ext_resource path="res://items/sword.tscn" type="PackedScene" id=4]
+
+
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 69.3322, 142.392 )
@@ -70,7 +75,7 @@ tracks/0/keys = {
 "values": [ 16, 17 ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=7]
 resource_name = "idledown"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -85,7 +90,7 @@ tracks/0/keys = {
 "values": [ 4 ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=8]
 resource_name = "idleleft"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -100,7 +105,7 @@ tracks/0/keys = {
 "values": [ 8 ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=9]
 resource_name = "idleright"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -115,7 +120,7 @@ tracks/0/keys = {
 "values": [ 12 ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=10]
 resource_name = "idleup"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -130,8 +135,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "walkdown"
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -145,8 +149,7 @@ tracks/0/keys = {
 "values": [ 4, 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "walkleft"
+[sub_resource type="Animation" id=12]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -160,8 +163,7 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11 ]
 }
 
-[sub_resource type="Animation" id=9]
-resource_name = "walkright"
+[sub_resource type="Animation" id=13]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -175,8 +177,7 @@ tracks/0/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 
-[sub_resource type="Animation" id=10]
-resource_name = "walkup"
+[sub_resource type="Animation" id=14]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -190,8 +191,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=11]
-resource_name = "default"
+[sub_resource type="Animation" id=15]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("aura:frame")
@@ -230,14 +230,14 @@ anims/attackdown = SubResource( 3 )
 anims/attackleft = SubResource( 4 )
 anims/attackright = SubResource( 5 )
 anims/attackup = SubResource( 6 )
-anims/idledown = SubResource( 12 )
-anims/idleleft = SubResource( 13 )
-anims/idleright = SubResource( 14 )
-anims/idleup = SubResource( 15 )
-anims/walkdown = SubResource( 7 )
-anims/walkleft = SubResource( 8 )
-anims/walkright = SubResource( 9 )
-anims/walkup = SubResource( 10 )
+anims/idledown = SubResource( 7 )
+anims/idleleft = SubResource( 8 )
+anims/idleright = SubResource( 9 )
+anims/idleup = SubResource( 10 )
+anims/walkdown = SubResource( 11 )
+anims/walkleft = SubResource( 12 )
+anims/walkright = SubResource( 13 )
+anims/walkup = SubResource( 14 )
 
 [node name="aura" type="Sprite" parent="."]
 scale = Vector2( 2, 1.5 )
@@ -247,5 +247,7 @@ frame = 1
 
 [node name="auraPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 4.08
-anims/default = SubResource( 11 )
+anims/default = SubResource( 15 )
+
+[node name="sword" parent="." instance=ExtResource( 4 )]
 

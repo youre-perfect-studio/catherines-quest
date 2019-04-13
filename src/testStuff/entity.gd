@@ -59,3 +59,10 @@ func damageLoop():
 			print("dead") 
 		visible = false
 		#$Anim.play("death")
+
+func use_item(item):
+	var newItem = item.instance()
+	newItem.add_to_group(str(newItem.get_name(), self))
+	add_child(newItem)
+	if get_tree().get_nodes_in_group(str(newItem.get_name(), self)).size() > newItem.max_amount:
+		newItem.queue_free()
