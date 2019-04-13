@@ -33,6 +33,8 @@ func state_default():
 	spritedirLoop()
 	if movedir != Vector2.ZERO:
 		anim_switch("walk")
+	else:
+		anim_switch("idle")
 	damageLoop()
 
 func state_swing():
