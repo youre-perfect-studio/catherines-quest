@@ -2,6 +2,9 @@ extends "res://testStuff/entity.gd"
 
 var state = "default"
 
+func ready():
+	pass
+	
 func _physics_process(delta):
 	match state:
 		"default":
@@ -18,16 +21,25 @@ func controlLoop():
 	movedir.x = -int(left) + int(right)
 	movedir.y = -int(up) + int(down)
 	
+	if hasAmulet == true:
+		$aura.visible = true
+		$auraPlayer.play("default")
+	else:
+		$aura.visible = false
+	
 func state_default():
 	controlLoop()
 	movementLoop()
 	spritedirLoop()
 	if movedir != Vector2.ZERO:
 		anim_switch("walk")
+	damageLoop()
 
 func state_swing():
 	anim_switch("attack")
 	movementLoop()
 	movedir = Vector2.ZERO
 	damageLoop()
-	 
+
+func get_amulet():
+	hasAmulet = true 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://engine/cam.tscn" type="PackedScene" id=1]
 [ext_resource path="res://screens/img/yellow_castle_interior_4k.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://items/magnet.tscn" type="PackedScene" id=6]
 [ext_resource path="res://characters/img/catherine_placeholder.png" type="Texture" id=7]
 [ext_resource path="res://enemies/dragon.tscn" type="PackedScene" id=8]
+[ext_resource path="res://items/amulet.tscn" type="PackedScene" id=9]
 
 [node name="Node" type="Node"]
 
@@ -34,10 +35,12 @@ position = Vector2( 28.981, 158.637 )
 sleeping = true
 
 [node name="player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 60, 13 )
+position = Vector2( -181.992, -96.5812 )
 scale = Vector2( 0.5, 0.5 )
 collision_mask = 1
 type = "player"
+health = 10
+speed = 150
 
 [node name="magnet" parent="." instance=ExtResource( 6 )]
 position = Vector2( 122.861, 163.245 )
@@ -52,4 +55,7 @@ position = Vector2( 394.088, 272.04 )
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
 subType = "dragon"
+
+[node name="amulet" parent="." instance=ExtResource( 9 )]
+position = Vector2( -550.189, 299.065 )
 

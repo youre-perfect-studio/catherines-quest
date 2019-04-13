@@ -1,13 +1,14 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://testStuff/player/player.gd" type="Script" id=1]
 [ext_resource path="res://testStuff/player/player.png" type="Texture" id=2]
+[ext_resource path="res://items/aura.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5, 8 )
+extents = Vector2( 69.3322, 142.392 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 5, 8 )
+extents = Vector2( 75.7801, 152.064 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "attackdown"
@@ -129,6 +130,22 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
+[sub_resource type="Animation" id=11]
+resource_name = "default"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("aura:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.1, 0.2, 0.5, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 1, 2, 3 ]
+}
+
 [node name="player" type="KinematicBody2D"]
 collision_mask = 3
 script = ExtResource( 1 )
@@ -142,10 +159,10 @@ frame = 23
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="player" type="Area2D" parent="."]
+[node name="DamageArea" type="Area2D" parent="."]
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
 shape = SubResource( 2 )
 
 [node name="Anim" type="AnimationPlayer" parent="."]
@@ -157,4 +174,14 @@ anims/walkdown = SubResource( 7 )
 anims/walkleft = SubResource( 8 )
 anims/walkright = SubResource( 9 )
 anims/walkup = SubResource( 10 )
+
+[node name="aura" type="Sprite" parent="."]
+scale = Vector2( 2, 1.5 )
+texture = ExtResource( 3 )
+hframes = 4
+frame = 1
+
+[node name="auraPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 4.08
+anims/default = SubResource( 11 )
 
