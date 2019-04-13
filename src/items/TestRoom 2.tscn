@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/testStuff/player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/items/amulet.tscn" type="PackedScene" id=2]
+
+
+
+[node name="TestRoom 2" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 985.925, 584.607 )
+
+[node name="amulet" parent="." instance=ExtResource( 2 )]
+position = Vector2( 609.808, 542.375 )
+
