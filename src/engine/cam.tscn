@@ -2,10 +2,12 @@
 
 [ext_resource path="res://engine/cam.gd" type="Script" id=1]
 
+
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 80, 80 )
+extents = Vector2( 980, 540 )
 
 [node name="cam" type="Camera2D"]
+anchor_mode = 0
 current = true
 script = ExtResource( 1 )
 

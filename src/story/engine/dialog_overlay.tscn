@@ -1,8 +1,15 @@
 [gd_scene load_steps=4 format=2]
 
+<<<<<<< HEAD:story/engine/dialog_overlay.tscn
 [ext_resource path="res://story/img/catherine_concept_1.png" type="Texture" id=1]
 [ext_resource path="res://story/img/robin_concept_1.png" type="Texture" id=2]
 [ext_resource path="res://story/img/text_box.png" type="Texture" id=3]
+=======
+[ext_resource path="res://characters/img/catherine_placeholder.png" type="Texture" id=1]
+[ext_resource path="res://src/story/img/text_box.png" type="Texture" id=2]
+[ext_resource path="res://src/story/img/robin_concept_1.png" type="Texture" id=3]
+
+>>>>>>> damain1/catherines-quest-master:src/story/engine/dialog_overlay.tscn
 
 [node name="CanvasLayer" type="CanvasLayer"]
 

@@ -26,6 +26,9 @@ func controlLoop():
 		$auraPlayer.play("default")
 	else:
 		$aura.visible = false
+		
+	if Input.is_action_just_pressed("attack"):
+		use_item(preload("res://items/sword.tscn"))
 	
 func state_default():
 	controlLoop()
