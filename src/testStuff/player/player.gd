@@ -1,4 +1,4 @@
-extends "res://src/testStuff/entity.gd"
+extends "res://testStuff/entity.gd"
 
 var state = "default"
 
@@ -28,7 +28,7 @@ func controlLoop():
 		$aura.visible = false
 		
 	if Input.is_action_just_pressed("attack"):
-		use_item(preload("res://src/items/sword.tscn"))
+		use_item(preload("res://items/sword.tscn"))
 	
 func state_default():
 	controlLoop()

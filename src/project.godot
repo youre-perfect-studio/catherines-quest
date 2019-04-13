@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Catherine's Quest"
-run/main_scene="res://src/testStuff/testRoom.tscn"
+run/main_scene="res://testStuff/testRoom.tscn"
 config/icon="res://icon.png"
 
 [display]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/robin_concept_1.png-c8f458629beba933fa03ba176edd98a4.stex"
+path="res://.import/robin_concept_1.png-7ce87c4da17f1fdb60ee001633732e5c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/story/img/robin_concept_1.png"
-dest_files=[ "res://.import/robin_concept_1.png-c8f458629beba933fa03ba176edd98a4.stex" ]
+source_file="res://story/img/robin_concept_1.png"
+dest_files=[ "res://.import/robin_concept_1.png-7ce87c4da17f1fdb60ee001633732e5c.stex" ]
 
 [params]
 

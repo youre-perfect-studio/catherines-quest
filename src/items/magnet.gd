@@ -1,4 +1,4 @@
-extends "res://src/items/itemBase.gd"
+extends "res://items/itemBase.gd"
 
 func _ready():
 	$pullZone.connect("area_entered", self, "onAreaEntered")

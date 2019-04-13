@@ -1,9 +1,13 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://src/testStuff/player/player.gd" type="Script" id=1]
-[ext_resource path="res://src/testStuff/player/player.png" type="Texture" id=2]
-[ext_resource path="res://src/items/aura.png" type="Texture" id=3]
-[ext_resource path="res://src/items/sword.tscn" type="PackedScene" id=4]
+[ext_resource path="res://testStuff/player/player.gd" type="Script" id=1]
+[ext_resource path="res://testStuff/player/player.png" type="Texture" id=2]
+[ext_resource path="res://items/aura.png" type="Texture" id=3]
+[ext_resource path="res://items/sword.tscn" type="PackedScene" id=4]
+
+
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 69.3322, 142.392 )

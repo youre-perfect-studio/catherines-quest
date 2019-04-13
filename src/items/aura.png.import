@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/aura.png-d762f1ceccb3cdfe4b8f80dd55fd0dba.stex"
+path="res://.import/aura.png-2b821934a3333cfaca0aa60f45d6f37e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/items/aura.png"
-dest_files=[ "res://.import/aura.png-d762f1ceccb3cdfe4b8f80dd55fd0dba.stex" ]
+source_file="res://items/aura.png"
+dest_files=[ "res://.import/aura.png-2b821934a3333cfaca0aa60f45d6f37e.stex" ]
 
 [params]
 

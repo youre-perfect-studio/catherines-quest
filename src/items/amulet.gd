@@ -1,4 +1,4 @@
-extends "res://src/items/itemBase.gd"
+extends "res://items/itemBase.gd"
 
 func _ready():
 	$hitbox.connect("area_entered", self, "area_entered")

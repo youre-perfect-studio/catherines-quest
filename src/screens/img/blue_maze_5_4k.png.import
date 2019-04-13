@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blue_maze_5_4k.png-a903c47e9e4b16dfc49e87f313bf6e66.stex"
+path="res://.import/blue_maze_5_4k.png-6e9f73ae4b68e3a061e8bc954e34c0d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/screens/img/blue_maze_5_4k.png"
-dest_files=[ "res://.import/blue_maze_5_4k.png-a903c47e9e4b16dfc49e87f313bf6e66.stex" ]
+source_file="res://screens/img/blue_maze_5_4k.png"
+dest_files=[ "res://.import/blue_maze_5_4k.png-6e9f73ae4b68e3a061e8bc954e34c0d0.stex" ]
 
 [params]
 

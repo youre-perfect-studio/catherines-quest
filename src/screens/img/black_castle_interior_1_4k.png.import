@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/black_castle_interior_1_4k.png-48716c97688571b5ba6fc4a7473c5f05.stex"
+path="res://.import/black_castle_interior_1_4k.png-623897fa116e240963dbb97b05e5844e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/screens/img/black_castle_interior_1_4k.png"
-dest_files=[ "res://.import/black_castle_interior_1_4k.png-48716c97688571b5ba6fc4a7473c5f05.stex" ]
+source_file="res://screens/img/black_castle_interior_1_4k.png"
+dest_files=[ "res://.import/black_castle_interior_1_4k.png-623897fa116e240963dbb97b05e5844e.stex" ]
 
 [params]
 

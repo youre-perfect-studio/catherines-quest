@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://src/enemies/dragon.gd" type="Script" id=1]
-[ext_resource path="res://src/characters/img/dragon_placeholder.png" type="Texture" id=2]
+[ext_resource path="res://enemies/dragon.gd" type="Script" id=1]
+[ext_resource path="res://characters/img/dragon_placeholder.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 240, 260 )
