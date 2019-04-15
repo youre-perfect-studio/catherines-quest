@@ -9,6 +9,7 @@
 script = ExtResource( 3 )
 character_name = "Robin"
 playable_character = true
+unlocked = true
 character_scene = ExtResource( 1 )
 pronouns = "they/them"
 symbol = ExtResource( 4 )
