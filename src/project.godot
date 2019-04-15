@@ -13,15 +13,9 @@ _global_script_classes=[ {
 "class": "Character",
 "language": "GDScript",
 "path": "res://characters/Character.gd"
-}, {
-"base": "Object",
-"class": "CharactersList",
-"language": "GDScript",
-"path": "res://characters/CharactersList.gd"
 } ]
 _global_script_class_icons={
-"Character": "",
-"CharactersList": ""
+"Character": ""
 }
 
 [application]
