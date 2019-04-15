@@ -51,7 +51,6 @@ custom_colors/font_outline_modulate = Color( 0.39664, 0.39664, 0.39664, 0.727732
 text = "Press any key to start"
 align = 1
 uppercase = true
-percent_visible = -0.0555556
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 anims/animateText = SubResource( 2 )

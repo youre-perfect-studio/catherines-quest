@@ -41,7 +41,6 @@ sleeping = true
 [node name="player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1648.37, 536.592 )
 scale = Vector2( 0.5, 0.5 )
-collision_mask = 1
 type = "player"
 health = 10
 speed = 150
