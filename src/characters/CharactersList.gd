@@ -1,5 +1,6 @@
 #Inspired by https://github.com/GDquest/godot-open-rpg/blob/master/godot/dialogue/DialogueDatabase.gd
 extends Object
+class_name CharactersList
 
 const CHARACTERS_DIRECTORY = "res://characters"
 var characters : Dictionary

@@ -8,6 +8,7 @@
 script = ExtResource( 2 )
 character_name = "Catherine"
 playable_character = false
+unlocked = false
 pronouns = "she/her"
 symbol = ExtResource( 3 )
 backstory = "Backstory Backstory
