@@ -4,7 +4,7 @@ func _ready():
 	$Anim.play("animateText")
 	
 	#example of getting the playable characters info
-	
+	#see characters/character.gd
 	var charlist = CharactersList.new()
 	var playable = charlist.get_playable_characters()
 	for idx in playable:
