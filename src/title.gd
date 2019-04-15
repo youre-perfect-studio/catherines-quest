@@ -5,5 +5,5 @@ func _ready():
 	
 func _input(event):
 	if event is InputEventKey and event.pressed:
-		print("any key was pressed")
+		#print("any key was pressed")
 		get_tree().change_scene("res://testStuff/testRoom.tscn")
