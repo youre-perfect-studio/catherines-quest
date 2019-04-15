@@ -32,6 +32,8 @@ func pickDirection():
 			return Vector2(x, y)
 			
 func spritedirLoop():
+	#to make this work with Dragon and bat may have to look at the X and Y seperate for Vector2, then prioritize
+	#either the X or Y over one another unless diagonal sprites become a thing
 	match movedir:
 		Vector2(-1,0):
 			spritedir = "left"
@@ -52,12 +54,12 @@ func damageLoop():
 		var body = area.get_parent()
 		if hasAmulet == false && hitstun == 0 && body.get("damage") != null && body.get("type") != type && visible == true && area.name=="bitebox":
 			health -= body.get("damage")
-			print("lost " + str(body.get("damage")) + "health")
+			#print("lost " + str(body.get("damage")) + "health")
 			hitstun = 10
 	if health <= 0:
-		if visible == true:
-			print("dead") 
-		visible = false
+		if visible == true: #this was done for player to prevent crashing, anything else can be queue_free()
+			#print("dead")   #was just a temporary measure until a gameover function is written
+			visible = false
 		#$Anim.play("death")
 
 func use_item(item):

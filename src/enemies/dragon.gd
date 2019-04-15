@@ -5,9 +5,12 @@ extends "res://testStuff/entity.gd"
 
 onready var player = get_node("../player")
 onready var bitebox =  get_node("../dragon/bitebox")
+onready var dragonAttract = get_node("../bait/dragonAttract")
+onready var cam = get_node("../cam")
 
 var moveTimerLength
 var moveTimer = 0
+var baitChase = false
 
 func _ready():
 	moveTimerLength = randi() % 800 + 100
@@ -26,9 +29,13 @@ func _physics_process(delta):
 			moveTimer = moveTimerLength
 			if is_on_wall():
 				movedir = -movedir
+	elif baitChase == true:
+		movedir = (dragonAttract.global_position - bitebox.global_position).normalized()
 	else:
-		movedir = (player.global_position - bitebox.global_position).normalized()
+			movedir = (player.global_position - bitebox.global_position).normalized()
 		
+		
+		#unless there is a specific plan for below, it's useless now with DamageLoop() in place
 func onAreaEntered(area):
 	if area.get_parent().get("type") == "player":
 		if area.get_parent().get("hasAmulet") == false:

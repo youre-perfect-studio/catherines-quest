@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://engine/cam.tscn" type="PackedScene" id=1]
 [ext_resource path="res://screens/img/yellow_castle_interior_4k.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://characters/img/catherine_placeholder.png" type="Texture" id=7]
 [ext_resource path="res://enemies/dragon.tscn" type="PackedScene" id=8]
 [ext_resource path="res://items/amulet.tscn" type="PackedScene" id=9]
+[ext_resource path="res://items/bait.tscn" type="PackedScene" id=10]
 
 [node name="Node" type="Node"]
 
@@ -16,6 +17,7 @@
 visible = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
@@ -37,7 +39,7 @@ position = Vector2( 887.65, 410.222 )
 sleeping = true
 
 [node name="player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 633.867, 833.834 )
+position = Vector2( 1648.37, 536.592 )
 scale = Vector2( 0.5, 0.5 )
 collision_mask = 1
 type = "player"
@@ -53,11 +55,15 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
 
 [node name="dragon" parent="." instance=ExtResource( 8 )]
-position = Vector2( 476.127, 507.217 )
+position = Vector2( 305.536, 296.563 )
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
 subType = "dragon"
+speed = 100
 
 [node name="amulet" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1560.93, 288.127 )
+
+[node name="bait" parent="." instance=ExtResource( 10 )]
+position = Vector2( 682.364, 661.686 )
 

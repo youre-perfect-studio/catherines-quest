@@ -11,7 +11,7 @@ func _ready():
 
 func _physics_process(delta):
 	rotation_degrees = 0
-	if name != "magnet":
+	if name != "magnet" && name != "bait":
 		var magPos = get_node("../magnet/pullZone").global_position
 		var direction = get_node("../" + name + "/magnetic").global_position - magPos
 		if inMagnet == false:

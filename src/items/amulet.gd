@@ -7,6 +7,6 @@ func area_entered(area):
 	var body = area.get_parent()
 	print(body.name)
 	if body.name == "player":
-		print("touching player")
+		#print("touching player")
 		body.get_amulet()
 		queue_free()

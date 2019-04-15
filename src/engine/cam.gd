@@ -13,7 +13,7 @@ func _process(delta):
 	var playerGridPos = get_grid_pos(get_node("../player").global_position)
 	global_position = playerGridPos * screenSize
 	gridPos = playerGridPos
-	print(global_position)
+	#print(global_position)
 	
 func get_grid_pos(pos):
 	var x = floor(pos.x / screenSize.x)
