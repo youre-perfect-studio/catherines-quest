@@ -32,7 +32,17 @@ func _get_input_value_port_type(idx):
 			return TYPE_INT
 
 func _get_output_value_port_count():
-	return 0
+	return 1
+
+func _get_output_value_port_name(idx):
+	match idx:
+		0:
+			return "Choice #"
+
+func _get_output_value_port_type(idx):
+	match idx:
+		0:
+			return TYPE_INT
 
 func _get_output_sequence_port_text(idx):
 	match idx:
@@ -42,3 +52,9 @@ func _get_output_sequence_port_text(idx):
 			return "Choice 2"
 		2:
 			return "Choice 3"
+		
+func _step(inputs, outputs, start_mode, working_mem):
+	assert(inputs.size() == 3)
+	outputs = []
+	return 0
+	

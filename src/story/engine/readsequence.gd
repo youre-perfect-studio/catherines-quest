@@ -25,3 +25,7 @@ func _get_input_value_port_type(idx):
 
 func _get_output_value_port_count():
 	return 0
+
+func _step(inputs, outputs, start_mode, working_mem):
+	assert(inputs.size() == 1)
+	outputs = []
