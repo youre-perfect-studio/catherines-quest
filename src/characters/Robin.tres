@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://testStuff/player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/img/portrait_robin_default.png" type="Texture" id=2]
+[ext_resource path="res://characters/Character.gd" type="Script" id=3]
+[ext_resource path="res://characters/img/symbol_nonbinary.png" type="Texture" id=4]
+
+[resource]
+script = ExtResource( 3 )
+character_name = "Robin"
+playable_character = true
+character_scene = ExtResource( 1 )
+pronouns = "they/them"
+symbol = ExtResource( 4 )
+backstory = "Backstory Backstory
+Backstory Backstory
+Backstory Backstory
+Backstory Backstory
+Backstory Backstory
+Backstory Backstory"
+expressions = {
+"default": ExtResource( 2 )
+}
+

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://characters/img/portrait_catherine_default.png" type="Texture" id=1]
+[ext_resource path="res://characters/Character.gd" type="Script" id=2]
+[ext_resource path="res://characters/img/symbol_female.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 2 )
+character_name = "Catherine"
+playable_character = false
+pronouns = "she/her"
+symbol = ExtResource( 3 )
+backstory = "Backstory Backstory
+Backstory Backstory
+Backstory Backstory
+Backstory Backstory
+Backstory Backstory
+Backstory Backstory"
+expressions = {
+"default": ExtResource( 1 )
+}
+
