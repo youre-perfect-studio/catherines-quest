@@ -1,13 +1,10 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://testStuff/player/player.gd" type="Script" id=1]
-[ext_resource path="res://testStuff/player/player.png" type="Texture" id=2]
-[ext_resource path="res://items/aura.png" type="Texture" id=3]
-[ext_resource path="res://items/sword.tscn" type="PackedScene" id=4]
-
-
-
-
+[ext_resource path="res://particles/aura_particles.tscn" type="PackedScene" id=2]
+[ext_resource path="res://testStuff/player/player.png" type="Texture" id=3]
+[ext_resource path="res://items/aura.png" type="Texture" id=4]
+[ext_resource path="res://items/sword.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 69.3322, 142.392 )
@@ -210,8 +207,11 @@ tracks/0/keys = {
 collision_mask = 3
 script = ExtResource( 1 )
 
+[node name="aura_particles" parent="." instance=ExtResource( 2 )]
+scale = Vector2( 2.99, 4.25 )
+
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 vframes = 3
 hframes = 8
 frame = 1
@@ -240,8 +240,9 @@ anims/walkright = SubResource( 13 )
 anims/walkup = SubResource( 14 )
 
 [node name="aura" type="Sprite" parent="."]
+visible = false
 scale = Vector2( 2, 1.5 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 hframes = 4
 frame = 1
 
@@ -249,5 +250,5 @@ frame = 1
 playback_speed = 4.08
 anims/default = SubResource( 15 )
 
-[node name="sword" parent="." instance=ExtResource( 4 )]
+[node name="sword" parent="." instance=ExtResource( 5 )]
 

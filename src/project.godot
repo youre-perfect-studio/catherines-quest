@@ -8,15 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Resource",
+"class": "Character",
+"language": "GDScript",
+"path": "res://characters/Character.gd"
+} ]
 _global_script_class_icons={
-
+"Character": ""
 }
 
 [application]
 
 config/name="Catherine's Quest"
-run/main_scene="res://testStuff/testRoom.tscn"
+run/main_scene="res://title.tscn"
 config/icon="res://icon.png"
 
 [display]
