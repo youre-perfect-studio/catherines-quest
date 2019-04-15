@@ -8,6 +8,7 @@ extends Resource
 class_name Character
 
 export(String) var character_name
+export(Texture) var character_icon
 export(bool) var playable_character
 export(bool) var unlocked
 export(PackedScene) var character_scene

@@ -1,19 +1,20 @@
-[gd_resource type="Resource" load_steps=4 format=2]
+[gd_resource type="Resource" load_steps=5 format=2]
 
-[ext_resource path="res://characters/img/portraid_locked_default.png" type="Texture" id=1]
-[ext_resource path="res://characters/Common/Character.gd" type="Script" id=2]
-[ext_resource path="res://characters/img/symbol_question.png" type="Texture" id=3]
-
+[ext_resource path="res://characters/ComingSoon/icon_comingsoon_default.png" type="Texture" id=1]
+[ext_resource path="res://characters/img/portraid_locked_default.png" type="Texture" id=2]
+[ext_resource path="res://characters/Common/Character.gd" type="Script" id=3]
+[ext_resource path="res://characters/img/symbol_question.png" type="Texture" id=4]
 
 [resource]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 character_name = "Coming Soon"
+character_icon = ExtResource( 1 )
 playable_character = true
 unlocked = false
 pronouns = "Unknown"
-symbol = ExtResource( 3 )
+symbol = ExtResource( 4 )
 backstory = "More playable characters, deeper story, and a bigger world coming in Version 2.0!"
 expressions = {
-"default": ExtResource( 1 )
+"default": ExtResource( 2 )
 }
 
