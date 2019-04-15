@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/magnetTemp.png-9e88dd88a4a3c7b0d82b5df34a3cf228.stex"
+path="res://.import/sword_dropped.png-4ebb0488c2801adb56ab9022be60b0ca.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/magnetTemp.png"
-dest_files=[ "res://.import/magnetTemp.png-9e88dd88a4a3c7b0d82b5df34a3cf228.stex" ]
+source_file="res://items/sword_dropped.png"
+dest_files=[ "res://.import/sword_dropped.png-4ebb0488c2801adb56ab9022be60b0ca.stex" ]
 
 [params]
 
