@@ -22,10 +22,12 @@ func controlLoop():
 	movedir.y = -int(up) + int(down)
 	
 	if hasAmulet == true:
-		$aura.visible = true
-		$auraPlayer.play("default")
+		#$aura.visible = true
+		#$auraPlayer.play("default")
+		$aura_particles/Particles2D.emitting = true
 	else:
-		$aura.visible = false
+		#$aura.visible = false
+		$aura_particles/Particles2D.emitting = false
 		
 	if Input.is_action_just_pressed("attack"):
 		use_item(preload("res://items/sword.tscn"))
