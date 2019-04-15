@@ -1,4 +1,4 @@
-extends "res://testStuff/entity.gd"
+extends "res://engine/entity.gd"
 
 #plan on making hitbox more defined once actual dragon art created, along with anything else
 # Vector2 Room Size (960, 540)

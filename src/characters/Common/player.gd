@@ -1,4 +1,4 @@
-extends "res://testStuff/entity.gd"
+extends "res://engine/entity.gd"
 
 var state = "default"
 

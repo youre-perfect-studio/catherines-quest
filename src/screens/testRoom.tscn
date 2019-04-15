@@ -4,7 +4,7 @@
 [ext_resource path="res://screens/img/yellow_castle_interior_4k.png" type="Texture" id=2]
 [ext_resource path="res://testStuff/tiles/wall.tres" type="TileSet" id=3]
 [ext_resource path="res://items/bridge.tscn" type="PackedScene" id=4]
-[ext_resource path="res://testStuff/player/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/Common/player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://items/magnet.tscn" type="PackedScene" id=6]
 [ext_resource path="res://characters/img/catherine_placeholder.png" type="Texture" id=7]
 [ext_resource path="res://enemies/dragon.tscn" type="PackedScene" id=8]
@@ -41,9 +41,6 @@ sleeping = true
 [node name="player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1648.37, 536.592 )
 scale = Vector2( 0.5, 0.5 )
-type = "player"
-health = 10
-speed = 150
 
 [node name="magnet" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1156.55, 310.914 )
