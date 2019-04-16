@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://menus/gameSelection.gd" type="Script" id=1]
+[ext_resource path="res://screens/img/Titlescreen_4k.png" type="Texture" id=2]
+[ext_resource path="res://fonts/FifthCenturyCaps.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 27
+font_data = ExtResource( 3 )
+
+[node name="gameSelection" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 980.0, 1170.81, 790.11 ]
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.317647 )
+position = Vector2( 960, 540 )
+scale = Vector2( 0.51, 0.51 )
+texture = ExtResource( 2 )
+
+[node name="NewGameBtn" type="Button" parent="."]
+margin_left = 790.0
+margin_top = 590.0
+margin_right = 1170.0
+margin_bottom = 720.0
+focus_neighbour_bottom = NodePath("../ContinueBtn")
+custom_fonts/font = SubResource( 1 )
+text = "New Game"
+flat = true
+
+[node name="ContinueBtn" type="Button" parent="."]
+margin_left = 790.0
+margin_top = 770.0
+margin_right = 1170.0
+margin_bottom = 900.0
+focus_neighbour_top = NodePath("../NewGameBtn")
+custom_fonts/font = SubResource( 1 )
+text = "Continue"
+flat = true
+
