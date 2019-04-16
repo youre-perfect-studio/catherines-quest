@@ -7,6 +7,7 @@ func _ready():
 
 func new_game():
 	print("New game")
+	get_tree().change_scene("res://menus/selectPlayer.tscn")
 	
 func continue_game():
 	print("continue")
