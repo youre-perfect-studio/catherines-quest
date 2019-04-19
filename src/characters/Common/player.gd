@@ -36,6 +36,7 @@ func state_default():
 	controlLoop()
 	movementLoop()
 	spritedirLoop()
+	$followerSpace/fsMover.play(spritedir)
 	if movedir != Vector2.ZERO:
 		anim_switch("walk")
 	else:

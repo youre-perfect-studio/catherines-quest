@@ -4,11 +4,14 @@ export(String) var type = "enemy"
 export(String) var subType
 
 var chasing = false
-var damage = 1
 var hasAmulet = false
+
+var damage = 1
 export var health = 1
 var hitstun = 0
+
 var movedir = Vector2.ZERO
+
 var spritedir = "left"
 
 export(int) var speed = 80
@@ -32,16 +35,14 @@ func pickDirection():
 			return Vector2(x, y)
 			
 func spritedirLoop():
-	#to make this work with Dragon and bat may have to look at the X and Y seperate for Vector2, then prioritize
-	#either the X or Y over one another unless diagonal sprites become a thing
 	match movedir:
-		Vector2(-1,0):
+		Vector2.LEFT:
 			spritedir = "left"
-		Vector2(1,0):
+		Vector2.RIGHT:
 			spritedir = "right"
-		Vector2(0,-1):
+		Vector2.UP:
 			spritedir = "up"
-		Vector2(0,1):
+		Vector2.DOWN:
 			spritedir = "down"
 
 func anim_switch(action):

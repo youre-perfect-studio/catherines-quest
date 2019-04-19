@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://characters/Common/player.gd" type="Script" id=1]
 [ext_resource path="res://particles/aura_particles.tscn" type="PackedScene" id=2]
@@ -203,6 +203,68 @@ tracks/0/keys = {
 "values": [ 2, 1, 2, 3 ]
 }
 
+[sub_resource type="RectangleShape2D" id=16]
+
+[sub_resource type="Animation" id=17]
+resource_name = "down"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -200 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "left"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 150, 0 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "right"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -150, 0 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "up"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 200 ) ]
+}
+
 [node name="player" type="KinematicBody2D"]
 collision_mask = 3
 script = ExtResource( 1 )
@@ -251,4 +313,14 @@ playback_speed = 4.08
 anims/default = SubResource( 15 )
 
 [node name="sword" parent="." instance=ExtResource( 5 )]
+
+[node name="followerSpace" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 200 )
+shape = SubResource( 16 )
+
+[node name="fsMover" type="AnimationPlayer" parent="followerSpace"]
+anims/down = SubResource( 17 )
+anims/left = SubResource( 18 )
+anims/right = SubResource( 19 )
+anims/up = SubResource( 20 )
 
