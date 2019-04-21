@@ -22,6 +22,7 @@ position = Vector2( 966.101, 1616.74 )
 visible = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 __meta__ = {
@@ -63,11 +64,10 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 9 )
 
 [node name="dragon" parent="." instance=ExtResource( 10 )]
-position = Vector2( 305.536, 296.563 )
+position = Vector2( 334.818, 1773.67 )
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
 subType = "dragon"
-speed = 1
 
 [node name="amulet" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1560.93, 288.127 )

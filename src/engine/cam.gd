@@ -10,10 +10,10 @@ func _ready():
 	#above is set up for having different screen sizes, going to attempt to figure out how to access in script later
 
 func _process(delta):
+	print(get_node("area/CollisionShape2D").get_shape().get_extents())
 	var playerGridPos = get_grid_pos(get_node("../player").global_position)
 	global_position = playerGridPos * screenSize
 	gridPos = playerGridPos
-	#print(global_position)
 	
 func get_grid_pos(pos):
 	var x = floor(pos.x / screenSize.x)

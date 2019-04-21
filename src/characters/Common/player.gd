@@ -2,8 +2,10 @@ extends "res://engine/entity.gd"
 
 var state = "default"
 
+var useItem = "none"
+
 func ready():
-	pass
+	var camItemUI = get_node("../cam/area/useItem")
 	
 func _physics_process(delta):
 	match state:
@@ -30,7 +32,13 @@ func controlLoop():
 		$aura_particles/Particles2D.emitting = false
 		
 	if Input.is_action_just_pressed("attack"):
-		use_item(preload("res://items/sword.tscn"))
+		match useItem:
+			"none":
+				if $DamageArea.overlaps_area(get("type") == "item") == true:
+					$camItemUI.texture = "res://items/" + name + ".png"
+			"sword":
+				use_item(preload("res://items/sword.tscn"))
+		
 	
 func state_default():
 	controlLoop()

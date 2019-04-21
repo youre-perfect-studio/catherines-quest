@@ -25,6 +25,5 @@ func _physics_process(delta):
 			set_mode(1)
 			set_sleeping(true)
 			set_sleeping(false)
-	else:
-		pass
-	
+			
+#	if 
