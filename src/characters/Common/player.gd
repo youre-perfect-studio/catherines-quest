@@ -36,6 +36,8 @@ func controlLoop():
 			"none":
 				if $DamageArea.overlaps_area(get("type") == "item") == true:
 					$camItemUI.texture = "res://items/" + name + ".png"
+				else:
+					pass
 			"sword":
 				use_item(preload("res://items/sword.tscn"))
 		
