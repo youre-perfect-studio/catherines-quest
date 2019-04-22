@@ -9,6 +9,7 @@ Act I: Robin Save the Queen
 Scene I
 
 (courtyard outside of the main castle)
+(skip button closes the dialog window)
 
 Robin:
 	<head pain>
@@ -36,6 +37,9 @@ Robin:
 -----
 
 Scene II: Cell Phone's Dead (that's a Beck song)
+
+(Inside of Queen Roux's castle)
+(skip button - see bottom of this scene notes)
 
 Catherine:
 	<happy>
@@ -215,3 +219,15 @@ Catherine:
 	2. Amulet
 	3. Neither.
 	4. Why not both?
+
+----
+Skip Button - if the user presses Skip at any time during the dialog in this scene
+They will get:
+
+Catherine:
+	<default>
+	In a hurry?
+	Well, out with it then, which would you like?
+		1. Dragon Sword
+		2. Amulet
+		3 Neither (chossing this one will just close the dialog)
