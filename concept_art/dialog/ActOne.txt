@@ -11,7 +11,7 @@ Scene I
 (courtyard outside of the main castle)
 
 Robin:
-	<head paid>
+	<head pain>
 	Owwwwwwwwww......
 	My head is killing me....
 	I must have partied too hard last night.
@@ -84,7 +84,7 @@ Catherine:
 
 Robin:
 	<annoyed>
-	How 'bout you just tell me how to get hom?
+	How 'bout you just tell me how to get home?
 
 Catherine:
 	Dearest Robin, please be careful!
@@ -187,6 +187,17 @@ Robin:
 	That makes no sense! How do you know what
 	video games and twitter are but you don't
 	know what a cell phone is?!
+
+Catherine:
+	<sly>
+	You didn't even notice that your clothes
+	are different from last night he, he, he
+
+Robin:
+	<super annoyed>
+	Ok fine. You want me to go find your "Queen"?
+	Fine. That's fine. Maybe she will have
+	a cell phone I can borrow.
 
 Catherine:
 	<confused>
