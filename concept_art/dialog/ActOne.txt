@@ -1,0 +1,206 @@
+Formatting:
+	(scene/location)
+	<portrait picture to show>
+
+---
+
+Act I: Robin Save the Queen
+
+Scene I
+
+(courtyard outside of the main castle)
+
+Robin:
+	<head paid>
+	Owwwwwwwwww......
+	My head is killing me....
+	I must have partied too hard last night.
+	I don't really remember...
+
+	<surprise>
+	Wait, where am I?
+	I can't believe I just passed out outside somewhere.
+	Uhh... is this somebody's yard? That sure is a huge
+	castle-y-looking house if so. Maybe this is some new
+	nightclub my friends dragged me to.
+
+	<default>
+	Well I better get up and get moving before someone
+	sees me and calls the cops.
+
+	<head pain>
+	Ugh standing up sure hurts...
+
+(player can now move around freely)
+
+-----
+
+Scene II: Cell Phone's Dead (that's a Beck song)
+
+Catherine:
+	<happy>
+	Ah Robin! You made it here!
+	 Thank goodness, I was getting little worried.
+
+Robin:
+	<cautious>
+	Sorry for uh... letting myself in.
+	I'm kind of lost and thought maybe
+	you could help me call a cab.
+	wait... how did you know my name?
+	did we meet last night?
+
+Catherine:
+	<proud>
+	Don't be silly Robin, of course I know your name.
+	_I_AM_ the titular character after all.
+
+Robin:
+	<confused>
+	...
+
+Catherine:
+	<default>
+	Well anyway, you have been brought to us because
+	our beloved Queen Roux has been kidnapped by the
+	sadistic Dark Queen, and you are fated to save her.
+	I can only imagine the torture she is undergoing
+	right now!
+
+Robin:
+	<annoyed>
+	You've got to be kidding me.
+	Can I just borrow a cell phone?
+
+Catherine:
+	<confused>
+	Self... hone...
+	<default>
+	Oh! Of course, the mystical self-honing
+	Dragon Blade that belongs to my father.
+	Where are my manners. Yes you may
+	 borrow either my father's sword
+	or the Amulet of Protection to use in your quest.
+
+Robin:
+	<annoyed>
+	How 'bout you just tell me how to get hom?
+
+Catherine:
+	Dearest Robin, please be careful!
+	You're single-mindedness will manifest itself
+	in unexpected ways! So which would you like?
+
+	1. Dragon Sword
+	2. Amulet
+	3. Neither.
+	4. Why not both?
+
+---
+
+Choosing 1 or 2 (amulet or sword):
+
+Catherine:
+	<happy>
+	Thank you so much Robin! You will find our
+	beloved Queen locked away in the Dark Queens
+	castle in the swamps and bayous to the north west.
+	Watch out for the dragons!
+
+Robin:
+	<annoyed>
+	Yeah ok... dragons... thanks.
+
+---
+
+Choosing 3 (Neither):
+
+Catherine:
+	<surprised>
+	Wow you really are brave Robin!
+	Are you sure you wan't to leave without borrowing
+	either of the magical items?
+	
+	Yes, leave without either item
+	No, choose an item
+
+(yes will end the dialog and the player is on their own)
+(no will show a dialog like)
+	1. Dragon Sword
+	2. Amulet
+	3. Why not both?
+
+---
+
+Choosing 4 (Why not both):
+
+Catherine:
+	<default>
+	I fear that single-minded determinism
+	is both your strength and your weakness.
+	To put it another way - you can only carry
+	one item at a time.
+
+Robin:
+	<confused>
+	Only one item at a time? So you are telling me
+	I'm physically incapable of carrying a sword
+	and an amulet at the same time?
+
+Catherine:
+	<default>
+	Yes.
+
+Robin:
+	<confused>
+	Well what about these clothes and this cloak
+	that I'm wearing? Are you saying I have to
+	be naked to wield your sword?
+
+Catherine:
+	<default>
+	Well you are not really my type...
+	Just kidding, no your clothes and cloak
+	don't count as items.
+
+Robin:
+	<annoyed>
+	Why because I'm wearing them?
+	<triumphant>
+	Well, what about if I'm wearing the
+	Amulet of Protection, then can I also
+	wield your sword? Or what about if I
+	put the Amulet of Protection around
+	your sword?
+
+Caterine:
+	<annoyed>
+	I'm afraid not, I said you are not really
+	my type. Look if you want to know the real
+	reason you can only carry one item...
+	its because the Atari 2600 only had 128 _BYTES_
+	of memory. It couldn't even hold the text of a
+	single tweet in RAM.
+
+Robin:
+	<really annoyed>
+	That makes no sense! How do you know what
+	video games and twitter are but you don't
+	know what a cell phone is?!
+
+Catherine:
+	<confused>
+	Self... hone...
+	<default>
+	Oh! Of course!
+
+Robin:
+	<annoyed>
+	You said that already.
+
+Catherine:
+	Oh, right! Well, out with it then, which would you like?
+	1. Dragon Sword
+	2. Amulet
+	3. Neither.
+	4. Why not both?
