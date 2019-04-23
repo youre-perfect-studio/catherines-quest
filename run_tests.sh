@@ -2,7 +2,7 @@ GODOT_VERSION=3.1.1
 GODOT_BIN=Godot_v${GODOT_VERSION}-rc1_linux_headless.64
 GODOT_ZIP=${GODOT_BIN}.zip
 GODOT_URL=https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/rc1/${GODOT_ZIP}
-GODOT_TEMPLATES=https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/rc1/Godot_v/${GODOT_VERSION}-rc1_export_templates.tpz
+GODOT_TEMPLATES=https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/rc1/Godot_v${GODOT_VERSION}-rc1_export_templates.tpz
 
 GAME_NAME="CatherinesQuest"
 
@@ -11,7 +11,7 @@ unzip ${GODOT_ZIP}
 chmod +x ${GODOT_BIN}
 ./${GODOT_BIN} -d -s --path ./src addons/gut/gut_cmdln.gd -gdir=res://test -ginclude_subdirs -gexit
 
-curl ${GODOT_TEMPLATES}
+curl ${GODOT_TEMPLATES} --output Godot_v${GODOT_VERSION}-rc1_export_templates.tpz
 mkdir -p /tmp/data/godot/templates
 unzip -q -d /tmp/data/godot/templates ${GODOT_VERSION}-rc1_export_templates.tpz
 mv /tmp/data/godot/templates/templates /tmp/data/godot/templates/3.1.1.rc1
