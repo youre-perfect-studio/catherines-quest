@@ -14,14 +14,14 @@ chmod +x ${GODOT_BIN}
 curl ${GODOT_TEMPLATES} --output Godot_v${GODOT_VERSION}-rc1_export_templates.tpz
 mkdir -p /tmp/data/godot/templates
 unzip -q -d /tmp/data/godot/templates Godot_v${GODOT_VERSION}-rc1_export_templates.tpz
-mv /tmp/data/godot/templates/templates /tmp/data/godot/templates/3.1.1.rc1
+mv /tmp/data/godot/templates/templates ~/.godot/templates/3.1.1.rc1
 
 XDG_CACHE_HOMR=/tmp/cache
 XDG_DATA_HOME=/tmp/data
 XDG_CONFIG_HOME=/tmp/config
 mkdir -p /tmp/cache
 mkdir -p /tmp/data
-mkdit -p /tmp/config
+mkdir -p /tmp/config
 
 EXPORT_NAME=HTML5
 OUTPUT_FILENAME=index.html
