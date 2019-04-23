@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://characters/Common/NPC.gd" type="Script" id=1]
+[ext_resource path="res://characters/Catherine/Catherine.gd" type="Script" id=1]
 [ext_resource path="res://characters/img/catherine_placeholder.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -13,8 +13,6 @@ extents = Vector2( 100, 200 )
 collision_layer = 0
 collision_mask = 2
 script = ExtResource( 1 )
-type = "NPC"
-subType = "follow"
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )

@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://story/engine/DialogController.gd" type="Script" id=1]
+[ext_resource path="res://characters/img/portrait_catherine_default.png" type="Texture" id=2]
+[ext_resource path="res://characters/img/portrait_robin_default.png" type="Texture" id=3]
+[ext_resource path="res://story/img/text_box.png" type="Texture" id=4]
+
+[node name="DialogController" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1735.1, 726.974 )
+scale = Vector2( 1.07603, 1.12204 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 261.821, 630.64 )
+scale = Vector2( 1.26526, 1.27491 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 994.123, 833.853 )
+scale = Vector2( 0.528876, 0.502207 )
+texture = ExtResource( 4 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 534.596
+margin_top = 799.552
+margin_right = 801.596
+margin_bottom = 858.552
+rect_scale = Vector2( 3, 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Go find my lost stuff
+and maybe I'll put out"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 530.702
+margin_top = 729.518
+margin_right = 693.702
+margin_bottom = 747.518
+rect_scale = Vector2( 4, 4 )
+custom_colors/default_color = Color( 1, 0.819608, 0.819608, 1 )
+text = "Catherine:"
+
+[node name="close_button" type="Button" parent="."]
+margin_left = 1313.3
+margin_top = 897.707
+margin_right = 1460.3
+margin_bottom = 983.707
+text = "Close"
+
+[connection signal="pressed" from="close_button" to="." method="_on_close_button_pressed"]
