@@ -35,5 +35,8 @@ func get_playable_characters() -> Dictionary:
 	var out = []
 	for index in characters:
 		if characters[index].playable_character:
-			out.push_front(characters[index]) #just to make sure Robin is before Coming Soon
+			if index == "Robin":
+				out.push_front(characters[index]) #make sure Robin is first
+			else:
+				out.append(characters[index])
 	return out

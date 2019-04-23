@@ -27,11 +27,18 @@ func next_character():
 
 
 func load_character():
-	$Character.texture = characters[index].expressions["default"]
-	$NameLbl.text = "Name: " + characters[index].character_name
-	$Description.text = characters[index].backstory
+	var character:Character = characters[index]
+	
+	$Character.texture = character.expressions["default"]
+	$NameLbl.text = "Name: " + character.character_name
+	$Description.text = character.backstory	
+	#TODO decide if we want these extra UI elements
+	#TODO UI element - $Pronouns.text = character.pronouns
+	#TODO UI element - $Symbol.texture = character.symbol	
 	$StartBtn.disabled = not characters[index].unlocked
 
 
 func start_game():
-	get_tree().change_scene("res://screens/testRoom.tscn")	
+	get_tree().change_scene("res://screens/testRoom.tscn")
+	#TODO spawn the player character by instancing characters[index].character_scene
+	#after the user selects, instead of pre-spawning player.tscn
