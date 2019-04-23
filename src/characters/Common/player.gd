@@ -4,6 +4,9 @@ var state = "default"
 
 var useItem = "none"
 
+var has_spoen_to_catherine:bool = false
+var has_seen_a_dragon:bool = false
+
 func ready():
 	var camItemUI = get_node("../cam/area/useItem")
 	
@@ -61,3 +64,6 @@ func state_swing():
 
 func get_amulet():
 	hasAmulet = true 
+	
+func talk_to_npc( npc_name:String ):
+	pass
