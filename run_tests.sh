@@ -23,7 +23,7 @@ mkdir -p /tmp/cache
 mkdir -p /tmp/data
 mkdir -p /tmp/config
 
-EXPORT_NAME=HTML5
+EXPORT_NAME="Linux X11"
 OUTPUT_FILENAME=index.html
 
 mkdir build
