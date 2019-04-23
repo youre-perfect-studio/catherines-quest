@@ -13,7 +13,7 @@ chmod +x ${GODOT_BIN}
 
 curl ${GODOT_TEMPLATES} --output Godot_v${GODOT_VERSION}-rc1_export_templates.tpz
 mkdir -p /tmp/data/godot/templates
-unzip -q -d /tmp/data/godot/templates ${GODOT_VERSION}-rc1_export_templates.tpz
+unzip -q -d /tmp/data/godot/templates Godot_v${GODOT_VERSION}-rc1_export_templates.tpz
 mv /tmp/data/godot/templates/templates /tmp/data/godot/templates/3.1.1.rc1
 
 XDG_CACHE_HOMR=/tmp/cache
