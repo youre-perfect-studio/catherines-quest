@@ -23,8 +23,7 @@ mkdir -p /tmp/cache
 mkdir -p /tmp/data
 mkdir -p /tmp/config
 
-EXPORT_NAME="Linux X11"
 OUTPUT_FILENAME=index.html
 
 mkdir build
-./${GODOT_BIN} --export \"${EXPORT_NAME}\" --path ./src \"./build/${OUTPUT_FILENAME}\"
+./${GODOT_BIN} --export "Linux X11" --path ./src "./build/${GAME_NAME}"
