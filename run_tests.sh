@@ -26,4 +26,4 @@ mkdir -p /tmp/config
 OUTPUT_FILENAME=index.html
 
 mkdir build
-./${GODOT_BIN} --export "Linux" --path ./src "./build/${GAME_NAME}"
+./${GODOT_BIN} --export "Linux" --path ./src "output"
