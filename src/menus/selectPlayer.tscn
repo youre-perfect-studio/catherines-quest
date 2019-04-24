@@ -8,11 +8,11 @@
 size = 86
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 24
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 36
 font_data = ExtResource( 3 )
 
@@ -65,7 +65,7 @@ margin_left = 2102.57
 margin_top = 1355.07
 margin_right = 3663.57
 margin_bottom = 2150.07
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 autowrap = true
 
 [node name="NameLbl" type="Label" parent="."]
@@ -73,7 +73,7 @@ margin_left = 2103.0
 margin_top = 1172.0
 margin_right = 2324.0
 margin_bottom = 1229.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Name:"
 
 [node name="DescriptionLbl" type="Label" parent="."]
@@ -81,7 +81,7 @@ margin_left = 2106.25
 margin_top = 1273.63
 margin_right = 2466.25
 margin_bottom = 1330.63
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Description:"
 
 [node name="StartBtn" type="Button" parent="."]

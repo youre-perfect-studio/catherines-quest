@@ -1,10 +1,18 @@
 extends "res://engine/entity.gd"
+class_name Player
 
 var state = "default"
 
-var useItem = "none"
+var useItem = "sword"
+
+var has_spoken_to_catherine:bool = false
+var has_accepted_quest:bool = false
+var has_seen_a_dragon:bool = false
+onready var catherine_node = $"/root/Node/Catherine"
+onready var catherine_talk_area = $"/root/Node/Catherine/talkZone"
 
 func ready():
+	assert(catherine_node != null)
 	var camItemUI = get_node("../cam/area/useItem")
 	
 func _physics_process(delta):
@@ -30,12 +38,18 @@ func controlLoop():
 	else:
 		#$aura.visible = false
 		$aura_particles/Particles2D.emitting = false
-		
+	
+	if Input.is_action_just_pressed("interact"):
+		if $DamageArea.overlaps_area(catherine_talk_area):
+			talk_to_npc("Catherine")
+	
 	if Input.is_action_just_pressed("attack"):
 		match useItem:
 			"none":
 				if $DamageArea.overlaps_area(get("type") == "item") == true:
 					$camItemUI.texture = "res://items/" + name + ".png"
+				else:
+					pass
 			"sword":
 				use_item(preload("res://items/sword.tscn"))
 		
@@ -59,3 +73,11 @@ func state_swing():
 
 func get_amulet():
 	hasAmulet = true 
+	
+func talk_to_npc( npc_name:String ):
+	match npc_name:
+		"Catherine":
+			catherine_node.begin_dialog(self)
+		"Roux":
+			pass
+			

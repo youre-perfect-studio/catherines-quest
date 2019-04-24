@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://story/engine/DialogController.gd" type="Script" id=1]
+[ext_resource path="res://characters/img/portrait_robin_default.png" type="Texture" id=2]
+[ext_resource path="res://story/img/dialog.png" type="Texture" id=3]
+
+[node name="DialogController" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Container" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="RightPortrait" type="Sprite" parent="Container"]
+position = Vector2( 1735.1, 726.974 )
+scale = Vector2( 1.07603, 1.12204 )
+
+[node name="LeftPortrait" type="Sprite" parent="Container"]
+position = Vector2( 261.821, 630.64 )
+scale = Vector2( 1.26526, 1.27491 )
+texture = ExtResource( 2 )
+
+[node name="DialogBox" type="Sprite" parent="Container"]
+position = Vector2( 994.123, 833.853 )
+scale = Vector2( 0.528876, 0.502207 )
+texture = ExtResource( 3 )
+
+[node name="DialogText" type="RichTextLabel" parent="Container"]
+margin_left = 572.0
+margin_top = 726.0
+margin_right = 899.0
+margin_bottom = 820.0
+rect_scale = Vector2( 2.5, 2.5 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "Huh? Where am I?"
+
+[node name="Speaker" type="RichTextLabel" parent="Container"]
+margin_left = 401.159
+margin_top = 635.136
+margin_right = 564.159
+margin_bottom = 653.136
+rect_scale = Vector2( 3, 3 )
+custom_colors/default_color = Color( 0.411765, 0.792157, 0.27451, 1 )
+text = "Robin"
+
+[node name="CloseButton" type="Button" parent="Container"]
+margin_left = 1448.4
+margin_top = 786.67
+margin_right = 1595.4
+margin_bottom = 872.67
+text = "Close"
+
+[connection signal="pressed" from="Container/CloseButton" to="." method="_on_close_button_pressed"]

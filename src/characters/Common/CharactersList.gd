@@ -32,8 +32,11 @@ func get_portrait(character_name:String, expression:String = "default") -> Textu
 	return characters[character_name].expressions[expression]
 
 func get_playable_characters() -> Dictionary:
-	var out : Dictionary
+	var out = []
 	for index in characters:
 		if characters[index].playable_character:
-			out[index] = characters[index]
+			if index == "Robin":
+				out.push_front(characters[index]) #make sure Robin is first
+			else:
+				out.append(characters[index])
 	return out

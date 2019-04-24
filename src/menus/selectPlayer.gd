@@ -1,45 +1,44 @@
 extends Node2D
-var characters = []
-var characters_file_path = "res://Characters/characters.json"
+
+onready var characters = CharactersList.new().get_playable_characters()
+
 var index = 0
-#var char_name = null
-#var char_texture_large = null
-#var char_texture_icon = null
-#var char_description = null
-#var char_pronoun = null
-#var char_playable = null
 
 func _ready():
+	assert(characters.size() > 0)
 	$Previous.connect("pressed", self, "previous_character")
 	$Next.connect("pressed", self, "next_character")
 	$StartBtn.connect("pressed", self, "start_game")
-	var json_file = File.new()
-	if not json_file.file_exists(characters_file_path):
-		return
-		
-	json_file.open(characters_file_path, File.READ)
-	characters = JSON.parse(json_file.get_as_text()).result
-	
-	#print(characters)
 	load_character()
-	
+
 
 func previous_character():
 	index -= 1 
-	print(index)
+	if index < 0:
+		index = characters.size()-1
 	load_character()
-	
+
 
 func next_character():
 	index +=1
-	print(index)
+	if index >= characters.size():
+		index = 0
 	load_character()
-	
 
-func load_character():	
-	$Character.texture = load(characters[index].get("texture_large"))
-	$NameLbl.text = "Name: " + characters[index].get("name")
-	$Description.text = characters[index].get("description")
+
+func load_character():
+	var character:Character = characters[index]
 	
+	$Character.texture = character.expressions["default"]
+	$NameLbl.text = "Name: " + character.character_name
+	$Description.text = character.backstory	
+	#TODO decide if we want these extra UI elements
+	#TODO UI element - $Pronouns.text = character.pronouns
+	#TODO UI element - $Symbol.texture = character.symbol	
+	$StartBtn.disabled = not characters[index].unlocked
+
+
 func start_game():
-	get_tree().change_scene("res://screens/testRoom.tscn")	
+	get_tree().change_scene("res://screens/testRoom.tscn")
+	#TODO spawn the player character by instancing characters[index].character_scene
+	#after the user selects, instead of pre-spawning player.tscn
