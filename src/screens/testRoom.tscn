@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://screens/YellowCastle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://engine/cam.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://enemies/dragon.tscn" type="PackedScene" id=10]
 [ext_resource path="res://items/amulet.tscn" type="PackedScene" id=11]
 [ext_resource path="res://items/bait.tscn" type="PackedScene" id=12]
+[ext_resource path="res://items/Sign.tscn" type="PackedScene" id=13]
 
 [node name="Node" type="Node"]
 
@@ -49,6 +50,7 @@ sleeping = true
 [node name="player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1630.92, 728.58 )
 scale = Vector2( 0.5, 0.5 )
+speed = 200
 
 [node name="magnet" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1156.55, 310.914 )
@@ -74,4 +76,8 @@ position = Vector2( 1560.93, 288.127 )
 
 [node name="bait" parent="." instance=ExtResource( 12 )]
 position = Vector2( 682.364, 661.686 )
+
+[node name="Sign" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1324, 732.746 )
+scale = Vector2( 0.3, 0.3 )
 

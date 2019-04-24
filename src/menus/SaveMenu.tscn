@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://menus/SaveMenu.gd" type="Script" id=1]
+
+[node name="SaveMenu" type="PopupMenu"]
+script = ExtResource( 1 )
+
+[node name="Save" type="Button" parent="."]
+margin_left = 39.0813
+margin_top = 8.09541
+margin_right = 80.0813
+margin_bottom = 28.0954
+text = "Save"
+
+[node name="Respawn" type="Button" parent="."]
+margin_left = 12.2827
+margin_top = 29.8693
+margin_right = 141.283
+margin_bottom = 49.8693
+text = "Set Respawn Point"
+
