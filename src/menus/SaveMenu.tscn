@@ -1,21 +1,62 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://menus/SaveMenu.gd" type="Script" id=1]
+[ext_resource path="res://story/img/dialog2.png" type="Texture" id=2]
+[ext_resource path="res://fonts/FifthCenturyCaps.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
 
 [node name="SaveMenu" type="PopupMenu"]
+margin_left = 465.634
+margin_top = 373.656
+margin_right = 1518.63
+margin_bottom = 803.656
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 574.166, 202.24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
 
 [node name="Save" type="Button" parent="."]
-margin_left = 39.0813
-margin_top = 8.09541
-margin_right = 80.0813
-margin_bottom = 28.0954
+margin_left = 18.2916
+margin_top = 132.624
+margin_right = 566.292
+margin_bottom = 163.624
+focus_neighbour_top = NodePath("../Close")
+focus_neighbour_bottom = NodePath("../Respawn")
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_hover = Color( 1, 0.631373, 0, 1 )
 text = "Save"
+flat = true
 
 [node name="Respawn" type="Button" parent="."]
-margin_left = 12.2827
-margin_top = 29.8693
-margin_right = 141.283
-margin_bottom = 49.8693
-text = "Set Respawn Point"
+margin_left = 14.7188
+margin_top = 195.15
+margin_right = 562.719
+margin_bottom = 226.15
+focus_neighbour_top = NodePath("../Save")
+focus_neighbour_bottom = NodePath("../Close")
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_hover = Color( 1, 0.631373, 0, 1 )
+text = "Set This location as current checkpoint"
+flat = true
+
+[node name="Close" type="Button" parent="."]
+margin_left = 833.117
+margin_top = 348.458
+margin_right = 1022.12
+margin_bottom = 379.458
+focus_neighbour_top = NodePath("../Respawn")
+focus_neighbour_bottom = NodePath("../Save")
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_hover = Color( 1, 0.631373, 0, 1 )
+text = "Close"
 
