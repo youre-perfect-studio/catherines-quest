@@ -2,7 +2,7 @@
 
 [ext_resource path="res://story/engine/DialogController.gd" type="Script" id=1]
 [ext_resource path="res://characters/img/portrait_robin_default.png" type="Texture" id=2]
-[ext_resource path="res://story/img/text_box.png" type="Texture" id=3]
+[ext_resource path="res://story/img/dialog.png" type="Texture" id=3]
 
 [node name="DialogController" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -26,28 +26,28 @@ scale = Vector2( 0.528876, 0.502207 )
 texture = ExtResource( 3 )
 
 [node name="DialogText" type="RichTextLabel" parent="Container"]
-margin_left = 534.596
-margin_top = 799.552
-margin_right = 801.596
-margin_bottom = 858.552
-rect_scale = Vector2( 3, 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+margin_left = 572.0
+margin_top = 726.0
+margin_right = 899.0
+margin_bottom = 820.0
+rect_scale = Vector2( 2.5, 2.5 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Huh? Where am I?"
 
 [node name="Speaker" type="RichTextLabel" parent="Container"]
-margin_left = 530.702
-margin_top = 729.518
-margin_right = 693.702
-margin_bottom = 747.518
-rect_scale = Vector2( 4, 4 )
-custom_colors/default_color = Color( 1, 0.819608, 0.819608, 1 )
-text = "Robin:"
+margin_left = 401.159
+margin_top = 635.136
+margin_right = 564.159
+margin_bottom = 653.136
+rect_scale = Vector2( 3, 3 )
+custom_colors/default_color = Color( 0.411765, 0.792157, 0.27451, 1 )
+text = "Robin"
 
 [node name="CloseButton" type="Button" parent="Container"]
-margin_left = 1313.3
-margin_top = 897.707
-margin_right = 1460.3
-margin_bottom = 983.707
+margin_left = 1448.4
+margin_top = 786.67
+margin_right = 1595.4
+margin_bottom = 872.67
 text = "Close"
 
 [connection signal="pressed" from="Container/CloseButton" to="." method="_on_close_button_pressed"]
