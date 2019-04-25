@@ -54,4 +54,3 @@ uppercase = true
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 anims/animateText = SubResource( 2 )
-

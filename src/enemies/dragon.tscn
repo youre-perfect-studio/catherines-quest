@@ -40,4 +40,3 @@ position = Vector2( 258, 178 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bitebox"]
 rotation = 1.5708
 shape = SubResource( 3 )
-

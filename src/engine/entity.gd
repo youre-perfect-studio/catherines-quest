@@ -4,7 +4,7 @@ export(String) var type = "enemy"
 export(String) var subType
 
 var chasing = false
-var hasAmulet = false
+export var hasAmulet = false
 
 var damage = 1
 export var health = 1
@@ -61,7 +61,7 @@ func damageLoop():
 		if visible == true: #this was done for player to prevent crashing, anything else can be queue_free()
 			#print("dead")   #was just a temporary measure until a gameover function is written
 			visible = false
-		#$Anim.play("death")
+		$Anim.play("death")
 
 func use_item(item):
 	var newItem = item.instance()

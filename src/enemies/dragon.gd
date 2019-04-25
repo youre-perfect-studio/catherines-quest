@@ -39,6 +39,5 @@ func _physics_process(delta):
 func onAreaEntered(area):
 	if area.get_parent().get("type") == "player":
 		if area.get_parent().get("hasAmulet") == false:
-			pass
-			#player.set_physics_process(false)
-			#player.set_visible(false)
+			player.set_physics_process(false)
+			player.set_visible(false)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://characters/Common/player.gd" type="Script" id=1]
 [ext_resource path="res://particles/aura_particles.tscn" type="PackedScene" id=2]
@@ -203,8 +203,6 @@ tracks/0/keys = {
 "values": [ 2, 1, 2, 3 ]
 }
 
-[sub_resource type="RectangleShape2D" id=16]
-
 [sub_resource type="Animation" id=17]
 resource_name = "down"
 tracks/0/type = "value"
@@ -268,6 +266,7 @@ tracks/0/keys = {
 [node name="player" type="KinematicBody2D"]
 collision_mask = 3
 script = ExtResource( 1 )
+type = "player"
 
 [node name="aura_particles" parent="." instance=ExtResource( 2 )]
 scale = Vector2( 2.99, 4.25 )
@@ -314,13 +313,11 @@ anims/default = SubResource( 15 )
 
 [node name="sword" parent="." instance=ExtResource( 5 )]
 
-[node name="followerSpace" type="CollisionShape2D" parent="."]
+[node name="followerSpace" type="Sprite" parent="."]
 position = Vector2( 0, 200 )
-shape = SubResource( 16 )
 
 [node name="fsMover" type="AnimationPlayer" parent="followerSpace"]
 anims/down = SubResource( 17 )
 anims/left = SubResource( 18 )
 anims/right = SubResource( 19 )
 anims/up = SubResource( 20 )
-

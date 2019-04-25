@@ -2,8 +2,7 @@ extends "res://engine/entity.gd"
 class_name Player
 
 var state = "default"
-
-var useItem = "sword"
+var useItem = "none"
 
 var has_spoken_to_catherine:bool = false
 var has_accepted_quest:bool = false
@@ -13,7 +12,9 @@ onready var catherine_talk_area = $"/root/Node/Catherine/talkZone"
 
 func ready():
 	assert(catherine_node != null)
-	var camItemUI = get_node("../cam/area/useItem")
+	var camItemUI = get_node("../cam/useItem")
+#	$DamageArea.connect("area_entered", self, "onAreaEntered")
+#	$DamageArea.connect("area_exited", self, "onAreaExited")
 	
 func _physics_process(delta):
 	match state:
@@ -44,12 +45,14 @@ func controlLoop():
 			talk_to_npc("Catherine")
 	
 	if Input.is_action_just_pressed("attack"):
+		print("triggered")
 		match useItem:
 			"none":
-				if $DamageArea.overlaps_area(get("type") == "item") == true:
-					$camItemUI.texture = "res://items/" + name + ".png"
-				else:
-					pass
+				for area in $DamageArea.get_overlapping_areas():
+					if area.get_parent().get("type") == "item" && area.name == "hitbox":
+						get_node("../cam/useItem").texture = load("res://items/" + area.get_parent().name + ".png")
+					else:
+						pass
 			"sword":
 				use_item(preload("res://items/sword.tscn"))
 		
@@ -80,4 +83,3 @@ func talk_to_npc( npc_name:String ):
 			catherine_node.begin_dialog(self)
 		"Roux":
 			pass
-			
