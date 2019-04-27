@@ -9,10 +9,10 @@ var has_accepted_quest:bool = false
 var has_seen_a_dragon:bool = false
 onready var catherine_node = $"/root/Node/Catherine"
 onready var catherine_talk_area = $"/root/Node/Catherine/talkZone"
+onready var dropSpace = get_node("../player/followerSpace")
 
 func ready():
 	assert(catherine_node != null)
-	var camItemUI = get_node("../cam/useItem")
 #	$DamageArea.connect("area_entered", self, "onAreaEntered")
 #	$DamageArea.connect("area_exited", self, "onAreaExited")
 	
@@ -45,16 +45,32 @@ func controlLoop():
 			talk_to_npc("Catherine")
 	
 	if Input.is_action_just_pressed("attack"):
-		print("triggered")
 		match useItem:
+
 			"none":
 				for area in $DamageArea.get_overlapping_areas():
 					if area.get_parent().get("type") == "item" && area.name == "hitbox":
 						get_node("../cam/useItem").texture = load("res://items/" + area.get_parent().name + ".png")
+						if area.get_parent().name == "magnet":
+							get_node("../cam").magnetPickedUp()
+						elif area.get_parent().name == "amulet":
+							hasAmulet = true
+						area.get_parent().queue_free()
+						useItem = area.get_parent().name
 					else:
 						pass
+
 			"sword":
 				use_item(preload("res://items/sword.tscn"))
+
+			"amulet":
+				pass
+				
+			"magnet":
+				pass
+#				use_item(load("res://items/magnet.tscn"))
+#				var magDrop = load("res://items/magnet.tscn")
+#				magDrop.glo
 		
 	
 func state_default():

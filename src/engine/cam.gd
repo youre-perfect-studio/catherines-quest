@@ -20,15 +20,24 @@ func get_grid_pos(pos):
 	return Vector2(x,y)
 	
 func onAreaEntered(area):
-	if area.get_parent().get("type") == "item":
-		area.get_parent().set_physics_process(true)
+	if area.get_parent().name == "magnet":
+		for area in $area.get_overlapping_areas():
+			if area.get_parent().get("type") == "item":
+				area.get_parent().magOnScreen = true
 		
 	elif area.get_parent().get("subType") == "dragon":
 		area.get_parent().chasing = true
 			
 func onAreaExited(area):
-	if area.get("type") == "item":
-		area.get_parent().set_physics_process(false)
+	if area.get_parent().name == "magnet":
+		for area in $area.get_overlapping_areas():
+			if area.get_parent().get("type") == "item":
+				area.get_parent().magOnScreen = false
 		
 	elif area.get("subType") == "dragon":
 		area.get_parent().chasing == false
+		
+func magnetPickedUp():
+	for area in $area.get_overlapping_areas():
+		if area.get_parent().get("type") == "item":
+			area.get_parent().magOnScreen == false

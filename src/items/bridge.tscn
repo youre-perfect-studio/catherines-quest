@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 23, 76 )
+extents = Vector2( 20, 76 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 30, 80 )
@@ -32,21 +32,21 @@ position = Vector2( 0, -80 )
 shape = SubResource( 1 )
 
 [node name="railway1" type="CollisionShape2D" parent="."]
-position = Vector2( -53, 0 )
+position = Vector2( -56, 0 )
 shape = SubResource( 2 )
 
 [node name="railway2" type="CollisionShape2D" parent="."]
-position = Vector2( 53, 0 )
+position = Vector2( 56, 0 )
 shape = SubResource( 2 )
 
 [node name="walkway" type="Area2D" parent="."]
-collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walkway"]
 shape = SubResource( 3 )
 
 [node name="hitbox" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 shape = SubResource( 4 )
