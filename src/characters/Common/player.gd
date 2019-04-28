@@ -10,8 +10,9 @@ var has_seen_a_dragon:bool = false
 onready var catherine_node = $"/root/Node/Catherine"
 onready var catherine_talk_area = $"/root/Node/Catherine/talkZone"
 onready var dropSpace = get_node("../player/followerSpace")
+onready var dialog_controller_node = $"/root/Node/DialogController"
 
-func ready():
+func _ready():
 	assert(catherine_node != null)
 #	$DamageArea.connect("area_entered", self, "onAreaEntered")
 #	$DamageArea.connect("area_exited", self, "onAreaExited")
@@ -99,3 +100,9 @@ func talk_to_npc( npc_name:String ):
 			catherine_node.begin_dialog(self)
 		"Roux":
 			pass
+
+func show_opening_dialog():
+	dialog_controller_node.clear()
+	dialog_controller_node.set_portait(0, "Robin", "default")
+	dialog_controller_node.set_text(tr("ROBIN_INTRO_1"))
+	dialog_controller_node.show_workaround()
