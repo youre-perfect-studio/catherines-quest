@@ -47,8 +47,6 @@ script = SubResource( 1 )
 position = Vector2( 6.85297, -198.737 )
 shape = SubResource( 2 )
 
-[node name="Tween" type="Tween" parent="."]
-
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.423529 )
 
