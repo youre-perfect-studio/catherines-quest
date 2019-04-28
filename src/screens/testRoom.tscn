@@ -14,7 +14,7 @@
 [ext_resource path="res://characters/Catherine/Catherine.tscn" type="PackedScene" id=12]
 [ext_resource path="res://items/Sign.tscn" type="PackedScene" id=13]
 [ext_resource path="res://story/engine/DialogController.tscn" type="PackedScene" id=14]
-[ext_resource path="res://screens/yellow castle overlay.tscn" type="PackedScene" id=15]
+[ext_resource path="res://screens/yellowCastleOverlay.tscn" type="PackedScene" id=15]
 [ext_resource path="res://screens/Overlay.gd" type="Script" id=16]
 [ext_resource path="res://testStuff/tiles/wall.tres" type="TileSet" id=17]
 
