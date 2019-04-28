@@ -1,6 +1,6 @@
 extends "res://characters/Common/NPC.gd"
 
-onready var dialog_controller_node:DialogController = $"/root/Node/DialogController"
+onready var dialog_controller_node:DialogController = $"/root/Episode1/DialogController"
 onready var charlist = CharactersList.new()
 
 func begin_dialog( player:Player ):

@@ -19,7 +19,7 @@
 [ext_resource path="res://screens/Overlay.gd" type="Script" id=17]
 [ext_resource path="res://testStuff/tiles/wall.tres" type="TileSet" id=18]
 
-[node name="Node" type="Node"]
+[node name="Episode1" type="Node"]
 
 [node name="yellow castle2" type="Sprite" parent="."]
 position = Vector2( 961.612, 1623.69 )

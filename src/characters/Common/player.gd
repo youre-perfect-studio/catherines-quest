@@ -7,10 +7,10 @@ var useItem = "none"
 var has_spoken_to_catherine:bool = false
 var has_accepted_quest:bool = false
 var has_seen_a_dragon:bool = false
-onready var catherine_node = $"/root/Node/Catherine"
-onready var catherine_talk_area = $"/root/Node/Catherine/talkZone"
+onready var catherine_node = $"/root/Episode1/Catherine"
+onready var catherine_talk_area = $"/root/Episode1/Catherine/talkZone"
 onready var dropSpace = get_node("../player/followerSpace")
-onready var dialog_controller_node = $"/root/Node/DialogController"
+onready var dialog_controller_node = $"/root/Episode1/DialogController"
 
 func _ready():
 	assert(catherine_node != null)
