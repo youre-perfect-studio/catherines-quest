@@ -15,7 +15,7 @@ Convenience function for showing a character portrait at the given posittion.
 	null will attempt to keep using the last-used expression. If the last-used character
 	changes last-used expression will reset to 'default'
 """
-func read_verbatim_text( text:String, character_name:String, portrain_position:Position, expression:String):
+func read_verbatim_text( text:String, character_name:String, portrain_position:String, expression:String):
 	#TODO
 	pass
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://screens/img/yellow castle2.png" type="Texture" id=1]
 [ext_resource path="res://engine/cam.tscn" type="PackedScene" id=2]
@@ -14,12 +14,9 @@
 [ext_resource path="res://characters/Catherine/Catherine.tscn" type="PackedScene" id=12]
 [ext_resource path="res://items/Sign.tscn" type="PackedScene" id=13]
 [ext_resource path="res://story/engine/DialogController.tscn" type="PackedScene" id=14]
-[ext_resource path="res://screens/img/yellow castle overlay.png" type="Texture" id=15]
-[ext_resource path="res://screens/yellow castle overlay.gd" type="Script" id=16]
+[ext_resource path="res://screens/yellow castle overlay.tscn" type="PackedScene" id=15]
+[ext_resource path="res://screens/Overlay.gd" type="Script" id=16]
 [ext_resource path="res://testStuff/tiles/wall.tres" type="TileSet" id=17]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 72.3806, 214.447 )
 
 [node name="Node" type="Node"]
 
@@ -85,16 +82,8 @@ scale = Vector2( 0.3, 0.3 )
 
 [node name="DialogController" parent="." instance=ExtResource( 14 )]
 
-[node name="yellow castle overlay" type="Sprite" parent="."]
-position = Vector2( 961.612, 1629.49 )
-texture = ExtResource( 15 )
+[node name="yellow castle overlay" parent="." instance=ExtResource( 15 )]
 script = ExtResource( 16 )
-
-[node name="Area" type="Area2D" parent="yellow castle overlay"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="yellow castle overlay/Area"]
-position = Vector2( 6.85297, -198.737 )
-shape = SubResource( 1 )
 
 [node name="TileMap" type="TileMap" parent="."]
 visible = false

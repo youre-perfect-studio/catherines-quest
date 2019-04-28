@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://screens/img/yellow castle overlay.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Sprite
+
+func _ready():
+	$Area.connect(\"area_entered\",self, \"area_entered\")
+	$Area.connect(\"area_exited\", self, \"area_exited\")
+	
+func area_entered(area):
+	if area.get_parent().name == \"player\":
+		modulate.a = 0.5
+func area_exited(area):
+	if area.get_parent().name == \"player\":
+		modulate.a = 1
+"
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 72.3806, 214.447 )
+
+[node name="yellow castle overlay" type="Sprite"]
+position = Vector2( 961.612, 1629.49 )
+texture = ExtResource( 1 )
+script = SubResource( 1 )
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+position = Vector2( 6.85297, -198.737 )
+shape = SubResource( 2 )
