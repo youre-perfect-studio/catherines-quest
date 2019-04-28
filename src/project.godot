@@ -123,6 +123,10 @@ interact={
  ]
 }
 
+[locale]
+
+translations=PoolStringArray( "res://i18n/RobinIntro_en_US.en_US.translation" )
+
 [physics]
 
 3d/active_soft_world=false

@@ -1,6 +1,22 @@
 extends CanvasLayer
 
-func _ready():
+enum Position {
+	Left,
+	Right,
+	Middle,
+}
+
+"""
+Convenience function for showing a character portrait at the given posittion. 
+
+@param text Verbatim text, not a translation key.
+@param character_name null or empty will continue using the last-used character
+@param expression eg 'default', 'surprised', etc. Used for loading different portraits.
+	null will attempt to keep using the last-used expression. If the last-used character
+	changes last-used expression will reset to 'default'
+"""
+func read_verbatim_text( text:String, character_name:String, portrain_position:Position, expression:String):
+	#TODO
 	pass
 
 func set_left_portrait( portrait:Texture ):

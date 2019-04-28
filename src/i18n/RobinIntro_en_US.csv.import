@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://i18n/RobinIntro_en_US.en_US.translation" ]
+
+source_file="res://i18n/RobinIntro_en_US.csv"
+dest_files=[ "res://i18n/RobinIntro_en_US.en_US.translation" ]
+
+[params]
+
+compress=true
+delimiter=0
