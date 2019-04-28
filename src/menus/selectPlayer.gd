@@ -40,7 +40,7 @@ func load_character():
 
 func start_game():
 	print("starting game")
-	Globals.Players.append(characters[index])
+	Globals.Players.append(characters[index].character_scene.instance())
 	get_tree().change_scene("res://screens/Episode1.tscn")
 	#TODO spawn the player character by instancing characters[index].character_scene
 	#after the user selects, instead of pre-spawning player.tscn
