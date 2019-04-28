@@ -22,27 +22,25 @@
 [node name="Node" type="Node"]
 
 [node name="yellow castle2" type="Sprite" parent="."]
-position = Vector2( 961.612, 1627.69 )
+position = Vector2( 961.612, 1623.69 )
 texture = ExtResource( 1 )
 
 [node name="Painterly_Adventure__Test" type="Sprite" parent="."]
-position = Vector2( 957.069, 2723.9 )
-scale = Vector2( 1.65, 1.65 )
+position = Vector2( 965.669, 2763.5 )
+scale = Vector2( 1.75, 1.75 )
 texture = ExtResource( 2 )
 
 [node name="cam" parent="." instance=ExtResource( 3 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-editor/display_folded = true
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 961.478, 545.454 )
+position = Vector2( 961.478, 540.454 )
 texture = ExtResource( 4 )
 
 [node name="bridge" parent="." instance=ExtResource( 5 )]
