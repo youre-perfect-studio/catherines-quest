@@ -49,20 +49,19 @@ position = Vector2( 961.478, 540.454 )
 texture = ExtResource( 5 )
 
 [node name="bridge" parent="." instance=ExtResource( 6 )]
-position = Vector2( 887.65, 410.222 )
-sleeping = true
+position = Vector2( 882.867, 491.538 )
 
 [node name="player" parent="." groups=[
 "Persist",
 ] instance=ExtResource( 7 )]
 position = Vector2( 1502.07, 667.411 )
 scale = Vector2( 0.5, 0.5 )
-speed = 200
+speed = 300
 
 [node name="NPC" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1727.89, 721.937 )
 scale = Vector2( 0.5, 0.5 )
-follow_player = false
+z_index = -1
 
 [node name="SwordPlaceholder" type="Sprite" parent="."]
 position = Vector2( 1301.32, 883.388 )
@@ -79,7 +78,7 @@ subType = "dragon"
 position = Vector2( 1560.93, 288.127 )
 
 [node name="magnet" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1220.1, 263.561 )
+position = Vector2( 1215.32, 490.768 )
 
 [node name="bait" parent="." instance=ExtResource( 13 )]
 position = Vector2( 682.364, 661.686 )
@@ -87,7 +86,7 @@ position = Vector2( 682.364, 661.686 )
 [node name="Catherine" parent="." instance=ExtResource( 14 )]
 position = Vector2( 351.831, 772.734 )
 scale = Vector2( 0.5, 0.5 )
-follow_player = false
+type = "NPC"
 
 [node name="Sign" parent="." instance=ExtResource( 15 )]
 position = Vector2( 312.927, 612.326 )

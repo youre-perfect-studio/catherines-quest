@@ -19,3 +19,7 @@ func save():
 		"parent": get_parent(),
 	}
 	return save_dict
+	
+func dropItem(item):
+	var newItem = item.instance()
+	add_child(newItem)
