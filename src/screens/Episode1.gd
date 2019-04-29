@@ -14,7 +14,13 @@ func spawn_players():
 	#	$"/root/Episode1".add_child(player)
 	$player.show_opening_dialog()
 	
-func load_game():
-	if SaveFunctions.continuing == true:
-		SaveFunctions.load_game()
+func save():
+	var save_dict = {
+		"filename": get_filename(),
+		"parent": get_parent(),
+	}
+	return save_dict
 	
+func dropItem(item):
+	var newItem = item.instance()
+	add_child(newItem)

@@ -1,7 +1,7 @@
 extends "res://engine/entity.gd"
 
 onready var player = get_node("../player/followerSpace")
-export(bool) var follow_player = true
+export(bool) var follow_player = false
 
 func _ready():
 	pass

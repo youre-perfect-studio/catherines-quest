@@ -3,16 +3,17 @@ class_name Player
 
 var state = "default"
 var useItem = "none"
+
 var respawn_point_x = null
 var respawn_point_y = null
 
 var has_spoken_to_catherine:bool = false
 var has_accepted_quest:bool = false
 var has_seen_a_dragon:bool = false
-onready var catherine_node = $"/root/Episode1/Catherine"
-onready var catherine_talk_area = $"/root/Episode1/Catherine/talkZone"
-onready var dropSpace = get_node("../player/followerSpace")
-onready var dialog_controller_node = $"/root/Episode1/DialogController"
+
+onready var catherine_node = $"../Catherine"
+onready var catherine_talk_area = $"../Catherine/talkZone"
+onready var dialog_controller_node = $"../DialogController"
 
 func _ready():
 	assert(catherine_node != null)
@@ -44,7 +45,7 @@ func controlLoop():
 		$aura_particles/Particles2D.emitting = false
 	
 	if Input.is_action_just_pressed("interact"):
-		if $DamageArea.overlaps_area(catherine_talk_area):
+		if $DamageArea.overlaps_area(catherine_talk_area) && catherine_node.follow_player != true:
 			talk_to_npc("Catherine")
 	
 	if Input.is_action_just_pressed("attack"):
@@ -53,9 +54,10 @@ func controlLoop():
 			"none":
 				for area in $DamageArea.get_overlapping_areas():
 					if area.get_parent().get("type") == "item" && area.name == "hitbox":
-						get_node("../cam/useItem").texture = load("res://items/" + area.get_parent().name + ".png")
+						$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + ".png")
+						$"../cam/useItem".visible = true
 						if area.get_parent().name == "magnet":
-							get_node("../cam").magnetPickedUp()
+							$"../cam".magnetPickedUp()
 						elif area.get_parent().name == "amulet":
 							hasAmulet = true
 						area.get_parent().queue_free()
@@ -65,16 +67,13 @@ func controlLoop():
 
 			"sword":
 				use_item(preload("res://items/sword.tscn"))
-
-			"amulet":
-				pass
 				
-			"magnet":
-				pass
-#				use_item(load("res://items/magnet.tscn"))
-#				var magDrop = load("res://items/magnet.tscn")
-#				magDrop.glo
-		
+	if Input.is_action_just_pressed("drop") && useItem != "none":
+		$"../".dropItem(load("res://items/" + useItem + ".tscn"))
+		var drop = get_node("../" + useItem)
+		drop.position = get_node("../player").global_position - get_node("../player/followerSpace").position
+		useItem = "none"
+		$"../cam/useItem".visible = false
 	
 func state_default():
 	controlLoop()
@@ -93,8 +92,8 @@ func state_swing():
 	movedir = Vector2.ZERO
 	damageLoop()
 
-func get_amulet():
-	hasAmulet = true 
+#func get_amulet():
+#	hasAmulet = true 
 	
 func talk_to_npc( npc_name:String ):
 	match npc_name:

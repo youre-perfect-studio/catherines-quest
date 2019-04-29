@@ -46,7 +46,6 @@ collision_mask = 0
 shape = SubResource( 3 )
 
 [node name="hitbox" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 shape = SubResource( 4 )
