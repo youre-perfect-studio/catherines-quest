@@ -3,6 +3,8 @@ class_name Player
 
 var state = "default"
 var useItem = "none"
+var respawn_point_x = null
+var respawn_point_y = null
 
 var has_spoken_to_catherine:bool = false
 var has_accepted_quest:bool = false
@@ -106,3 +108,25 @@ func show_opening_dialog():
 	dialog_controller_node.set_portait(0, "Robin", "default")
 	dialog_controller_node.set_text(tr("ROBIN_INTRO_1"))
 	dialog_controller_node.show_workaround()
+
+func set_restore_point():
+	respawn_point_x = position.x
+	respawn_point_y = position.y
+	
+func save():
+	var save_dict = {
+		"filename": get_filename(),
+		"parent": get_parent().get_path(),
+		"pos_x": position.x,
+		"pos_y": position.y,
+		"health": health,
+		"damage": damage,
+		"spritedir": spritedir,
+		"respawn_point_x": respawn_point_x,
+		"respawn_point_y": respawn_point_y,
+		"hasAmulet": hasAmulet,
+		"has_accepted_quest": has_accepted_quest,
+		"has_seen_a_dragon": has_seen_a_dragon,
+		"has_spoken_to_catherine": has_spoken_to_catherine
+	}
+	return save_dict

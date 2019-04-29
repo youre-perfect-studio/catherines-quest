@@ -8,9 +8,9 @@ func _ready():
 
 func open_menu(area):
 	if area.get_parent().name == "player":
-		$SaveMenu.popup()
+		$"../UI/SaveMenu".popup()
 		print("opening menu")
 	
 func close_menu(area):
 	if area.get_parent().name == "player":
-		$SaveMenu.close()
+		$"../UI/SaveMenu".close()

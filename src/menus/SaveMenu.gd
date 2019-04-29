@@ -11,9 +11,11 @@ func _ready():
 	
 func save():
 	print("saving")
+	SaveFunctions.save_game()
 	
 func set_respawn_point():
 	print("setting respawn point")
+	$"../../player".set_restore_point()
 	
 func close():
 	print("closing menu")

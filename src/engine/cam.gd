@@ -41,3 +41,12 @@ func magnetPickedUp():
 	for area in $area.get_overlapping_areas():
 		if area.get_parent().get("type") == "item":
 			area.get_parent().magOnScreen == false
+			
+func save():
+	var save_dict = {
+		"filename": get_filename(),
+		"parent": get_parent().get_path(),
+		"pos_x": position.x,
+		"pos_y": position.y
+	}
+	return save_dict
