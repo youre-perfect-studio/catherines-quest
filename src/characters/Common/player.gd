@@ -5,9 +5,9 @@ signal open_menu
 
 var state = "default"
 var useItem = "none"
-
-var respawn_point_x = null
-var respawn_point_y = null
+export var base_health = 2
+var respawn_point_x = 0
+var respawn_point_y = 0
 var is_close_to_sign = false
 
 var has_spoken_to_catherine:bool = false
@@ -104,6 +104,10 @@ func state_swing():
 	movementLoop()
 	movedir = Vector2.ZERO
 	damageLoop()
+	
+func restart():
+	health = base_health
+	position = Vector2(respawn_point_x, respawn_point_y)
 
 #func get_amulet():
 #	hasAmulet = true 

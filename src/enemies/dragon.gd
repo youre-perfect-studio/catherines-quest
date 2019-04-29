@@ -37,7 +37,8 @@ func _physics_process(delta):
 		
 		#unless there is a specific plan for below, it's useless now with DamageLoop() in place
 func onAreaEntered(area):
-	if area.get_parent().get("type") == "player":
-		if area.get_parent().get("hasAmulet") == false:
-			player.set_physics_process(false)
-			player.set_visible(false)
+	pass
+	#if area.get_parent().get("type") == "player":
+		#if area.get_parent().get("hasAmulet") == false:
+			#player.set_physics_process(false)
+			#player.set_visible(false)

@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export(String) var type = "enemy"
 export(String) var subType
-
+var is_alive = true
 var chasing = false
 export var hasAmulet = false
 
@@ -58,9 +58,17 @@ func damageLoop():
 			#print("lost " + str(body.get("damage")) + "health")
 			hitstun = 10
 	if health <= 0:
+		if type == "player":
+			if is_alive:
+				$"../UI/RestartMenu".popup()
+				is_alive = false
+			
 		if visible == true: #this was done for player to prevent crashing, anything else can be queue_free()
 			#print("dead")   #was just a temporary measure until a gameover function is written
 			visible = false
+	else:
+		visible = true
+		is_alive = true
 		#$Anim.play("death")
 
 func use_item(item):

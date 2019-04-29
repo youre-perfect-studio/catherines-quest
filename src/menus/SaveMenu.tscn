@@ -59,4 +59,3 @@ focus_neighbour_bottom = NodePath("../Save")
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_hover = Color( 1, 0.631373, 0, 1 )
 text = "Close"
-
