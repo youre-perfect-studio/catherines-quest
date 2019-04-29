@@ -1,11 +1,14 @@
 extends "res://engine/entity.gd"
 class_name Player
 
+signal open_menu
+
 var state = "default"
 var useItem = "none"
 
 var respawn_point_x = null
 var respawn_point_y = null
+var is_close_to_sign = false
 
 var has_spoken_to_catherine:bool = false
 var has_accepted_quest:bool = false
@@ -49,6 +52,10 @@ func controlLoop():
 			talk_to_npc("Catherine")
 	
 	if Input.is_action_just_pressed("attack"):
+		# if player close to the sign and attack pressed then open the menu
+		if is_close_to_sign:
+			emit_signal("open_menu")
+			
 		match useItem:
 
 			"none":
