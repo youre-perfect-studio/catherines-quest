@@ -10,11 +10,11 @@ func _ready():
 	#above is set up for having different screen sizes, going to attempt to figure out how to access in script later
 
 func _process(delta):
-	if get_parent().has_node("player"):
+	if has_node("../player"):
 		var playerGridPos = get_grid_pos(get_node("../player").global_position)
 		global_position = playerGridPos * screenSize
 		gridPos = playerGridPos
-	
+		
 func get_grid_pos(pos):
 	var x = floor(pos.x / screenSize.x)
 	var y = floor(pos.y / screenSize.y) 

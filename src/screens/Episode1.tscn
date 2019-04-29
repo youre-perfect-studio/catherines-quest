@@ -36,6 +36,7 @@ texture = ExtResource( 3 )
 [node name="cam" parent="." instance=ExtResource( 4 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 __meta__ = {
@@ -106,3 +107,7 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="SaveMenu" parent="UI" instance=ExtResource( 20 )]
+
+[node name="Sign2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1672.38, 3014.82 )
+scale = Vector2( 0.5, 0.5 )

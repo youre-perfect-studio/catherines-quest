@@ -129,6 +129,7 @@ func save():
 		"has_spoken_to_catherine": has_spoken_to_catherine,
 		"speed": speed,
 		"scale_x": get_scale().x,
-		"scale_y": get_scale().y
+		"scale_y": get_scale().y,
+		"type": type
 	}
 	return save_dict

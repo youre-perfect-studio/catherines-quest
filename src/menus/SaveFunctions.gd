@@ -35,7 +35,8 @@ func load_game():
     # For our example, we will accomplish this by deleting saveable objects.
 	var save_nodes = get_tree().get_nodes_in_group("Persist")
 	for i in save_nodes:
-		i.queue_free()
+		if i.get_name() != "player" :
+			i.queue_free()
 
     # Load the file line by line and process that dictionary to restore
     # the object it represents.
@@ -43,10 +44,16 @@ func load_game():
 	while not save_game.eof_reached():
 		var current_line = parse_json(save_game.get_line())
 		print(current_line)
+		var new_object = null
 		if current_line != null:
-	        # Firstly, we need to create the object and add it to the tree and set its position.
-			var new_object = load(current_line["filename"]).instance()
+			if current_line["type"] == "player":
+				new_object = get_node(str(current_line["parent"], "/player"))
+			else:
+				# Firstly, we need to create the object and add it to the tree and set its position.
+				new_object = load(current_line["filename"]).instance()
+			
 			get_node(current_line["parent"]).add_child(new_object)
+		
 			new_object.position = Vector2(current_line["pos_x"], current_line["pos_y"])
 			if current_line.has("scale_x"):
 				new_object.set_scale(Vector2(current_line["scale_x"], current_line["scale_y"]))
