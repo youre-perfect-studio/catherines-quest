@@ -3,6 +3,7 @@ extends Node
 func _ready():
 	TranslationServer.set_locale("en_US")
 	call_deferred("spawn_players")
+	load_game()
 
 func spawn_players():
 	#This should only happe when running single-scene debugging
@@ -13,9 +14,7 @@ func spawn_players():
 	#	$"/root/Episode1".add_child(player)
 	$player.show_opening_dialog()
 	
-func save():
-	var save_dict = {
-		"filename": get_filename(),
-		"parent": get_parent(),
-	}
-	return save_dict
+func load_game():
+	if SaveFunctions.continuing == true:
+		SaveFunctions.load_game()
+	

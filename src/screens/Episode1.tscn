@@ -33,9 +33,7 @@ position = Vector2( 965.669, 2763.5 )
 scale = Vector2( 1.75, 1.75 )
 texture = ExtResource( 3 )
 
-[node name="cam" parent="." groups=[
-"Persist",
-] instance=ExtResource( 4 )]
+[node name="cam" parent="." instance=ExtResource( 4 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

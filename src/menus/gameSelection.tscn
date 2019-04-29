@@ -39,4 +39,3 @@ focus_neighbour_top = NodePath("../NewGameBtn")
 custom_fonts/font = SubResource( 1 )
 text = "Continue"
 flat = true
-

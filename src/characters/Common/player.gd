@@ -127,6 +127,9 @@ func save():
 		"hasAmulet": hasAmulet,
 		"has_accepted_quest": has_accepted_quest,
 		"has_seen_a_dragon": has_seen_a_dragon,
-		"has_spoken_to_catherine": has_spoken_to_catherine
+		"has_spoken_to_catherine": has_spoken_to_catherine,
+		"speed": speed,
+		"scale_x": get_scale().x,
+		"scale_y": get_scale().y
 	}
 	return save_dict
