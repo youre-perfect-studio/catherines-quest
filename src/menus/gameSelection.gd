@@ -11,3 +11,5 @@ func new_game():
 	
 func continue_game():
 	print("continue")
+	SaveFunctions.set_continuing()
+	get_tree().change_scene("res://screens/Episode1.tscn")

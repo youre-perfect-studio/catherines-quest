@@ -3,6 +3,7 @@ extends Node
 func _ready():
 	TranslationServer.set_locale("en_US")
 	call_deferred("spawn_players")
+	load_game()
 
 func spawn_players():
 	#This should only happe when running single-scene debugging
