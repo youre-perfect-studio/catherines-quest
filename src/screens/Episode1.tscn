@@ -8,9 +8,9 @@
 [ext_resource path="res://items/bridge.tscn" type="PackedScene" id=6]
 [ext_resource path="res://characters/Common/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://characters/Common/NPC.tscn" type="PackedScene" id=8]
-[ext_resource path="res://items/sword_dropped.png" type="Texture" id=9]
-[ext_resource path="res://enemies/dragon.tscn" type="PackedScene" id=10]
-[ext_resource path="res://items/amulet.tscn" type="PackedScene" id=11]
+[ext_resource path="res://enemies/dragon.tscn" type="PackedScene" id=9]
+[ext_resource path="res://items/amulet.tscn" type="PackedScene" id=10]
+[ext_resource path="res://items/swordDrop.tscn" type="PackedScene" id=11]
 [ext_resource path="res://items/magnet.tscn" type="PackedScene" id=12]
 [ext_resource path="res://items/bait.tscn" type="PackedScene" id=13]
 [ext_resource path="res://characters/Catherine/Catherine.tscn" type="PackedScene" id=14]
@@ -66,19 +66,17 @@ position = Vector2( 1727.89, 721.937 )
 scale = Vector2( 0.5, 0.5 )
 z_index = -1
 
-[node name="SwordPlaceholder" type="Sprite" parent="."]
-position = Vector2( 1301.32, 883.388 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 9 )
-
-[node name="dragon" parent="." instance=ExtResource( 10 )]
+[node name="dragon" parent="." instance=ExtResource( 9 )]
 position = Vector2( 334.818, 1773.67 )
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
 subType = "dragon"
 
-[node name="amulet" parent="." instance=ExtResource( 11 )]
+[node name="amulet" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1560.93, 288.127 )
+
+[node name="sword" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1055.82, 833.751 )
 
 [node name="magnet" parent="." instance=ExtResource( 12 )]
 position = Vector2( 1215.32, 490.768 )

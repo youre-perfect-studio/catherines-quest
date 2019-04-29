@@ -22,7 +22,7 @@ func _physics_process(delta):
 		else:
 			self.set_applied_force(Vector2.ZERO)
 			set_mode(1)
-			set_sleeping(true)
-			set_sleeping(false)
+			
 	else:
-		pass
+		set_mode(1)
+		

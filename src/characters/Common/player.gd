@@ -61,7 +61,10 @@ func controlLoop():
 			"none":
 				for area in $DamageArea.get_overlapping_areas():
 					if area.get_parent().get("type") == "item" && area.name == "hitbox":
-						$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + ".png")
+						if area.get_parent().name == "sword":
+							$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + "Drop.png")
+						else:
+							$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + ".png")
 						$"../cam/useItem".visible = true
 						if area.get_parent().name == "magnet":
 							$"../cam".magnetPickedUp()
@@ -76,7 +79,10 @@ func controlLoop():
 				use_item(preload("res://items/sword.tscn"))
 				
 	if Input.is_action_just_pressed("drop") && useItem != "none":
-		$"../".dropItem(load("res://items/" + useItem + ".tscn"))
+		if useItem == "sword":
+			$"../".dropItem(load("res://items/" + useItem + "Drop.tscn"))
+		else:
+			$"../".dropItem(load("res://items/" + useItem + ".tscn"))
 		var drop = get_node("../" + useItem)
 		drop.position = get_node("../player").global_position - get_node("../player/followerSpace").position
 		useItem = "none"
