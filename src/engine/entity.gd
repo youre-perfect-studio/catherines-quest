@@ -60,7 +60,8 @@ func damageLoop():
 	if health <= 0:
 		if type == "player":
 			if is_alive:
-				$"../UI/RestartMenu".popup()
+				get_tree().paused = true
+				$"../UI/RestartMenu".show()
 				is_alive = false
 			
 		if visible == true: #this was done for player to prevent crashing, anything else can be queue_free()

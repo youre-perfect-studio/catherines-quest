@@ -10,38 +10,29 @@ font_data = ExtResource( 3 )
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 3 )
 
-[node name="SaveMenu" type="PopupMenu"]
-margin_left = 465.634
-margin_top = 373.656
-margin_right = 1518.63
-margin_bottom = 803.656
+[node name="SaveMenu" type="Control"]
+margin_left = -558.0
+margin_top = -218.0
+margin_right = 585.0
+margin_bottom = 188.0
+rect_pivot_offset = Vector2( 558.166, 219.171 )
+focus_mode = 2
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 574.166, 202.24 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
-[node name="Save" type="Button" parent="."]
-margin_left = 18.2916
-margin_top = 132.624
-margin_right = 566.292
-margin_bottom = 163.624
-focus_neighbour_top = NodePath("../Close")
-focus_neighbour_bottom = NodePath("../Respawn")
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color_hover = Color( 1, 0.631373, 0, 1 )
-text = "Save"
-flat = true
-
 [node name="Respawn" type="Button" parent="."]
-margin_left = 14.7188
-margin_top = 195.15
-margin_right = 562.719
-margin_bottom = 226.15
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -274.0
+margin_top = -15.5
+margin_right = 274.0
+margin_bottom = 15.5
 focus_neighbour_top = NodePath("../Save")
 focus_neighbour_bottom = NodePath("../Close")
 custom_fonts/font = SubResource( 1 )
@@ -59,3 +50,23 @@ focus_neighbour_bottom = NodePath("../Save")
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_hover = Color( 1, 0.631373, 0, 1 )
 text = "Close"
+
+[node name="Save" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -275.869
+margin_top = -69.7039
+margin_right = 272.131
+margin_bottom = -38.7039
+focus_neighbour_top = NodePath("../Close")
+focus_neighbour_bottom = NodePath("../Respawn")
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_hover = Color( 1, 0.631373, 0, 1 )
+text = "Save"
+flat = true
+
+[node name="ItemList" type="ItemList" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0

@@ -19,9 +19,11 @@ func area_exited(area):
 	
 
 func open_menu():
-		$"../UI/SaveMenu".popup()
+		$"../UI/SaveMenu".show()
+		get_tree().paused = true
 		print("opening menu")
 	
 func close_menu():
 		$"../UI/SaveMenu".close()
+		get_tree().paused = false
 		print("closing menu")

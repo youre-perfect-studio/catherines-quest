@@ -6,8 +6,8 @@ signal open_menu
 var state = "default"
 var useItem = "none"
 export var base_health = 2
-var respawn_point_x = 0
-var respawn_point_y = 0
+var respawn_point_x = 1200
+var respawn_point_y = 800
 var is_close_to_sign = false
 
 var has_spoken_to_catherine:bool = false
