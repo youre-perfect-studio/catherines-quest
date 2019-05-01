@@ -12,7 +12,8 @@ func spawn_players():
 	#TODO when character selection works
 	#for player in Globals.Players:
 	#	$"/root/Episode1".add_child(player)
-	$player.show_opening_dialog()
+	if $player.respawn_count == 0:
+		$player.show_opening_dialog()
 	
 func load_game():
 	if SaveFunctions.continuing == true:
