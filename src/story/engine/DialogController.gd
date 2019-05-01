@@ -7,6 +7,7 @@ enum Position {
 	Middle = 2,
 }
 
+onready var next_close = $"./Container/CloseButton"
 onready var charlist = CharactersList.new().characters
 var players = []
 
@@ -83,7 +84,8 @@ func set_text( text:String ):
 	$Container/DialogText.text = text
 
 func _on_close_button_pressed():
-	hide_workaround()
+	pass
+	#hide_workaround()
 
 # see https://github.com/godotengine/godot/issues/16532
 func show_workaround():
