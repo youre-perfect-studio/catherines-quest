@@ -1,7 +1,8 @@
 extends Node
 	
-var type = null
-const damage = 1	
+const damage = 1
+
+var type = "item"
 
 var max_amount = 1
 

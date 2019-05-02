@@ -3,6 +3,10 @@ class_name Player
 
 signal open_menu
 
+###########Temporary variable#######
+export var buttonPickup = false
+########### To use set true in inspector ##########
+
 var state = "default"
 var useItem = "none"
 export var base_health = 2
@@ -21,8 +25,9 @@ onready var dialog_controller_node = $"../DialogController"
 
 func _ready():
 	assert(catherine_node != null)
-#	$DamageArea.connect("area_entered", self, "onAreaEntered")
-#	$DamageArea.connect("area_exited", self, "onAreaExited")
+	if buttonPickup == false:
+		$DamageArea.connect("area_entered", self, "onAreaEntered")
+		#$DamageArea.connect("area_exited", self, "onAreaExited")
 	
 func _physics_process(delta):
 	match state:
@@ -56,33 +61,38 @@ func controlLoop():
 		# if player close to the sign and attack pressed then open the menu
 		if is_close_to_sign:
 			emit_signal("open_menu")
-			
-		match useItem:
+		
+	if Input.is_action_just_pressed("attack"):
+		if buttonPickup == true:
+			match useItem:
 
-			"none":
-				for area in $DamageArea.get_overlapping_areas():
-					if area.get_parent().get("type") == "item" && area.name == "hitbox":
-						if area.get_parent().name == "sword":
-							$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + "Drop.png")
+				"none":
+					for area in $DamageArea.get_overlapping_areas():
+						if area.get_parent().get("type") == "item" && area.name == "hitbox":
+							if area.get_parent().name == "sword":
+								$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + "Drop.png")
+							else:
+								$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + ".png")
+							$"../cam/useItem".visible = true
+							if area.get_parent().name == "magnet":
+								$"../cam".magnetPickedUp()
+							elif area.get_parent().name == "amulet":
+								hasAmulet = true
+							useItem = area.get_parent().name
+							area.get_parent().queue_free()
+							print(useItem)
 						else:
-							$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + ".png")
-						$"../cam/useItem".visible = true
-						if area.get_parent().name == "magnet":
-							$"../cam".magnetPickedUp()
-						elif area.get_parent().name == "amulet":
-							hasAmulet = true
-						area.get_parent().queue_free()
-						useItem = area.get_parent().name
-					else:
-						pass
+							pass
 
-			"sword":
-				use_item(preload("res://items/sword.tscn"))
+				"sword":
+					use_item(preload("res://items/sword.tscn"))
 				
 	if Input.is_action_just_pressed("drop") && useItem != "none":
 		if useItem == "sword":
 			$"../".dropItem(load("res://items/" + useItem + "Drop.tscn"))
 		else:
+			if useItem == "amulet":
+				hasAmulet = false
 			$"../".dropItem(load("res://items/" + useItem + ".tscn"))
 		var drop = get_node("../" + useItem)
 		drop.position = get_node("../player").global_position - get_node("../player/followerSpace").position
@@ -163,3 +173,24 @@ func save():
 		"type": type
 	}
 	return save_dict
+	
+func onAreaEntered(area):
+	match useItem:
+
+		"none":
+			#for area in $DamageArea.get_overlapping_areas():
+				if area.get_parent().get("type") == "item" && area.name == "hitbox":
+					if area.get_parent().name == "sword":
+						$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + "Drop.png")
+					else:
+						$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + ".png")
+					$"../cam/useItem".visible = true
+					if area.get_parent().name == "magnet":
+							$"../cam".magnetPickedUp()
+					elif area.get_parent().name == "amulet":
+						hasAmulet = true
+					area.get_parent().queue_free()
+					useItem = area.get_parent().name
+					print(useItem)
+				else:
+					pass
