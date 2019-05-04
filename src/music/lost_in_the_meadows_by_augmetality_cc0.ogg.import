@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/lost_in_the_meadows_by_augmetality_cc0.ogg-7f9426ea842934ee94d982a62de1fad0.oggstr"
+
+[deps]
+
+source_file="res://music/lost_in_the_meadows_by_augmetality_cc0.ogg"
+dest_files=[ "res://.import/lost_in_the_meadows_by_augmetality_cc0.ogg-7f9426ea842934ee94d982a62de1fad0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

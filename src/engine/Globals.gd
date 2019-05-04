@@ -5,3 +5,8 @@ project root folder for more information.
 """
 extends Node
 var Players = []
+var MusicPlayer:AudioStreamPlayer
+
+func _ready():
+	MusicPlayer = AudioStreamPlayer.new()
+	$"/root".call_deferred("add_child",MusicPlayer)

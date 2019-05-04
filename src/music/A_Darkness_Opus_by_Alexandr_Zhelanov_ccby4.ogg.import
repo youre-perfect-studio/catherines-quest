@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/A_Darkness_Opus_by_Alexandr_Zhelanov_ccby4.ogg-5aeab54b8707aa0e24b6a40a1fa59fa3.oggstr"
+
+[deps]
+
+source_file="res://music/A_Darkness_Opus_by_Alexandr_Zhelanov_ccby4.ogg"
+dest_files=[ "res://.import/A_Darkness_Opus_by_Alexandr_Zhelanov_ccby4.ogg-5aeab54b8707aa0e24b6a40a1fa59fa3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

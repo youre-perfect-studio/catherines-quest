@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/life_in_corrupted_binary_by_haeldb_cc0.ogg-f4c25175333c8c8c8f9714af49cb4a6b.oggstr"
+
+[deps]
+
+source_file="res://music/life_in_corrupted_binary_by_haeldb_cc0.ogg"
+dest_files=[ "res://.import/life_in_corrupted_binary_by_haeldb_cc0.ogg-f4c25175333c8c8c8f9714af49cb4a6b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

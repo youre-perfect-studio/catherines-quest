@@ -6,6 +6,8 @@ project root folder for more information.
 extends Node2D
 
 func _ready():
+	Globals.MusicPlayer.stream = load("res://music/life_in_corrupted_binary_by_haeldb_cc0.ogg")
+	Globals.MusicPlayer.play()
 	$Anim.play("animateText")
 	$Button.connect("pressed", self, "start_game")
 	

@@ -16,6 +16,8 @@ func spawn_players():
 		Globals.Players.append(CharactersList.new().characters["Robin"].character_scene.instance())
 	elif $player.respawn_count == 0:
 		$player.show_opening_dialog()
+		Globals.MusicPlayer.stream = load("res://music/lost_in_the_meadows_by_augmetality_cc0.ogg")
+		Globals.MusicPlayer.play()
 
 	#TODO when character selection works
 	#for player in Globals.Players:
