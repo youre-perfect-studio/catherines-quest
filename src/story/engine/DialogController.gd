@@ -1,3 +1,8 @@
+"""
+Copyright(C) 2019 You're Perfect LLC, All Rights Reserved
+Licensed under the MIT license, see LICENSE file in the
+project root folder for more information.
+"""
 extends CanvasLayer
 class_name DialogController
 
@@ -31,6 +36,7 @@ func play_phrase(phrase:DialogPhrase):
 """
 Play an array of phrases and close dialog at the end. This will trigger audio
 and play messages at the set speed, allowing the user to skip the messages.
+Will also set player portrait and expressions
 """
 func play_phrases(phrases:Array):
 	for i in range(phrases.size()):
