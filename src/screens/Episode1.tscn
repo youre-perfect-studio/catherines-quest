@@ -114,6 +114,7 @@ position = Vector2( 882.867, 491.538 )
 position = Vector2( 1727.89, 721.937 )
 scale = Vector2( 0.5, 0.5 )
 z_index = -1
+follow_player = true
 
 [node name="dragon" parent="." instance=ExtResource( 17 )]
 position = Vector2( 334.818, 1773.67 )
