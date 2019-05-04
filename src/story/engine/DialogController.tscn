@@ -53,5 +53,7 @@ margin_left = 1448.4
 margin_top = 786.67
 margin_right = 1595.4
 margin_bottom = 872.67
-text = "Close"
-[connection signal="pressed" from="Container/CloseButton" to="." method="_on_close_button_pressed"]
+text = "Next"
+
+[node name="AudioPlayer" type="AudioStreamPlayer" parent="Container"]
+[connection signal="pressed" from="Container/CloseButton" to="." method="on_next_pressed"]

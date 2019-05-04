@@ -139,10 +139,7 @@ func show_opening_dialog():
 	dialog_controller_node.clear()
 	dialog_controller_node.show_workaround()
 	dialog_controller_node.next_close.text = tr("Next")
-	for phrase in openingDialog:
-		dialog_controller_node.play_phrase(phrase)
-		yield(dialog_controller_node.next_close,"pressed")
-	dialog_controller_node.hide_workaround()
+	dialog_controller_node.play_phrases(openingDialog)
 
 
 func set_restore_point():

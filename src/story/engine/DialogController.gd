@@ -8,27 +8,56 @@ enum Position {
 	Middle = 3,
 }
 
+signal next_pressed
+
+export var message_speed = 0.05
 onready var next_close = $"./Container/CloseButton"
 onready var charlist = CharactersList.new().characters
-var players = []
+
+var reading_text:bool = false
+var target_text:String = ""
+
 
 """
-Typical method for presenting a single phrase of dialog. This will set the portrait,
+Mid-level function for presenting a single phrase of dialog. This will set the portrait,
 expression, position, etc. defined by the given phrase object and will attempt to
 load appropriate matching audio.
 """
 func play_phrase(phrase:DialogPhrase):
 	set_portait(phrase.position, phrase.character, phrase.expression)
 	set_speaker(phrase.character)
-	set_text(phrase.get_text())
-	var audio:AudioStream = phrase.get_audio()
-	if audio != null:
-		#TODO
-		pass
+	read_text(phrase.get_text(), phrase.get_audio())
 
+"""
+Play an array of phrases and close dialog at the end. This will trigger audio
+and play messages at the set speed, allowing the user to skip the messages.
+"""
 func play_phrases(phrases:Array):
-	for phrase in phrases:
-		play_phrase(phrase)
+	for i in range(phrases.size()):
+		play_phrase(phrases[i])
+		yield(self,"next_pressed")
+		if i == phrases.size() - 1:
+			hide_workaround()
+
+
+func read_text( text:String, audio:AudioStream ):
+	set_text("")
+	target_text = text
+	reading_text = true
+	for i in range(text.length()):
+		if reading_text:
+			set_text(get_text()+text[i])
+			yield(get_tree().create_timer(message_speed),"timeout")
+	reading_text = false
+
+
+func on_next_pressed():
+	if reading_text:
+		set_text(target_text)
+		reading_text = false
+	else:
+		$Container/AudioPlayer.stop()
+		emit_signal("next_pressed")
 
 """
 Convenience function for showing a character portrait at the given posittion. 
@@ -95,12 +124,11 @@ func set_middle_portrait( portrait:Texture ):
 func set_speaker( name:String ):
 	$Container/Speaker.text = name
 
+func get_text() -> String:
+	return $Container/DialogText.text
+
 func set_text( text:String ):
 	$Container/DialogText.text = text
-
-func _on_close_button_pressed():
-	pass
-	#hide_workaround()
 
 # see https://github.com/godotengine/godot/issues/16532
 func show_workaround():
