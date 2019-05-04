@@ -14,13 +14,13 @@ func _init( grouping:String, number:int, character:String, expression:String, po
 	self.expression = expression
 	self.position = position
 
-func get_index() -> String:
+func get_index_name() -> String:
 	assert(number > 0)
 	assert(not grouping.empty())
 	return grouping+"_"+str(number)
 
 func get_text() -> String:
-	return tr(get_index())
+	return tr(get_index_name())
 
 func get_audio() -> AudioStream:
 	#TODO

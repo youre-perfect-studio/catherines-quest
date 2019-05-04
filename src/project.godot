@@ -29,6 +29,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://story/engine/DialogPhrase.gd"
 }, {
+"base": "Object",
+"class": "DialogSequencer",
+"language": "GDScript",
+"path": "res://story/engine/DialogSequencer.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
@@ -39,6 +44,7 @@ _global_script_class_icons={
 "CharactersList": "",
 "DialogController": "",
 "DialogPhrase": "",
+"DialogSequencer": "",
 "Player": ""
 }
 

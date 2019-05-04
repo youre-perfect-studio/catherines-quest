@@ -7,6 +7,7 @@ signal open_menu
 export var buttonPickup = false
 ########### To use set true in inspector ##########
 
+var character_info:Character = null
 var state = "default"
 var useItem = "none"
 export var base_health = 2
@@ -133,11 +134,7 @@ func talk_to_npc( npc_name:String ):
 
 func show_opening_dialog():
 	#Currently assuming Robin as character
-	var openingDialog = []
-	openingDialog.append(DialogPhrase.new("ROBIN_INTRO", 1, "Robin", "default", dialog_controller_node.Position.Left))
-	openingDialog.append(DialogPhrase.new("ROBIN_INTRO", 2, "Robin", "default", dialog_controller_node.Position.Left))
-	openingDialog.append(DialogPhrase.new("ROBIN_INTRO", 3, "Robin", "default", dialog_controller_node.Position.Left))
-	openingDialog.append(DialogPhrase.new("ROBIN_INTRO", 4, "Robin", "default", dialog_controller_node.Position.Left))
+	var openingDialog = DialogSequencer.generate_sequence("ROBIN_INTRO", 1, 4, "Robin", "default", dialog_controller_node.Position.Left)
 	
 	dialog_controller_node.clear()
 	dialog_controller_node.show_workaround()
