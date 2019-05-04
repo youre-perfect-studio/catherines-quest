@@ -9,11 +9,12 @@ func spawn_players():
 	#This should only happe when running single-scene debugging
 	if Globals.Players.size() == 0:
 		Globals.Players.append(CharactersList.new().characters["Robin"].character_scene.instance())
+	elif $player.respawn_count == 0:
+		$player.show_opening_dialog()
+
 	#TODO when character selection works
 	#for player in Globals.Players:
 	#	$"/root/Episode1".add_child(player)
-	if $player.respawn_count == 0:
-		$player.show_opening_dialog()
 	
 func load_game():
 	if SaveFunctions.continuing == true:
