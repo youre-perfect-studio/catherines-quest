@@ -132,21 +132,22 @@ func talk_to_npc( npc_name:String ):
 			pass
 
 func show_opening_dialog():
-	dialog_controller_node.clear()
-	dialog_controller_node.set_portait(0, "Robin", "default")
-	dialog_controller_node.set_text(tr("ROBIN_INTRO_1"))
-	dialog_controller_node.next_close.text = tr("Next")
-	dialog_controller_node.show_workaround()
-	yield(dialog_controller_node.next_close,"pressed")
-	dialog_controller_node.set_text(tr("ROBIN_INTRO_2"))
-	yield(dialog_controller_node.next_close,"pressed")
-	dialog_controller_node.set_text(tr("ROBIN_INTRO_3"))
-	yield(dialog_controller_node.next_close,"pressed")
-	dialog_controller_node.set_text(tr("ROBIN_INTRO_4"))
-	dialog_controller_node.next_close.text = tr("Next")
-	yield(dialog_controller_node.next_close,"pressed")
-	dialog_controller_node.hide_workaround()
+	#Currently assuming Robin as character
+	var openingDialog = []
+	openingDialog.append(DialogPhrase.new("ROBIN_INTRO", 1, "Robin", "default", dialog_controller_node.Position.Left))
+	openingDialog.append(DialogPhrase.new("ROBIN_INTRO", 2, "Robin", "default", dialog_controller_node.Position.Left))
+	openingDialog.append(DialogPhrase.new("ROBIN_INTRO", 3, "Robin", "default", dialog_controller_node.Position.Left))
+	openingDialog.append(DialogPhrase.new("ROBIN_INTRO", 4, "Robin", "default", dialog_controller_node.Position.Left))
 	
+	dialog_controller_node.clear()
+	dialog_controller_node.show_workaround()
+	dialog_controller_node.next_close.text = tr("Next")
+	for phrase in openingDialog:
+		dialog_controller_node.play_phrase(phrase)
+		yield(dialog_controller_node.next_close,"pressed")
+	dialog_controller_node.hide_workaround()
+
+
 func set_restore_point():
 	respawn_point_x = position.x
 	respawn_point_y = position.y

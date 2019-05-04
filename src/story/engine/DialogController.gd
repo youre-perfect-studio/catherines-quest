@@ -2,14 +2,33 @@ extends CanvasLayer
 class_name DialogController
 
 enum Position {
-	Left = 0,
-	Right = 1,
-	Middle = 2,
+	None = 0,
+	Left = 1,
+	Right = 2,
+	Middle = 3,
 }
 
 onready var next_close = $"./Container/CloseButton"
 onready var charlist = CharactersList.new().characters
 var players = []
+
+"""
+Typical method for presenting a single phrase of dialog. This will set the portrait,
+expression, position, etc. defined by the given phrase object and will attempt to
+load appropriate matching audio.
+"""
+func play_phrase(phrase:DialogPhrase):
+	set_portait(phrase.position, phrase.character, phrase.expression)
+	set_speaker(phrase.character)
+	set_text(phrase.get_text())
+	var audio:AudioStream = phrase.get_audio()
+	if audio != null:
+		#TODO
+		pass
+
+func play_phrases(phrases:Array):
+	for phrase in phrases:
+		play_phrase(phrase)
 
 """
 Convenience function for showing a character portrait at the given posittion. 
@@ -42,7 +61,6 @@ func read_verbatim_text( text:String, character_name:String, portrait_position, 
 			set_middle_portrait(portrait)
 			
 	set_text(text)
-	show_workaround()
 
 func clear():
 	set_left_portrait(null)
@@ -64,9 +82,6 @@ func set_portait( position, character:String, expression:String):
 			set_right_portrait(portrait)
 		Position.Middle:
 			set_middle_portrait(portrait)
-		
-	
-		
 
 func set_left_portrait( portrait:Texture ):
 	$Container/LeftPortrait.texture = portrait
