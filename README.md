@@ -9,7 +9,7 @@ Action/RPG from You're Perfect Studio. We plan to release the game across
 several "Episodes", each expanding the world and adding new player
 characters, quests, items, and enemies.
 
-You're Perfect Studio is worldwide team of artists and developers working
+You're Perfect Studio is a [worldwide team of artists and developers](https://gitlab.com/youreperfectstudio/catherines-quest/blob/master/CONTRIBUTORS.md) working
 together across multiple projects.
 
 * Help support this game's development: https://www.patreon.com/YourePerfect
