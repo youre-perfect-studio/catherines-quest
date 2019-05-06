@@ -29,6 +29,7 @@ expression, position, etc. defined by the given phrase object and will attempt t
 load appropriate matching audio.
 """
 func play_phrase(phrase:DialogPhrase):
+	$Container/CloseButton.show()
 	set_portait(phrase.position, phrase.character, phrase.expression)
 	set_speaker(phrase.character)
 	read_text(phrase.get_text(), phrase.get_audio())
@@ -58,14 +59,19 @@ func read_text( text:String, audio:AudioStream ):
 			set_text(get_text()+text[i])
 			yield(get_tree().create_timer(message_speed),"timeout")
 	reading_text = false
+	#TODO audio
 
 
 func offer_choice( choices:Array ):
+	#$Container/CloseButton.hide()
 	while reading_text:
 		yield(get_tree(), "idle_frame")
-	for choice in choices:
-		assert(choice is DialogChoice)
-		set_text(get_text()+"\n\t\t"+choice.label)
+	for i in range(choices.size()):
+		assert(choices[i] is DialogChoice)
+		if i == 0:
+			set_text(get_text()+"\n\t>\t"+choices[i].label)
+		else:
+			set_text(get_text()+"\n\t\t"+choices[i].label)
 		#TODO
 
 
