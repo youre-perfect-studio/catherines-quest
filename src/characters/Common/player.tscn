@@ -321,3 +321,7 @@ anims/down = SubResource( 16 )
 anims/left = SubResource( 17 )
 anims/right = SubResource( 18 )
 anims/up = SubResource( 19 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 180.0
+one_shot = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://screens/Episode1.gd" type="Script" id=1]
 [ext_resource path="res://screens/img/yellow castle2.png" type="Texture" id=2]
@@ -14,27 +14,26 @@
 [ext_resource path="res://screens/img/road_right_4k.png" type="Texture" id=12]
 [ext_resource path="res://engine/cam.tscn" type="PackedScene" id=13]
 [ext_resource path="res://screens/img/yellow castle.png" type="Texture" id=14]
-[ext_resource path="res://items/bridge.tscn" type="PackedScene" id=15]
-[ext_resource path="res://characters/Common/NPC.tscn" type="PackedScene" id=16]
-[ext_resource path="res://enemies/dragon.tscn" type="PackedScene" id=17]
-[ext_resource path="res://items/amulet.tscn" type="PackedScene" id=18]
-[ext_resource path="res://items/swordDrop.tscn" type="PackedScene" id=19]
-[ext_resource path="res://items/magnet.tscn" type="PackedScene" id=20]
-[ext_resource path="res://items/bait.tscn" type="PackedScene" id=21]
-[ext_resource path="res://characters/Catherine/Catherine.tscn" type="PackedScene" id=22]
-[ext_resource path="res://items/Sign.tscn" type="PackedScene" id=23]
-[ext_resource path="res://story/engine/DialogController.tscn" type="PackedScene" id=24]
-[ext_resource path="res://screens/yellowCastleOverlay.tscn" type="PackedScene" id=25]
-[ext_resource path="res://screens/Overlay.gd" type="Script" id=26]
-[ext_resource path="res://menus/SaveMenu.tscn" type="PackedScene" id=27]
-[ext_resource path="res://menus/RestartMenu.tscn" type="PackedScene" id=28]
-[ext_resource path="res://fonts/FifthCenturyCaps.ttf" type="DynamicFontData" id=29]
-[ext_resource path="res://testStuff/tiles/wall.tres" type="TileSet" id=30]
-[ext_resource path="res://characters/Common/player.tscn" type="PackedScene" id=31]
+[ext_resource path="res://characters/Common/NPC.tscn" type="PackedScene" id=15]
+[ext_resource path="res://enemies/dragon.tscn" type="PackedScene" id=16]
+[ext_resource path="res://items/amulet.tscn" type="PackedScene" id=17]
+[ext_resource path="res://items/swordDrop.tscn" type="PackedScene" id=18]
+[ext_resource path="res://items/magnet.tscn" type="PackedScene" id=19]
+[ext_resource path="res://items/bait.tscn" type="PackedScene" id=20]
+[ext_resource path="res://characters/Catherine/Catherine.tscn" type="PackedScene" id=21]
+[ext_resource path="res://items/Sign.tscn" type="PackedScene" id=22]
+[ext_resource path="res://story/engine/DialogController.tscn" type="PackedScene" id=23]
+[ext_resource path="res://screens/yellowCastleOverlay.tscn" type="PackedScene" id=24]
+[ext_resource path="res://screens/Overlay.gd" type="Script" id=25]
+[ext_resource path="res://menus/SaveMenu.tscn" type="PackedScene" id=26]
+[ext_resource path="res://menus/RestartMenu.tscn" type="PackedScene" id=27]
+[ext_resource path="res://fonts/FifthCenturyCaps.ttf" type="DynamicFontData" id=28]
+[ext_resource path="res://testStuff/tiles/wall.tres" type="TileSet" id=29]
+[ext_resource path="res://characters/Common/player.tscn" type="PackedScene" id=30]
 
 [sub_resource type="DynamicFont" id=1]
 size = 45
-font_data = ExtResource( 29 )
+font_data = ExtResource( 28 )
 
 [node name="Episode1" type="Node"]
 pause_mode = 1
@@ -107,59 +106,54 @@ __meta__ = {
 position = Vector2( 961.478, 540.454 )
 texture = ExtResource( 14 )
 
-[node name="bridge" parent="." instance=ExtResource( 15 )]
-position = Vector2( 882.867, 491.538 )
-
-[node name="NPC" parent="." instance=ExtResource( 16 )]
+[node name="NPC" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1727.89, 721.937 )
 scale = Vector2( 0.5, 0.5 )
 z_index = -1
-follow_player = true
 
-[node name="dragon" parent="." instance=ExtResource( 17 )]
+[node name="dragon" parent="." instance=ExtResource( 16 )]
 position = Vector2( 334.818, 1773.67 )
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
 subType = "dragon"
 
-[node name="amulet" parent="." instance=ExtResource( 18 )]
+[node name="amulet" parent="." instance=ExtResource( 17 )]
 position = Vector2( 1560.93, 288.127 )
 
-[node name="sword" parent="." instance=ExtResource( 19 )]
+[node name="sword" parent="." instance=ExtResource( 18 )]
 position = Vector2( 1055.82, 833.751 )
 
-[node name="magnet" parent="." instance=ExtResource( 20 )]
+[node name="magnet" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1215.32, 490.768 )
 
-[node name="bait" parent="." instance=ExtResource( 21 )]
+[node name="bait" parent="." instance=ExtResource( 20 )]
 position = Vector2( 682.364, 661.686 )
 
-[node name="Catherine" parent="." instance=ExtResource( 22 )]
+[node name="Catherine" parent="." instance=ExtResource( 21 )]
 position = Vector2( 351.831, 855.344 )
 scale = Vector2( 0.5, 0.5 )
 type = "NPC"
 
-[node name="Sign" parent="." instance=ExtResource( 23 )]
+[node name="Sign" parent="." instance=ExtResource( 22 )]
 position = Vector2( 328.416, 457.432 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="DialogController" parent="." instance=ExtResource( 24 )]
+[node name="DialogController" parent="." instance=ExtResource( 23 )]
 
-[node name="yellow castle overlay" parent="." instance=ExtResource( 25 )]
-script = ExtResource( 26 )
+[node name="yellow castle overlay" parent="." instance=ExtResource( 24 )]
+script = ExtResource( 25 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 pause_mode = 2
-editor/display_folded = true
 
-[node name="SaveMenu" parent="UI" instance=ExtResource( 27 )]
+[node name="SaveMenu" parent="UI" instance=ExtResource( 26 )]
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 
-[node name="RestartMenu" parent="UI" instance=ExtResource( 28 )]
+[node name="RestartMenu" parent="UI" instance=ExtResource( 27 )]
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -180,13 +174,13 @@ custom_fonts/font = SubResource( 1 )
 [node name="StatusTimer" type="Timer" parent="UI"]
 one_shot = true
 
-[node name="Sign2" parent="." instance=ExtResource( 23 )]
+[node name="Sign2" parent="." instance=ExtResource( 22 )]
 position = Vector2( 1672.38, 3014.82 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="TileMap" type="TileMap" parent="."]
 visible = false
-tile_set = ExtResource( 30 )
+tile_set = ExtResource( 29 )
 cell_size = Vector2( 16, 16 )
 collision_mask = 7
 format = 1
@@ -194,7 +188,7 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 
 [node name="player" parent="." groups=[
 "Persist",
-] instance=ExtResource( 31 )]
+] instance=ExtResource( 30 )]
 position = Vector2( 1502.07, 667.411 )
 scale = Vector2( 0.5, 0.5 )
 speed = 300

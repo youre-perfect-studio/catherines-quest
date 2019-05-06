@@ -15,6 +15,7 @@ script = ExtResource( 1 )
 position = Vector2( 1801.65, 955.031 )
 
 [node name="area" type="Area2D" parent="."]
+visible = false
 collision_layer = 15
 collision_mask = 0
 

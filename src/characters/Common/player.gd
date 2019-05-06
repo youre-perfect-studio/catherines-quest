@@ -69,10 +69,10 @@ func controlLoop():
 			emit_signal("open_menu")
 		
 	if Input.is_action_just_pressed("attack"):
-		if buttonPickup == true:
-			match useItem:
+		match useItem:
 
-				"none":
+			"none":
+				if buttonPickup == true:
 					for area in $DamageArea.get_overlapping_areas():
 						if area.get_parent().get("type") == "item" && area.name == "hitbox":
 							if area.get_parent().name == "sword":
@@ -80,9 +80,9 @@ func controlLoop():
 							else:
 								$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + ".png")
 							$"../cam/useItem".visible = true
-							if area.get_parent().name == "magnet":
-								$"../cam".magnetPickedUp()
-							elif area.get_parent().name == "amulet":
+#							if area.get_parent().name == "magnet":
+#								$"../cam".magnetPickedUp() #idea to allow dropped items to have magnetism, still going to work with it later
+							if area.get_parent().name == "amulet":
 								hasAmulet = true
 							useItem = area.get_parent().name
 							area.get_parent().queue_free()
@@ -90,20 +90,36 @@ func controlLoop():
 						else:
 							pass
 
-				"sword":
-					use_item(preload("res://items/sword.tscn"))
+			"sword":
+				use_item(preload("res://items/sword.tscn"))
 				
-	if Input.is_action_just_pressed("drop") && useItem != "none":
+			"bridge":
+				$"../".dropItem(load("res://items/" + useItem + ".tscn"))
+				var drop = get_node("../" + useItem)
+				drop.position = get_node("../player").global_position - movedir
+				useItem = "none"
+				$"../cam/useItem".visible = false
+				
+			"bait":
+				$"../".dropItem(load("res://items/" + useItem + ".tscn"))
+				var drop = get_node("../" + useItem)
+				drop.position = get_node("../player").global_position - get_node("../player/followerSpace").position * 2
+				useItem = "none"
+				$"../cam/useItem".visible = false
+				
+	if Input.is_action_just_pressed("poop") && useItem != "none":
 		if useItem == "sword":
 			$"../".dropItem(load("res://items/" + useItem + "Drop.tscn"))
 		else:
 			if useItem == "amulet":
 				hasAmulet = false
 			$"../".dropItem(load("res://items/" + useItem + ".tscn"))
-		var drop = get_node("../" + useItem)
-		drop.position = get_node("../player").global_position - get_node("../player/followerSpace").position
+		var poop = get_node("../" + useItem)
+		poop.position = get_node("../player").global_position + get_node("../player/followerSpace").position
+		get_node("../" + useItem).dropped = true  
 		useItem = "none"
 		$"../cam/useItem".visible = false
+		
 	
 func state_default():
 	controlLoop()
@@ -155,7 +171,7 @@ func show_opening_dialog():
 	dialog_controller_node.next_close.text = tr("Next")
 	dialog_controller_node.play_phrases(openingDialog)
 
-
+	
 func set_restore_point():
 	respawn_point_x = position.x
 	respawn_point_y = position.y
@@ -184,22 +200,19 @@ func save():
 	return save_dict
 	
 func onAreaEntered(area):
-	match useItem:
-
-		"none":
-			#for area in $DamageArea.get_overlapping_areas():
-				if area.get_parent().get("type") == "item" && area.name == "hitbox":
-					if area.get_parent().name == "sword":
-						$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + "Drop.png")
-					else:
-						$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + ".png")
-					$"../cam/useItem".visible = true
-					if area.get_parent().name == "magnet":
-							$"../cam".magnetPickedUp()
-					elif area.get_parent().name == "amulet":
-						hasAmulet = true
-					area.get_parent().queue_free()
-					useItem = area.get_parent().name
-					print(useItem)
-				else:
-					pass
+	if useItem == "none":
+		if area.get_parent().get("type") == "item" && area.name == "hitbox" && area.get_parent().dropped == false:
+			if area.get_parent().name == "sword":
+				$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + "Drop.png")
+			else:
+				$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + ".png")
+			$"../cam/useItem".visible = true
+#			if area.get_parent().name == "magnet":
+#					$"../cam".magnetPickedUp()
+			if area.get_parent().name == "amulet":
+				hasAmulet = true
+			area.get_parent().queue_free()
+			useItem = area.get_parent().name
+			print(useItem)
+		else:
+			pass

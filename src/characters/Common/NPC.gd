@@ -5,7 +5,7 @@ project root folder for more information.
 """
 extends "res://engine/entity.gd"
 
-onready var player = get_node("../player/followerSpace")
+onready var player = $"../player/followerSpace"
 export(bool) var follow_player = false
 
 func _ready():
