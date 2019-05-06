@@ -35,6 +35,7 @@ func play_phrase(phrase:DialogPhrase):
 	if phrase.choices.size() > 0:
 		offer_choice(phrase.choices)
 
+
 """
 Play an array of phrases and close dialog at the end. This will trigger audio
 and play messages at the set speed, allowing the user to skip the messages.
@@ -58,10 +59,15 @@ func read_text( text:String, audio:AudioStream ):
 			yield(get_tree().create_timer(message_speed),"timeout")
 	reading_text = false
 
+
 func offer_choice( choices:Array ):
+	while reading_text:
+		yield(get_tree(), "idle_frame")
 	for choice in choices:
-		print(choice.label)
+		assert(choice is DialogChoice)
+		set_text(get_text()+"\n\t\t"+choice.label)
 		#TODO
+
 
 func on_next_pressed():
 	if reading_text:
@@ -70,6 +76,7 @@ func on_next_pressed():
 	else:
 		$Container/AudioPlayer.stop()
 		emit_signal("next_pressed")
+
 
 """
 Convenience function for showing a character portrait at the given posittion. 
@@ -103,11 +110,13 @@ func read_verbatim_text( text:String, character_name:String, portrait_position, 
 			
 	set_text(text)
 
+
 func clear():
 	set_left_portrait(null)
 	set_right_portrait(null)
 	set_speaker("")
 	set_text("")
+
 
 func set_portait( position, character:String, expression:String):
 	assert(position >= 0 and position < 3)
@@ -124,20 +133,26 @@ func set_portait( position, character:String, expression:String):
 		Position.Middle:
 			set_middle_portrait(portrait)
 
+
 func set_left_portrait( portrait:Texture ):
 	$Container/LeftPortrait.texture = portrait
+
 
 func set_right_portrait( portrait:Texture ):
 	$Container/RightPortrait.texture = portrait
 
+
 func set_middle_portrait( portrait:Texture ):
 	$Container/MiddlePortrait.texture = portrait
+
 
 func set_speaker( name:String ):
 	$Container/Speaker.text = name
 
+
 func get_text() -> String:
 	return $Container/DialogText.text
+
 
 func set_text( text:String ):
 	$Container/DialogText.text = text
