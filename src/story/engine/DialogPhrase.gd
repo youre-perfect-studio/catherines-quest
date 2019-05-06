@@ -11,6 +11,7 @@ var number:int
 var character:String
 var expression:String
 var position:int
+var choices:Array
 
 func _init( grouping:String, number:int, character:String, expression:String, position:int ):
 	self.grouping = grouping

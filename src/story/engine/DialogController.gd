@@ -32,6 +32,8 @@ func play_phrase(phrase:DialogPhrase):
 	set_portait(phrase.position, phrase.character, phrase.expression)
 	set_speaker(phrase.character)
 	read_text(phrase.get_text(), phrase.get_audio())
+	if phrase.choices.size() > 0:
+		offer_choice(phrase.choices)
 
 """
 Play an array of phrases and close dialog at the end. This will trigger audio
@@ -56,6 +58,10 @@ func read_text( text:String, audio:AudioStream ):
 			yield(get_tree().create_timer(message_speed),"timeout")
 	reading_text = false
 
+func offer_choice( choices:Array ):
+	for choice in choices:
+		print(choice.label)
+		#TODO
 
 func on_next_pressed():
 	if reading_text:
