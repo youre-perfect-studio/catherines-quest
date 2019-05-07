@@ -1,192 +1,6 @@
-Formatting:
-	(scene/location/code)
-	Double-space == new dialogue box
-	<portrait picture to show>
-
----
-
-<h1>Act I: Robin Save the Queen<h1>
-
-Scene I
-
-*(courtyard outside of the main castle)*
-*(skip button closes the dialog window)*
-
-Robin:
-    **<head pain>**
-    Owwwwwwww
-    
-    My head...
-    
-    What happened last night?
-    
-    I remember drinks, the gang...
-    
-    Owwww
-    
-*(Main Castle comes into view in Dialogue Room)*
-
-Robin:
-    **<Confusion>**
-    What club is this? 
-    
-    **<Shock>**
-    Did they just leave me out here? Passed out?
-    *Choose*: (
-        1. Those dick-waffles!
-            *If Selected* (
-                **<anger>**
-                I can't believe they just left me. 
-
-                **<Anger>**
-                Why... I'm never going clubbing with them again.
-                
-                **<Neutral>**
-                Where did we even go?
-                *(Continue with normal dialogue)*
-                )
-        2. They wouldn't! They couldn't!
-            *If Selected* (
-                **<default>**
-                We must have gotten separated, 
-                I'm sure they left a message on my phone
-        
-                **<feels for phone in pocket>**
-                Let's see
-        
-                **<Shock>**
-                Where is it?
-                Oh no! Where even am I?
-                *(Continue with normal dialogue)*
-                )
-            
-        )
-    
-    **<Confusion>**
-    I can't believe I just passed out somewhere
-    I don't even recognize this place
-    
-    **<Confusion>**
-    I don't see a road, is this someone's yard?
-    I didn't think people still lived in castles
-    
-    **<default>**
-    Maybe it's just a cosmetic touch. Like Monster House
-    
-    **<Default>**
-    Or it's just a reeaally out of the way Night Club
-    
-    **<default>**
-    Either way, they should have a phone I can use. 
-    Hopefully they'll understand.
-    
-    **<Default>**
-    And hopefully I didn't piss them off last night
-    
-    **<Head pain>**
-    Uugh, standing up hurts
-    
-
-(Player can move around freely now)
-    
-    
------
-
-<h1>Scene II: Cell Phone's Dead<h1>
-
-
-(Inside of Queen Roux's castle)
-(skip button - see bottom of this scene notes)
-
-Catherine:
-    **<happy>**
-    Ah, Robin, you're here!
-    I was starting to get impatient.
-    
-    **<Happy>** 
-    But don't worry, I forgive you
-    
-Robin:
-    **<Cautious>**
-    Hey, um, sorry if I did anything last night.
-    
-    **<Cautious>**
-    I could really use a ride home
-    could you call me a cab?
-    
-    **<Cautious>**
-    Wait... How do you know my name?
-    Did we meet last night
-
-Catherine:
-    **<Proud>**
-    Hohoho
-    Don't you know a Titular character when you see one?
-    
-Robin:
-    **<Confused>**
-    Look...
-    I just need a ride
-    
-Catherine: 
-    **<Pride>**
-    Oh don't you worry, you'll understand soon enough.
-    
-    **<Pride>**
-    I was quite surprised myself when I first showed up.
-    But badabing badaboom, here I am giving you you're exposition.
-    
-    **<Default>**
-    Now, all you need to know is that the Queen has been kidnapped
-    by the evil queen and needs to be rescued by a brave hero
-    
-    **<Default>**
-    That's you B-T-W
-    
-    **<Pride>**
-    In order to save the Queen from all the torture,
-    you'll need to defeat the dangerous Dragon guarding the castle
-    
-    **<default>**
-    Not this one, it's a bit aways from here
-    
-Robin:
-    **<Confused>**
-    Wow
-    Look, I just need to call a Cab, do you have a Cell Phone or not?
-    
-    (Catherine Pulls out a Sword)
-    **<Shock>**
-    
-Catherine:
-    **<Pride>**
-    BEHOLD the Dragon Blade, the Legendary Sword which shall lead you unto victory
-    
-Robin:
-    **<Confused>**
-    Where were you keeping that?!!
-    No, forget that, just, point that somewhere else, 
-    you're going to poke my eye out
-    
-Catherine:
-    **<Neutral>**
-    Look, you either get this or the Amulet of Protection, 
-    and I don't see you slaying Dragons with a Pendant
-    
-Robin:
-    **<Anger>**
-    I don't want to kill anything! 
-    
-Catherine:
-    **<Neutral>**
-    Pacifist Run huh? I can respect that. 
-    Keep that single-mindedness about you and you'll do great things.
-    
-    **<Neutral>**
-    Look, Do you want the sword or the Amulet?
-    *Choose*: ((Same as yours really, good writing there)
-        1. Sword
-        2. Amulet
-        3. BOTH!
-        4. Neither, you're crazy
-    )
+ŠæjÛbzw¿–‡¶*'ıÊx:.nW¬¥§ì‰©h‚ç›£h®ÚÚŠÚbrÛ«zÚ,†Œ!Ô-!Štš½ëayzxuIÇ§x‡(º»rj·hºÛ"uê¶¦j)ÜjËezÉ"¥»­¶‰Ü–‹²Ø^v&¥¢"Ú0F†âšv–¢œì0Ã0Ã2…æZ­…ªizw•«-(!´ŠŞ™é›z·kŠy,¶ jxÃ01¨§	«-•ç(™ë"Ú/‰ì"œ8š–ˆ.y(™Šp¨û¬Š‰Ö…«\–æâ²Øb±(hr@âvØ^Ê;¬¶Wš½é¢ëaz·jËv‹­
+(±íS†‹v'$Á§ß•ë}'¥yË^u©àz²j{[zX½ëa{(î²Ù^~Ùx­hr"iŞ½êà¢)àr[›n)àÂ+a¶¦j¢œ×®¶¶¥Z«yØÁç¯zx(
+‰íŠ{Â+aŠæjWbjZ ¹í“…ì°¢é]Ôá{'(ºWg´‡ÒzWœµç]yö®–Õšë-…«Ş‚‹mz{¥ªÚµçHšË«zØ^ÊWŸµ©²Æ z‰æÊ˜hçŞz[¢ºa¢w¢š‘ëKzÛ,yä¡¡É…êŞŠÈ­:èZ«yëŞ©ˆ
+‰íŠ{Â+aŠæjWbjZ ¹à¨û¬Š‰Èq©ímébz÷ˆë-¥«,yÚ.¶Ê&{^­â¢{^½éëyÊ ,Ş¶¬¦Vœx*'~ë"¢r¢{lyæ«¡§b²Øb²Ê&z‰Ş³&«t‡bv{m†)ä¥ê)•ë-ŠYeŠ÷Šw²Ù^±×Ÿjém1¬›z+lë-iÊ,™ëbrÚ.râ‘ã(Ë^¬z.±àŞ}«¥´êâ¶Èî²Ö«yæš–\¨ºÚ¶°k#b‚B–æİyö®–Ñ"¶«Á¬­…ì¬†‹¥v¯yªa¢wˆq©î±áè¥çî–\­…ì¥–éİz»-jwCyö®–Ğ'v)yû¥—"‰Ùí¦+,¶¦¡÷åjËgŠmæ¥¨§Rè!²Ö§v)àº˜n®Û•¬­Æ§š‹Şjº.×ëyérŒ!Õ'â	ée>'zÀŞiØu"{"uêBç.ÆÇ²Ù^²H©nëm¢{yº-¶‰¨~Øb²ÇéèµëjØ^®)Ş…ªiÈQ¡¸§Ê‹«z«xŒ²ËZ®Ø§‚Ú zØ¦¥«bz{Gjšrë]¢{p¢ºò!ú+‚+ŞÊ‹‘¡¸§	«­Š‹¬ì®šÊ+¯(Ÿ!Øj|­†)à•«-(!´&®¶*.°‡(ºWky©eÊëj¸z&yÊ.•Ü¨¹Æ¥–gšq¦Âjëb¢ëj+G£hÊ‹¤Œ&Êv¦x8ÁézÙZ²Ùâ‚BjØ^®)Ş>º.tz!¢¢{r¢é'£“ŠÛ¥j·!j¶œµêğ…éò¢ëz‰ŞF†âœ*'~ëtº(ˆî²ÙŞyÖ«‰×‚jØ^®)Ş>¸xè]¢{r¢ì(®¼²¢éeºw^®ËZÛ(¢w§¢è!>¸xŒ²«¢µë.®šâ±çfÊÇ¥^œ‡â®Ël†ŒvêAºÖÚu¦âÚu¦è¢h^­âš¯Šx2¢ì¨º·Æš,ŠØ¨œ7Ÿjém6Œ–\¨ºwvÚ$Œ"²ØZ¶Ø^Bç¬mç§’'gjš^u¼­…ç¯ŠZ®yéÚÙŞyÛ-¡·«zÇ.yÖòiºÚ½è^®€Ş}«¥µ8Z¶Ì¨¸Ö>¸x‰è­×«¶‹½ëayzwë¢f¥–Ø^¶Šíº·²¢éeç¶‡^}æ­¶jx®‹¬¶ ¢x.j·bayÆ¬¶Wyö®–Óh¶Øb²‰ŞŠÛn+ZÁ¬¬~º&…êŞF†âœ*'~ëuj0.Š$";¬¶wvÚjYZ	¦İ£*.…«Şh'¥”øhê+‹BjØ^®)Ş>ée²‹­i,(­Ô¡¡ÉjØ^®)Ş>¸x8°í…àëj
+'VzØ^-èÖ«É,(­Ü!‰Èl…©e•æÊ‹®Ú/‰Ëh¯$hn)Â¢wî±çV…êŞÁêŞÊ‹¤yêbajÓh~ŠàzÛajØî²ÚhŠ{m…«l¢g°…êŞz[Ê‹«z
+"h¦‰›'²z‹­	«az¸§x×®¶¶¥.Š$Ê‹ŠØ^®­¶¬¢»ax	®•ëh|úèµç-Š‰ÚÒ¢{lyì¨ºÉZÊ)à¶ ¢{0ŠØZ=éİj{Q¡¸§x¬‡hÜÛh’)ej|­†)à	«az¸§x×®¶¶¥=§"~+-FéáºjzŞ²—œ¶ØZ´§¦ØZ¶È§‚W¦Šw^vw¬±¦èºÜ¨¹©İÊ‹¥•Ú ­æ­¶§‚Ã^ºÚÚ”º(:2¢ìÛazÌ(­Ú+¶€šé^´(h¢Ç’jgš³*.®ÊŞjYr‚ŠÂ¸­Šx-…êŞÕ,(­İ€šé^·pNL~z+az¼¨º·œ­¬ò
