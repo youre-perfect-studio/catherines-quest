@@ -1,0 +1,192 @@
+Formatting:
+	(scene/location/code)
+	Double-space == new dialogue box
+	<portrait picture to show>
+
+---
+
+<h1>Act I: Robin Save the Queen<h1>
+
+Scene I
+
+*(courtyard outside of the main castle)*
+*(skip button closes the dialog window)*
+
+Robin:
+    **<head pain>**
+    Owwwwwwww
+    
+    My head...
+    
+    What happened last night?
+    
+    I remember drinks, the gang...
+    
+    Owwww
+    
+*(Main Castle comes into view in Dialogue Room)*
+
+Robin:
+    **<Confusion>**
+    What club is this? 
+    
+    **<Shock>**
+    Did they just leave me out here? Passed out?
+    *Choose*: (
+        1. Those dick-waffles!
+            *If Selected* (
+                **<anger>**
+                I can't believe they just left me. 
+
+                **<Anger>**
+                Why... I'm never going clubbing with them again.
+                
+                **<Neutral>**
+                Where did we even go?
+                *(Continue with normal dialogue)*
+                )
+        2. They wouldn't! They couldn't!
+            *If Selected* (
+                **<default>**
+                We must have gotten separated, 
+                I'm sure they left a message on my phone
+        
+                **<feels for phone in pocket>**
+                Let's see
+        
+                **<Shock>**
+                Where is it?
+                Oh no! Where even am I?
+                *(Continue with normal dialogue)*
+                )
+            
+        )
+    
+    **<Confusion>**
+    I can't believe I just passed out somewhere
+    I don't even recognize this place
+    
+    **<Confusion>**
+    I don't see a road, is this someone's yard?
+    I didn't think people still lived in castles
+    
+    **<default>**
+    Maybe it's just a cosmetic touch. Like Monster House
+    
+    **<Default>**
+    Or it's just a reeaally out of the way Night Club
+    
+    **<default>**
+    Either way, they should have a phone I can use. 
+    Hopefully they'll understand.
+    
+    **<Default>**
+    And hopefully I didn't piss them off last night
+    
+    **<Head pain>**
+    Uugh, standing up hurts
+    
+
+(Player can move around freely now)
+    
+    
+-----
+
+<h1>Scene II: Cell Phone's Dead<h1>
+
+
+(Inside of Queen Roux's castle)
+(skip button - see bottom of this scene notes)
+
+Catherine:
+    **<happy>**
+    Ah, Robin, you're here!
+    I was starting to get impatient.
+    
+    **<Happy>** 
+    But don't worry, I forgive you
+    
+Robin:
+    **<Cautious>**
+    Hey, um, sorry if I did anything last night.
+    
+    **<Cautious>**
+    I could really use a ride home
+    could you call me a cab?
+    
+    **<Cautious>**
+    Wait... How do you know my name?
+    Did we meet last night
+
+Catherine:
+    **<Proud>**
+    Hohoho
+    Don't you know a Titular character when you see one?
+    
+Robin:
+    **<Confused>**
+    Look...
+    I just need a ride
+    
+Catherine: 
+    **<Pride>**
+    Oh don't you worry, you'll understand soon enough.
+    
+    **<Pride>**
+    I was quite surprised myself when I first showed up.
+    But badabing badaboom, here I am giving you you're exposition.
+    
+    **<Default>**
+    Now, all you need to know is that the Queen has been kidnapped
+    by the evil queen and needs to be rescued by a brave hero
+    
+    **<Default>**
+    That's you B-T-W
+    
+    **<Pride>**
+    In order to save the Queen from all the torture,
+    you'll need to defeat the dangerous Dragon guarding the castle
+    
+    **<default>**
+    Not this one, it's a bit aways from here
+    
+Robin:
+    **<Confused>**
+    Wow
+    Look, I just need to call a Cab, do you have a Cell Phone or not?
+    
+    (Catherine Pulls out a Sword)
+    **<Shock>**
+    
+Catherine:
+    **<Pride>**
+    BEHOLD the Dragon Blade, the Legendary Sword which shall lead you unto victory
+    
+Robin:
+    **<Confused>**
+    Where were you keeping that?!!
+    No, forget that, just, point that somewhere else, 
+    you're going to poke my eye out
+    
+Catherine:
+    **<Neutral>**
+    Look, you either get this or the Amulet of Protection, 
+    and I don't see you slaying Dragons with a Pendant
+    
+Robin:
+    **<Anger>**
+    I don't want to kill anything! 
+    
+Catherine:
+    **<Neutral>**
+    Pacifist Run huh? I can respect that. 
+    Keep that single-mindedness about you and you'll do great things.
+    
+    **<Neutral>**
+    Look, Do you want the sword or the Amulet?
+    *Choose*: ((Same as yours really, good writing there)
+        1. Sword
+        2. Amulet
+        3. BOTH!
+        4. Neither, you're crazy
+    )
