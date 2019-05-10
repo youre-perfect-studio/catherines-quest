@@ -1,0 +1,25 @@
+[gd_scene format=2]
+
+[node name="Dock Shell" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Toolbars" type="VBoxContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+
+[node name="Toolbar" type="HBoxContainer" parent="Toolbars"]
+margin_right = 1920.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+size_flags_horizontal = 3
+
+[node name="Content" type="VBoxContainer" parent="."]
+margin_top = 28.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3

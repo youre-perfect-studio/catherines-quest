@@ -82,7 +82,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "gut" )
+enabled=PoolStringArray( "gut", "scene_notes" )
 
 [importer_defaults]
 
