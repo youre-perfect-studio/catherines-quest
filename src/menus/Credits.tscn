@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/FifthCenturyCaps.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[node name="Credits" type="Node2D"]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_right = 1918.0
+margin_bottom = 1083.0
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+margin_right = 1918.0
+margin_bottom = 85.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
+margin_right = 1918.0
+margin_bottom = 85.0
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+margin_right = 1918.0
+margin_bottom = 49.0
+
+[node name="Label" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/CenterContainer"]
+margin_left = 859.0
+margin_right = 1059.0
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 1 )
+text = "Credits"
+align = 1
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+margin_top = 53.0
+margin_right = 1918.0
+margin_bottom = 85.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+margin_right = 1918.0
+margin_bottom = 14.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 878.0
+margin_right = 979.0
+margin_bottom = 14.0
+grow_horizontal = 2
+size_flags_stretch_ratio = 0.0
+text = "John Longname "
+
+[node name="Label2" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 983.0
+margin_right = 1039.0
+margin_bottom = 14.0
+text = "Jane Doe"
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 1918.0
+margin_bottom = 32.0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/VBoxContainer/CenterContainer"]
+margin_left = 875.0
+margin_right = 1042.0
+margin_bottom = 14.0
+split_offset = 36
+
+[node name="Label3" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/VBoxContainer/CenterContainer/HSplitContainer"]
+margin_right = 98.0
+margin_bottom = 14.0
+text = "Jane Something"
+
+[node name="Label4" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/VBoxContainer/CenterContainer/HSplitContainer"]
+margin_left = 110.0
+margin_right = 167.0
+margin_bottom = 14.0
+grow_horizontal = 2
+size_flags_stretch_ratio = 0.0
+text = "John Doe"
