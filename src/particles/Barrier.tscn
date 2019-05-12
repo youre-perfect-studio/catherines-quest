@@ -1,7 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://screens/Barrier.gd" type="Script" id=1]
+[ext_resource path="res://particles/Barrier.gd" type="Script" id=1]
 [ext_resource path="res://screens/img/blueparticle.png" type="Texture" id=2]
+
 
 [sub_resource type="Gradient" id=4]
 colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 0 )
