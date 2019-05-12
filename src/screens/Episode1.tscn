@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://screens/Episode1.gd" type="Script" id=1]
 [ext_resource path="res://screens/img/yellow castle2.png" type="Texture" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://testStuff/tiles/wall.tres" type="TileSet" id=29]
 [ext_resource path="res://characters/Common/player.tscn" type="PackedScene" id=30]
 [ext_resource path="res://particles/Barrier.tscn" type="PackedScene" id=31]
+[ext_resource path="res://TPPoint.tscn" type="PackedScene" id=32]
 
 [sub_resource type="DynamicFont" id=1]
 size = 45
@@ -182,6 +183,7 @@ position = Vector2( -2452.54, -614.81 )
 scale = Vector2( 0.3, 0.3 )
 
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 tile_set = ExtResource( 29 )
 cell_size = Vector2( 16, 16 )
 collision_mask = 7
@@ -203,4 +205,24 @@ position = Vector2( -1770.21, 2684.21 )
 scale = Vector2( -1, 1 )
 
 [node name="Barrier3" parent="." instance=ExtResource( 31 )]
-position = Vector2( -1983.32, 2691.65 )
+position = Vector2( -1927.25, 2691.65 )
+
+[node name="TeleportPositions" type="Node2D" parent="."]
+
+[node name="A1" parent="TeleportPositions" instance=ExtResource( 32 )]
+position = Vector2( -3825.36, 189.261 )
+teleport_to = "A2"
+
+[node name="A2" parent="TeleportPositions" instance=ExtResource( 32 )]
+position = Vector2( -1915.44, 2348.68 )
+rotation = 3.14159
+teleport_to = "A1"
+
+[node name="M1" parent="TeleportPositions" instance=ExtResource( 32 )]
+position = Vector2( -3830.06, 1995.3 )
+teleport_to = "M2"
+
+[node name="M2" parent="TeleportPositions" instance=ExtResource( 32 )]
+position = Vector2( -6.10144, 1990.02 )
+rotation = 3.14159
+teleport_to = "M1"
