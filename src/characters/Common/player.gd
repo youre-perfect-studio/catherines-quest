@@ -26,7 +26,9 @@ var has_accepted_quest:bool = false
 var has_seen_a_dragon:bool = false
 
 onready var catherine_node = $"../Catherine"
+onready var roux_node = $"../NPC"
 onready var catherine_talk_area = $"../Catherine/talkZone"
+onready var roux_talk_area = $"../NPC/talkZone"
 onready var dialog_controller_node = $"../DialogController"
 
 func _ready():
@@ -62,6 +64,8 @@ func controlLoop():
 	if Input.is_action_just_pressed("interact"):
 		if $DamageArea.overlaps_area(catherine_talk_area) && catherine_node.follow_player != true:
 			talk_to_npc("Catherine")
+		if $DamageArea.overlaps_area(roux_talk_area) && roux_node.follow_player != true:
+			talk_to_npc("Roux")
 	
 	if Input.is_action_just_pressed("attack"):
 		# if player close to the sign and attack pressed then open the menu
@@ -107,7 +111,7 @@ func controlLoop():
 				useItem = "none"
 				$"../cam/useItem".visible = false
 				
-	if Input.is_action_just_pressed("poop") && useItem != "none":
+	if Input.is_action_just_pressed("drop") && useItem != "none":
 		if useItem == "sword":
 			$"../".dropItem(load("res://items/" + useItem + "Drop.tscn"))
 		else:
@@ -151,20 +155,20 @@ func talk_to_npc( npc_name:String ):
 		"Catherine":
 			catherine_node.begin_dialog(self)
 		"Roux":
-			pass
+			roux_node.follow_player = true
 
 func show_opening_dialog():
 	#Currently assuming Robin as character
 	var openingDialog = DialogSequencer.generate_sequence("ROBIN_INTRO", 1, 4, "Robin", "default", dialog_controller_node.Position.Left)
 	
-	var choices:Array = []
-	var choice1 = DialogChoice.new()
-	choice1.label = "choice 1"	
-	var choice2 = DialogChoice.new()
-	choice2.label = "choice 2"
-	choices.append(choice1)
-	choices.append(choice2)
-	openingDialog[3].choices = choices
+	#var choices:Array = []
+	#var choice1 = DialogChoice.new()
+	#choice1.label = "choice 1"	
+	#var choice2 = DialogChoice.new()
+	#choice2.label = "choice 2"
+	#choices.append(choice1)
+	#choices.append(choice2)
+	#openingDialog[3].choices = choices
 	
 	dialog_controller_node.clear()
 	dialog_controller_node.show_workaround()

@@ -107,15 +107,17 @@ position = Vector2( 961.478, 540.454 )
 texture = ExtResource( 14 )
 
 [node name="NPC" parent="." instance=ExtResource( 15 )]
-position = Vector2( 1727.89, 721.937 )
+position = Vector2( -3133.01, -425.811 )
 scale = Vector2( 0.5, 0.5 )
 z_index = -1
+speed = 300
 
 [node name="dragon" parent="." instance=ExtResource( 16 )]
-position = Vector2( 334.818, 1773.67 )
+position = Vector2( 3457.33, 2869.84 )
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
 subType = "dragon"
+speed = 200
 
 [node name="amulet" parent="." instance=ExtResource( 17 )]
 position = Vector2( 1560.93, 288.127 )
@@ -127,7 +129,7 @@ position = Vector2( 1055.82, 833.751 )
 position = Vector2( 1215.32, 490.768 )
 
 [node name="bait" parent="." instance=ExtResource( 20 )]
-position = Vector2( 682.364, 661.686 )
+position = Vector2( 2536.88, 2432.11 )
 
 [node name="Catherine" parent="." instance=ExtResource( 21 )]
 position = Vector2( 351.831, 855.344 )
@@ -135,7 +137,7 @@ scale = Vector2( 0.5, 0.5 )
 type = "NPC"
 
 [node name="Sign" parent="." instance=ExtResource( 22 )]
-position = Vector2( 328.416, 457.432 )
+position = Vector2( 1678.14, 1941.71 )
 scale = Vector2( 0.3, 0.3 )
 
 [node name="DialogController" parent="." instance=ExtResource( 23 )]
@@ -175,10 +177,11 @@ custom_fonts/font = SubResource( 1 )
 one_shot = true
 
 [node name="Sign2" parent="." instance=ExtResource( 22 )]
-position = Vector2( 1672.38, 3014.82 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( -2452.54, -614.81 )
+scale = Vector2( 0.3, 0.3 )
 
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 tile_set = ExtResource( 29 )
 cell_size = Vector2( 16, 16 )
 collision_mask = 7
@@ -188,6 +191,6 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 [node name="player" parent="." groups=[
 "Persist",
 ] instance=ExtResource( 30 )]
-position = Vector2( 1502.07, 667.411 )
+position = Vector2( 713.57, 1892.86 )
 scale = Vector2( 0.5, 0.5 )
-speed = 300
+speed = 400
