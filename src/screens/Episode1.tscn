@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://screens/Episode1.gd" type="Script" id=1]
 [ext_resource path="res://screens/img/yellow castle2.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://fonts/FifthCenturyCaps.ttf" type="DynamicFontData" id=28]
 [ext_resource path="res://testStuff/tiles/wall.tres" type="TileSet" id=29]
 [ext_resource path="res://characters/Common/player.tscn" type="PackedScene" id=30]
+[ext_resource path="res://screens/Barrier.tscn" type="PackedScene" id=31]
 
 [sub_resource type="DynamicFont" id=1]
 size = 45
@@ -194,3 +195,10 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 position = Vector2( 713.57, 1892.86 )
 scale = Vector2( 0.5, 0.5 )
 speed = 400
+
+[node name="Barrier" parent="." instance=ExtResource( 31 )]
+position = Vector2( 3728.66, 2705.79 )
+
+[node name="Barrier2" parent="." instance=ExtResource( 31 )]
+position = Vector2( -1770.21, 2684.21 )
+scale = Vector2( -1, 1 )
