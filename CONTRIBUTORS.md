@@ -22,6 +22,9 @@ In alphabetical order
 # James Yeakey
 * Contributsions: [Patreon](https://www.patreon.com/YourePerfect) supporter, box and promotional art
 
+# Jesse Graves
+* Contributsions: [Patreon](https://www.patreon.com/YourePerfect) supporter
+
 # Katrina Niolet
 * Contributions: sales, accounting, programming, high-level business manegement
 * Email: katrina.niolet@youreperfect.studio
@@ -47,6 +50,9 @@ In alphabetical order
 
 # Reagan Foucha
 * Contributions: [Patreon](https://www.patreon.com/YourePerfect) supporter
+
+# Sebastian “Deathbymanga” Ferguson
+* Discord DM: deathbymanga#6751
 
 # TwofacedHarley
 * Contributions: 2d character and concept art
