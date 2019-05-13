@@ -56,26 +56,37 @@ func anim_switch(action):
 func damageLoop():
 	if hitstun > 0:
 		hitstun -= 1
-	for area in $DamageArea.get_overlapping_areas():
-		var body = area.get_parent()
-		if hasAmulet == false && hitstun == 0 && body.get("damage") != null && body.get("type") != type && visible == true && area.name=="bitebox":
-			health -= body.get("damage")
-			#print("lost " + str(body.get("damage")) + "health")
-			hitstun = 10
+		
+	if self.name == "player":
+		for area in $DamageArea.get_overlapping_areas():
+			var body = area.get_parent()
+			if hasAmulet == false && hitstun == 0 && body.get("damage") != null && body.get("type") != "player" && visible == true:
+				if area.name=="bitebox":
+					health -= body.get("damage")
+					#print("lost " + str(body.get("damage")) + "health")
+					hitstun = 10
+	if self.type == "enemy":
+		for area in get_node("../" + self.name + "/hitbox").get_overlapping_areas():
+			var body = area.get_parent()
+			if hitstun == 0 && body.get("damage") != null && body.get("type") == "weapon":
+				health -= body.get("damage")
+				
 	if health <= 0:
 		if type == "player":
 			if is_alive:
 				get_tree().paused = true
 				$"../UI/RestartMenu".show()
 				is_alive = false
+		else:
+			queue_free()
 			
 		if visible == true: #this was done for player to prevent crashing, anything else can be queue_free()
-			#print("dead")   #was just a temporary measure until a gameover function is written
 			visible = false
 	else:
 		visible = true
 		is_alive = true
 		#$Anim.play("death")
+
 
 func use_item(item):
 	var newItem = item.instance()

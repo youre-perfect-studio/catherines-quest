@@ -7,12 +7,12 @@ extends Node
 	
 const damage = 1
 
-var type = "item"
+var type = "weapon"
 
 var max_amount = 1
 
 func _ready():
-	type = get_parent().type
+	type = "weapon"
 	$Anim.connect("animation_finished", self, "destroy")
 	$Anim.play(str("swing", get_parent().spritedir))
 	if get_parent().has_method("state_swing"):

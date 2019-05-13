@@ -10,7 +10,6 @@ extends "res://engine/entity.gd"
 
 onready var player = get_node("../player")
 onready var bitebox =  get_node("../dragon/bitebox")
-onready var dragonAttract = get_node("../bait/dragonAttract")
 onready var cam = get_node("../cam")
 
 var moveTimerLength
@@ -23,8 +22,9 @@ func _ready():
 	$bitebox.connect("area_entered", self, "onAreaEntered")
 	
 func _physics_process(delta):
+	damageLoop()
 	movementLoop()
-	if chasing == false:
+	if chasing == false && baitChase == false:
 		if moveTimer > 0:
 			moveTimer -= 1
 			if is_on_wall():
@@ -35,10 +35,11 @@ func _physics_process(delta):
 			if is_on_wall():
 				movedir = -movedir
 	elif baitChase == true:
-		movedir = (dragonAttract.global_position - bitebox.global_position).normalized()
-	else:
+		movedir = (get_node("../bait/dragonAttract").global_position - bitebox.global_position).normalized()
+	elif chasing == true && baitChase == false:
 			movedir = (player.global_position - bitebox.global_position).normalized()
-		
+	else:
+		pass
 		
 		#unless there is a specific plan for below, it's useless now with DamageLoop() in place
 func onAreaEntered(area):

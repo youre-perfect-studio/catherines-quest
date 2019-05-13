@@ -231,6 +231,5 @@ func onAreaEntered(area):
 				hasAmulet = true
 			area.get_parent().queue_free()
 			useItem = area.get_parent().name
-			print(useItem)
 		else:
 			pass
