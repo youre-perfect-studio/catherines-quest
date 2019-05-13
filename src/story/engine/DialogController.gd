@@ -63,17 +63,25 @@ func read_text( text:String, audio:AudioStream ):
 
 
 func offer_choice( choices:Array ):
-	#$Container/CloseButton.hide()
+	$Container/CloseButton.hide()
 	while reading_text:
 		yield(get_tree(), "idle_frame")
 	for i in range(choices.size()):
 		assert(choices[i] is DialogChoice)
-		if i == 0:
-			set_text(get_text()+"\n\t>\t"+choices[i].label)
-		else:
-			set_text(get_text()+"\n\t\t"+choices[i].label)
-		#TODO
+		show_choice( i, choices[i].label )
 
+#TODO create the labels dynamically
+func show_choice( choice:int, label:String ):
+	match choice:
+		0:
+			$Container/Option1.show()
+			$Container/Option1.text = label
+		1:
+			$Container/Option2.show()
+			$Container/Option2.text = label
+		2:
+			$Container/Option3.show()
+			$Container/Option3.text = label
 
 func on_next_pressed():
 	if reading_text:
@@ -168,3 +176,11 @@ func show_workaround():
 	$Container.show()
 func hide_workaround():
 	$Container.hide()
+
+
+func _on_Option_pressed(option:int):
+	$Container/Option1.hide()
+	$Container/Option2.hide()
+	$Container/Option3.hide()
+	$Container/CloseButton.show()
+	hide_workaround()

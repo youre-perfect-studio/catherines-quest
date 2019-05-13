@@ -161,14 +161,14 @@ func show_opening_dialog():
 	#Currently assuming Robin as character
 	var openingDialog = DialogSequencer.generate_sequence("ROBIN_INTRO", 1, 4, "Robin", "default", dialog_controller_node.Position.Left)
 	
-	#var choices:Array = []
-	#var choice1 = DialogChoice.new()
-	#choice1.label = "choice 1"	
-	#var choice2 = DialogChoice.new()
-	#choice2.label = "choice 2"
-	#choices.append(choice1)
-	#choices.append(choice2)
-	#openingDialog[3].choices = choices
+	var choices:Array = []
+	var choice1 = DialogChoice.new()
+	choice1.label = "choice 1"	
+	var choice2 = DialogChoice.new()
+	choice2.label = "choice 2"
+	choices.append(choice1)
+	choices.append(choice2)
+	openingDialog[3].choices = choices
 	
 	dialog_controller_node.clear()
 	dialog_controller_node.show_workaround()
