@@ -88,5 +88,5 @@ flat = true
 [node name="AudioPlayer" type="AudioStreamPlayer" parent="Container"]
 [connection signal="pressed" from="Container/CloseButton" to="." method="on_next_pressed"]
 [connection signal="pressed" from="Container/Option1" to="." method="_on_Option_pressed" binds= [ 1 ]]
-[connection signal="pressed" from="Container/Option2" to="." method="_on_Optoin_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="Container/Option2" to="." method="_on_Option_pressed" binds= [ 2 ]]
 [connection signal="pressed" from="Container/Option3" to="." method="_on_Option_pressed" binds= [ 3 ]]

@@ -47,7 +47,7 @@ func play_phrases(phrases:Array):
 	for i in range(phrases.size()):
 		play_phrase(phrases[i])
 		yield(self,"next_pressed")
-		if i == phrases.size() - 1:
+		if i == phrases.size() - 1 && phrases[i].choices.size() == 0:
 			hide_workaround()
 
 
@@ -182,9 +182,13 @@ func hide_workaround():
 
 
 func _on_Option_pressed(option:int):
+	assert(option > 0 && option <= current_choices.size())
 	$Container/Option1.hide()
 	$Container/Option2.hide()
 	$Container/Option3.hide()
 	$Container/CloseButton.show()
 	hide_workaround()
+	var choice = current_choices[option-1]
+	if  choice.player != null and not choice.function.empty():
+		choice.player.callv(choice.function,choice.params)
 	current_choices = []

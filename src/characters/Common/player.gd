@@ -157,19 +157,33 @@ func talk_to_npc( npc_name:String ):
 		"Roux":
 			roux_node.follow_player = true
 
-func show_opening_dialog():
-	#Currently assuming Robin as character
-	var openingDialog = DialogSequencer.generate_sequence("ROBIN_INTRO", 1, 4, "Robin", "default", dialog_controller_node.Position.Left)
-	
-	var choices:Array = []
-	var choice1 = DialogChoice.new()
-	choice1.label = "choice 1"	
-	var choice2 = DialogChoice.new()
-	choice2.label = "choice 2"
-	choices.append(choice1)
-	choices.append(choice2)
-	openingDialog[3].choices = choices
-	
+func show_opening_dialog(sequence:int = 0):
+	var openingDialog:Array
+	match sequence:
+		0:
+			#Currently assuming Robin as character
+			openingDialog = DialogSequencer.generate_sequence("ROBIN_INTRO", 1, 3, "Robin", "default", dialog_controller_node.Position.Left)
+			
+			var choices:Array = []
+			var choice1 = DialogChoice.new()
+			choice1.label = tr("ROBIN_INTRO_5")	
+			choice1.player = self
+			choice1.function = "show_opening_dialog"
+			choice1.params = [1]
+			var choice2 = DialogChoice.new()
+			choice2.label = tr("ROBIN_INTRO_9")
+			choice2.player = self
+			choice2.function = "show_opening_dialog"
+			choice2.params = [2]
+			choices.append(choice1)
+			choices.append(choice2)
+			openingDialog[openingDialog.size()-1].choices = choices
+		1:
+			openingDialog = DialogSequencer.generate_sequence("ROBIN_INTRO", 6, 8, "Robin", "default", dialog_controller_node.Position.Left)
+			openingDialog += DialogSequencer.generate_sequence("ROBIN_INTRO", 13, 19, "Robin", "default", dialog_controller_node.Position.Left)
+		2:
+			openingDialog = DialogSequencer.generate_sequence("ROBIN_INTRO", 10, 19, "Robin", "default", dialog_controller_node.Position.Left)
+		
 	dialog_controller_node.clear()
 	dialog_controller_node.show_workaround()
 	dialog_controller_node.next_close.text = tr("Next")
