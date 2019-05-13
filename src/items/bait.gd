@@ -29,5 +29,6 @@ func onHitboxEntered(area):
 		$Timer.start(4)
 	
 func baitEaten():
-	dragon.baitChase = false
-	queue_free()
+	if $"../dragon" != null:
+		dragon.baitChase = false
+		queue_free()
