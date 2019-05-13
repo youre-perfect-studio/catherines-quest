@@ -162,7 +162,7 @@ interact={
 
 test="en_US"
 fallback="en_US"
-translations=PoolStringArray( "res://i18n/RobinIntro_en_US.en_US.translation" )
+translations=PoolStringArray( "res://i18n/RobinIntro_en_US.en_US.translation", "res://i18n/GetQuest_en_US.en_US.translation" )
 locale_filter=[ 0, [ "en_US" ] ]
 
 [physics]
