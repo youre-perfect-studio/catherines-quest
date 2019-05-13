@@ -21,6 +21,7 @@ onready var charlist = CharactersList.new().characters
 
 var reading_text:bool = false
 var target_text:String = ""
+var current_choices:Array
 
 
 """
@@ -63,6 +64,8 @@ func read_text( text:String, audio:AudioStream ):
 
 
 func offer_choice( choices:Array ):
+	assert( choices.size() > 0 )
+	current_choices = choices
 	$Container/CloseButton.hide()
 	while reading_text:
 		yield(get_tree(), "idle_frame")
@@ -184,3 +187,4 @@ func _on_Option_pressed(option:int):
 	$Container/Option3.hide()
 	$Container/CloseButton.show()
 	hide_workaround()
+	current_choices = []
