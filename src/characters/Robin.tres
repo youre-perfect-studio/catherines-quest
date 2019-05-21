@@ -1,20 +1,21 @@
-[gd_resource type="Resource" load_steps=6 format=2]
+[gd_resource type="Resource" load_steps=7 format=2]
 
 [ext_resource path="res://characters/Robin/icon_robin_default.png" type="Texture" id=1]
 [ext_resource path="res://characters/Common/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://characters/img/portrait_robin_default.png" type="Texture" id=3]
-[ext_resource path="res://characters/Common/Character.gd" type="Script" id=4]
-[ext_resource path="res://characters/img/symbol_nonbinary.png" type="Texture" id=5]
+[ext_resource path="res://characters/img/portrait_robin_annoyed.png" type="Texture" id=3]
+[ext_resource path="res://characters/img/portrait_robin_default.png" type="Texture" id=4]
+[ext_resource path="res://characters/Common/Character.gd" type="Script" id=5]
+[ext_resource path="res://characters/img/symbol_nonbinary.png" type="Texture" id=6]
 
 [resource]
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 character_name = "Robin"
 character_icon = ExtResource( 1 )
 playable_character = true
 unlocked = true
 character_scene = ExtResource( 2 )
 pronouns = "they/them"
-symbol = ExtResource( 5 )
+symbol = ExtResource( 6 )
 backstory = "Backstory Backstory
 Backstory Backstory
 Backstory Backstory
@@ -22,5 +23,6 @@ Backstory Backstory
 Backstory Backstory
 Backstory Backstory"
 expressions = {
-"default": ExtResource( 3 )
+"annoyed": ExtResource( 3 ),
+"default": ExtResource( 4 )
 }

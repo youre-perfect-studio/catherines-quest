@@ -179,7 +179,7 @@ func show_opening_dialog(sequence:int = 0):
 			choices.append(choice2)
 			openingDialog[openingDialog.size()-1].choices = choices
 		1:
-			openingDialog = DialogSequencer.generate_sequence("ROBIN_INTRO", 6, 8, "Robin", "default", dialog_controller_node.Position.Left)
+			openingDialog = DialogSequencer.generate_sequence("ROBIN_INTRO", 6, 8, "Robin", "annoyed", dialog_controller_node.Position.Left)
 			openingDialog += DialogSequencer.generate_sequence("ROBIN_INTRO", 13, 19, "Robin", "default", dialog_controller_node.Position.Left)
 		2:
 			openingDialog = DialogSequencer.generate_sequence("ROBIN_INTRO", 10, 19, "Robin", "default", dialog_controller_node.Position.Left)
