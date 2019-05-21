@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://enemies/dragon.gd" type="Script" id=1]
-[ext_resource path="res://characters/img/dragon_placeholder.png" type="Texture" id=2]
+[ext_resource path="res://enemies/img/spritesheet_dragon_default.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 240, 260 )
@@ -21,6 +21,8 @@ speed = 50
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
+vframes = 6
+hframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -39,3 +41,5 @@ position = Vector2( 258, 178 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bitebox"]
 rotation = 1.5708
 shape = SubResource( 3 )
+
+[node name="Anim" type="AnimationPlayer" parent="."]
