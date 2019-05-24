@@ -22,7 +22,11 @@ onready var charlist = CharactersList.new().characters
 var reading_text:bool = false
 var target_text:String = ""
 var current_choices:Array
+var cancelling:bool = false
 
+func _process(delta):
+	if Input.is_action_pressed("ui_cancel"):
+		cancelling = true
 
 """
 Mid-level function for presenting a single phrase of dialog. This will set the portrait,
@@ -44,6 +48,7 @@ and play messages at the set speed, allowing the user to skip the messages.
 Will also set player portrait and expressions
 """
 func play_phrases(phrases:Array):
+	cancelling = false
 	for i in range(phrases.size()):
 		play_phrase(phrases[i])
 		yield(self,"next_pressed")
@@ -192,3 +197,6 @@ func _on_Option_pressed(option:int):
 	if  choice.player != null and not choice.function.empty():
 		choice.player.callv(choice.function,choice.params)
 	current_choices = []
+	cancelling = false
+	set_left_portrait(null)
+	set_right_portrait(null)

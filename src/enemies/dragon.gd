@@ -20,6 +20,7 @@ func _ready():
 	moveTimerLength = randi() % 800 + 100
 	moveTimer = moveTimerLength
 	$bitebox.connect("area_entered", self, "onAreaEntered")
+	anim_switch("walk")
 	
 func _physics_process(delta):
 	damageLoop()
@@ -40,6 +41,7 @@ func _physics_process(delta):
 			movedir = (player.global_position - bitebox.global_position).normalized()
 	else:
 		pass
+	anim_switch("walk")
 		
 		#unless there is a specific plan for below, it's useless now with DamageLoop() in place
 func onAreaEntered(area):
