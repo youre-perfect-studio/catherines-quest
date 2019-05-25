@@ -27,6 +27,7 @@ var cancelling:bool = false
 func _process(delta):
 	if Input.is_action_pressed("ui_cancel"):
 		cancelling = true
+		emit_signal("next_pressed")
 
 """
 Mid-level function for presenting a single phrase of dialog. This will set the portrait,
@@ -51,7 +52,8 @@ func play_phrases(phrases:Array):
 	cancelling = false
 	for i in range(phrases.size()):
 		play_phrase(phrases[i])
-		yield(self,"next_pressed")
+		if not cancelling:
+			yield(self,"next_pressed")
 		if i == phrases.size() - 1 && phrases[i].choices.size() == 0:
 			hide_workaround()
 
@@ -63,7 +65,8 @@ func read_text( text:String, audio:AudioStream ):
 	for i in range(text.length()):
 		if reading_text:
 			set_text(get_text()+text[i])
-			yield(get_tree().create_timer(message_speed),"timeout")
+			if not cancelling:
+				yield(get_tree().create_timer(message_speed),"timeout")
 	reading_text = false
 	#TODO audio
 
