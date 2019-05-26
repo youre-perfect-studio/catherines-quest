@@ -40,15 +40,12 @@ func pickDirection():
 			return Vector2(x, y)
 			
 func spritedirLoop():
-	match movedir:
-		Vector2.LEFT:
-			spritedir = "left"
-		Vector2.RIGHT:
-			spritedir = "right"
-		Vector2.UP:
-			spritedir = "up"
-		Vector2.DOWN:
-			spritedir = "down"
+	if movedir.x < 0: spritedir = "left"
+	elif movedir.x > 0: spritedir = "right"
+	elif movedir.y > 0: spritedir = "down"
+	elif movedir.y < 0: spritedir = "up"
+	elif spritedir.empty(): spritedir = "down"
+
 
 func anim_switch(action):
 	$Anim.play(action+spritedir)   

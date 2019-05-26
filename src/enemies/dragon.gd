@@ -24,7 +24,6 @@ func _ready():
 	
 func _physics_process(delta):
 	damageLoop()
-	movementLoop()
 	if chasing == false && baitChase == false:
 		if moveTimer > 0:
 			moveTimer -= 1
@@ -41,6 +40,8 @@ func _physics_process(delta):
 			movedir = (player.global_position - bitebox.global_position).normalized()
 	else:
 		pass
+	movementLoop()
+	spritedirLoop()
 	anim_switch("walk")
 		
 		#unless there is a specific plan for below, it's useless now with DamageLoop() in place
