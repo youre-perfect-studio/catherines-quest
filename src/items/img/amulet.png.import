@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/magnet.png-a462c64f068b1aa1dda3b70297a90876.stex"
+path="res://.import/amulet.png-e6da0b18cace5ce2582f388d152ee865.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/magnet.png"
-dest_files=[ "res://.import/magnet.png-a462c64f068b1aa1dda3b70297a90876.stex" ]
+source_file="res://items/img/amulet.png"
+dest_files=[ "res://.import/amulet.png-e6da0b18cace5ce2582f388d152ee865.stex" ]
 
 [params]
 

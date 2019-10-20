@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wooden_sign.png-bb73bd87537db0e5a44de6e4b47aa94e.stex"
+path="res://.import/bridge.png-083ce3a09ad8e65dd54a496526b59cab.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/wooden_sign.png"
-dest_files=[ "res://.import/wooden_sign.png-bb73bd87537db0e5a44de6e4b47aa94e.stex" ]
+source_file="res://items/img/bridge.png"
+dest_files=[ "res://.import/bridge.png-083ce3a09ad8e65dd54a496526b59cab.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/amulet.png-602f550dddf48f46236871a5665eadfa.stex"
+path="res://.import/player.png-5525df3aef8fae309601ddaf4beff8da.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/amulet.png"
-dest_files=[ "res://.import/amulet.png-602f550dddf48f46236871a5665eadfa.stex" ]
+source_file="res://characters/img/player.png"
+dest_files=[ "res://.import/player.png-5525df3aef8fae309601ddaf4beff8da.stex" ]
 
 [params]
 

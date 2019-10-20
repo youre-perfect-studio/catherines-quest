@@ -47,7 +47,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
-"path": "res://characters/Common/player.gd"
+"path": "res://characters/Common/Player.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
@@ -63,7 +63,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Catherine's Quest"
-run/main_scene="res://title.tscn"
+run/main_scene="res://TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]

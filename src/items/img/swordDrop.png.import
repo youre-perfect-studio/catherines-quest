@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/aura.png-2b821934a3333cfaca0aa60f45d6f37e.stex"
+path="res://.import/swordDrop.png-77fd53988258af86f1b8bebdcd8e8575.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/aura.png"
-dest_files=[ "res://.import/aura.png-2b821934a3333cfaca0aa60f45d6f37e.stex" ]
+source_file="res://items/img/swordDrop.png"
+dest_files=[ "res://.import/swordDrop.png-77fd53988258af86f1b8bebdcd8e8575.stex" ]
 
 [params]
 

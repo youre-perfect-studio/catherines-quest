@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/swordDrop.png-a1bf2addecf88404ffc531e39fc35949.stex"
+path="res://.import/bait.png-87174dfef3a91dcfa2ee5f5c2b81aaad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/swordDrop.png"
-dest_files=[ "res://.import/swordDrop.png-a1bf2addecf88404ffc531e39fc35949.stex" ]
+source_file="res://items/img/bait.png"
+dest_files=[ "res://.import/bait.png-87174dfef3a91dcfa2ee5f5c2b81aaad.stex" ]
 
 [params]
 

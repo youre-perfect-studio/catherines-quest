@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://items/itemBase.gd" type="Script" id=1]
-[ext_resource path="res://items/swordDrop.png" type="Texture" id=2]
+[ext_resource path="res://items/Item.gd" type="Script" id=1]
+[ext_resource path="res://items/img/swordDrop.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 50, 75 )

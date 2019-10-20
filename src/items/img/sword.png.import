@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bait.png-94be4c9dba6c3221f9fdb9d1b47764a2.stex"
+path="res://.import/sword.png-4bc10ab991cd91e130cf10390fe5480c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/bait.png"
-dest_files=[ "res://.import/bait.png-94be4c9dba6c3221f9fdb9d1b47764a2.stex" ]
+source_file="res://items/img/sword.png"
+dest_files=[ "res://.import/sword.png-4bc10ab991cd91e130cf10390fe5480c.stex" ]
 
 [params]
 

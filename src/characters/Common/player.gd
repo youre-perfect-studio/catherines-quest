@@ -80,9 +80,9 @@ func controlLoop():
 					for area in $DamageArea.get_overlapping_areas():
 						if area.get_parent().get("type") == "item" && area.name == "hitbox":
 							if area.get_parent().name == "sword":
-								$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + "Drop.png")
+								$"../cam/useItem".texture = load("res://items/img/" + area.get_parent().name + "Drop.png")
 							else:
-								$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + ".png")
+								$"../cam/useItem".texture = load("res://items/img/" + area.get_parent().name + ".png")
 							$"../cam/useItem".visible = true
 #							if area.get_parent().name == "magnet":
 #								$"../cam".magnetPickedUp() #idea to allow dropped items to have magnetism, still going to work with it later
@@ -95,7 +95,7 @@ func controlLoop():
 							pass
 
 			"sword":
-				use_item(preload("res://items/sword.tscn"))
+				use_item(preload("res://items/Sword.tscn"))
 				
 			"bridge":
 				$"../".dropItem(load("res://items/" + useItem + ".tscn"))
@@ -221,9 +221,9 @@ func onAreaEntered(area):
 	if useItem == "none":
 		if area.get_parent().get("type") == "item" && area.name == "hitbox" && area.get_parent().dropped == false:
 			if area.get_parent().name == "sword":
-				$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + "Drop.png")
+				$"../cam/useItem".texture = load("res://items/img/" + area.get_parent().name + "Drop.png")
 			else:
-				$"../cam/useItem".texture = load("res://items/" + area.get_parent().name + ".png")
+				$"../cam/useItem".texture = load("res://items/img/" + area.get_parent().name + ".png")
 			$"../cam/useItem".visible = true
 #			if area.get_parent().name == "magnet":
 #					$"../cam".magnetPickedUp()
