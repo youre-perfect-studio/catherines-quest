@@ -19,4 +19,4 @@ func _input(event):
 		
 
 func start_game():
-	get_tree().change_scene("res://menus/gameSelection.tscn")
+	get_tree().change_scene("res://menus/GameSelection.tscn")

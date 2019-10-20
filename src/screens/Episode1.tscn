@@ -31,7 +31,10 @@
 [ext_resource path="res://testStuff/tiles/wall.tres" type="TileSet" id=29]
 [ext_resource path="res://characters/Common/player.tscn" type="PackedScene" id=30]
 [ext_resource path="res://particles/Barrier.tscn" type="PackedScene" id=31]
-[ext_resource path="res://TPPoint.tscn" type="PackedScene" id=32]
+[ext_resource path="res://engine/TPPoint.tscn" type="PackedScene" id=32]
+
+
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 45
