@@ -4,8 +4,7 @@ export(String) var teleport_to
 
 func _ready():
 	$Area2D.connect("area_entered", self, "teleport")
-	
-	
+
 func teleport(area):
 	if area.get_parent().get("type") == "player":
 		var player = $"../../player"

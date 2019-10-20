@@ -25,7 +25,12 @@ func get_index_name() -> String:
 	assert(not grouping.empty())
 	return grouping+"_"+str(number)
 
+# Returns the translated text, if there is no match for the index
+# return "..."
 func get_text() -> String:
+	var translatedIndexName = tr(get_index_name())
+	if translatedIndexName == get_index_name():
+		return "..."
 	return tr(get_index_name())
 
 func get_audio() -> AudioStream:
