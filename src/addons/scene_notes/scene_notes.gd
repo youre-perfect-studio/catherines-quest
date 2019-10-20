@@ -17,10 +17,10 @@ func _init() . (SceneNotesDock):
 	pass
 
 func get_plugin_name():
-  return DOCK_NAME
+	return DOCK_NAME
 
 func get_plugin_icon():
-  return load(get_addon_dir() + "icon.png")
+	return load(get_addon_dir() + "icon.png")
 
 func setup_dock(dock):
 	dock.name = DOCK_NAME
@@ -61,7 +61,7 @@ func setup_dock(dock):
 # clean up before freeing the dock instance
 func cleanup_dock(dock):
 	if current_scene:
-	  save_notes()
+		save_notes()
 	
 	save_config("scene-notes.ini", notes)
 	
