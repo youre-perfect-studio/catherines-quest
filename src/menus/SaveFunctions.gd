@@ -17,7 +17,7 @@ func save_game():
 	saving = true
 	var save_game = File.new()
 	save_game.open(str("user://",save_file_name,".save"), File.WRITE)
-    # Searches for nodes that are set to the group "Persist"
+	# Searches for nodes that are set to the group "Persist"
 	# Calls the save function for that node
 	var save_nodes = get_tree().get_nodes_in_group("Persist")
 	for i in save_nodes:
@@ -34,17 +34,17 @@ func load_game():
 	if not save_game.file_exists(str("user://",save_file_name,".save")):
 		return # Error! We don't have a save to load.
 
-    # We need to revert the game state so we're not cloning objects
-    # during loading. This will vary wildly depending on the needs of a
-    # project, so take care with this step.
-    # For our example, we will accomplish this by deleting saveable objects.
+	# We need to revert the game state so we're not cloning objects
+	# during loading. This will vary wildly depending on the needs of a
+	# project, so take care with this step.
+	# For our example, we will accomplish this by deleting saveable objects.
 	var save_nodes = get_tree().get_nodes_in_group("Persist")
 	for i in save_nodes:
 		if i.get_name() != "player" :
 			i.queue_free()
 
-    # Load the file line by line and process that dictionary to restore
-    # the object it represents.
+	# Load the file line by line and process that dictionary to restore
+	# the object it represents.
 	save_game.open(str("user://",save_file_name,".save"), File.READ)
 	while not save_game.eof_reached():
 		var current_line = parse_json(save_game.get_line())
@@ -62,7 +62,7 @@ func load_game():
 			new_object.position = Vector2(current_line["pos_x"], current_line["pos_y"])
 			if current_line.has("scale_x"):
 				new_object.set_scale(Vector2(current_line["scale_x"], current_line["scale_y"]))
-	        # Now we set the remaining variables.
+	# Now we set the remaining variables.
 			for i in current_line.keys():
 				if i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y" or i == "scale_x" or i == "scale_y":
 					continue

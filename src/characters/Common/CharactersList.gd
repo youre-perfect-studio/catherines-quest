@@ -7,7 +7,7 @@ extends Object
 class_name CharactersList
 
 var characters : Dictionary = {
-	 "Robin"		:	preload("res://characters/Robin.tres"),
+	"Robin"		:	preload("res://characters/Robin.tres"),
 	"Catherine"		:	preload("res://characters/Catherine.tres"),
 	"ComingSoon"	:	preload("res://characters/ComingSoon.tres"),
 	}
