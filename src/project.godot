@@ -71,6 +71,10 @@ config/icon="res://icon.png"
 Globals="*res://engine/Globals.gd"
 SaveFunctions="*res://menus/SaveFunctions.gd"
 
+[debug]
+
+gdscript/warnings/return_value_discarded=false
+
 [display]
 
 window/size/width=1920
