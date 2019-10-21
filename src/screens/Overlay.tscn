@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends \"Overlay.gd\"
+		"
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 93.3013, 230.869 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "fadeIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.423529 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "fadeOut"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.423529 ) ]
+}
+
+[node name="Overlay" type="Node2D"]
+position = Vector2( 961.612, 1629.49 )
+script = SubResource( 1 )
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+position = Vector2( 6.85297, -198.737 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.423529 )
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+anims/fadeIn = SubResource( 3 )
+anims/fadeOut = SubResource( 4 )

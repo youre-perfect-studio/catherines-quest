@@ -1,0 +1,94 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://menus/SelectPlayer.gd" type="Script" id=1]
+[ext_resource path="res://screens/img/Titlescreen_4k.png" type="Texture" id=2]
+[ext_resource path="res://fonts/FifthCenturyCaps.ttf" type="DynamicFontData" id=3]
+
+
+[sub_resource type="DynamicFont" id=1]
+size = 86
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 36
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 36
+font_data = ExtResource( 3 )
+
+[node name="selectPlayer" type="Node2D"]
+scale = Vector2( 0.51, 0.51 )
+script = ExtResource( 1 )
+
+[node name="Titlescreen_4k" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.317647 )
+position = Vector2( 1890.04, 1056.48 )
+texture = ExtResource( 2 )
+
+[node name="Character" type="Sprite" parent="."]
+position = Vector2( 1031.52, 1237.86 )
+scale = Vector2( 1.90097, 2.10585 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_top = -0.758167
+margin_right = 40.0
+margin_bottom = 39.2418
+
+[node name="Previous" type="Button" parent="."]
+margin_left = 287.0
+margin_top = 1332.0
+margin_right = 397.0
+margin_bottom = 1587.0
+custom_fonts/font = SubResource( 1 )
+text = "<"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Next" type="Button" parent="."]
+margin_left = 1593.23
+margin_top = 1340.8
+margin_right = 1703.23
+margin_bottom = 1595.8
+custom_fonts/font = SubResource( 1 )
+text = ">"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Description" type="Label" parent="."]
+margin_left = 2102.57
+margin_top = 1355.07
+margin_right = 3663.57
+margin_bottom = 2150.07
+custom_fonts/font = SubResource( 2 )
+autowrap = true
+
+[node name="NameLbl" type="Label" parent="."]
+margin_left = 2103.0
+margin_top = 1172.0
+margin_right = 2324.0
+margin_bottom = 1229.0
+custom_fonts/font = SubResource( 3 )
+text = "Name:"
+
+[node name="DescriptionLbl" type="Label" parent="."]
+margin_left = 2106.25
+margin_top = 1273.63
+margin_right = 2466.25
+margin_bottom = 1330.63
+custom_fonts/font = SubResource( 3 )
+text = "Description:"
+
+[node name="StartBtn" type="Button" parent="."]
+margin_left = 2820.03
+margin_top = 1889.14
+margin_right = 3188.03
+margin_bottom = 2064.14
+custom_fonts/font = SubResource( 4 )
+text = "START"
