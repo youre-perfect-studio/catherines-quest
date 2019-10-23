@@ -3,7 +3,7 @@ Copyright(C) 2019 You're Perfect LLC, All Rights Reserved
 Licensed under the MIT license, see LICENSE file in the
 project root folder for more information.
 """
-extends "res://engine/entity.gd"
+extends "res://engine/Entity.gd"
 
 onready var player = $"../player/followerSpace"
 export(bool) var follow_player = false
