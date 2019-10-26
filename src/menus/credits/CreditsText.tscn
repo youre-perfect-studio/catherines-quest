@@ -1,0 +1,368 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://menus/credits/CoolRole.tscn" type="PackedScene" id=1]
+[ext_resource path="res://menus/credits/Spacer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://menus/credits/TextBlock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://menus/credits/GroupRole.tscn" type="PackedScene" id=4]
+[ext_resource path="res://menus/credits/CoolRolePerson.tscn" type="PackedScene" id=5]
+[ext_resource path="res://menus/credits/UssualRole.tscn" type="PackedScene" id=7]
+[ext_resource path="res://menus/credits/UssualRolePerson.tscn" type="PackedScene" id=8]
+
+[node name="MarginContainer" type="MarginContainer"]
+margin_right = 1908.0
+margin_bottom = 1386.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 1908.0
+margin_bottom = 2265.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Spacer2" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 0.0
+margin_right = 1908.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_vertical = 0
+
+[node name="TextBlock" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 54.0
+margin_right = 1908.0
+margin_bottom = 199.0
+
+[node name="Spacer" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 203.0
+margin_right = 1908.0
+margin_bottom = 363.0
+rect_min_size = Vector2( 0, 160 )
+size_flags_vertical = 0
+
+[node name="CoolRole" parent="VBoxContainer" instance=ExtResource( 1 )]
+self_modulate = Color( 0.0431373, 0.541176, 0.121569, 1 )
+margin_top = 367.0
+margin_right = 1908.0
+margin_bottom = 401.0
+
+[node name="CoolRolePerson" parent="VBoxContainer" instance=ExtResource( 5 )]
+margin_top = 405.0
+margin_right = 1908.0
+margin_bottom = 444.0
+
+[node name="Spacer3" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 448.0
+margin_right = 1908.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 0, 160 )
+size_flags_vertical = 0
+
+[node name="CoolRole2" parent="VBoxContainer" instance=ExtResource( 1 )]
+self_modulate = Color( 0.0431373, 0.541176, 0.121569, 1 )
+margin_top = 612.0
+margin_right = 1908.0
+margin_bottom = 646.0
+
+[node name="CoolRolePerson2" parent="VBoxContainer" instance=ExtResource( 5 )]
+margin_top = 650.0
+margin_right = 1908.0
+margin_bottom = 689.0
+
+[node name="Spacer4" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 693.0
+margin_right = 1908.0
+margin_bottom = 853.0
+rect_min_size = Vector2( 0, 160 )
+size_flags_vertical = 0
+
+[node name="CoolRole3" parent="VBoxContainer" instance=ExtResource( 1 )]
+self_modulate = Color( 0.0431373, 0.541176, 0.121569, 1 )
+margin_top = 857.0
+margin_right = 1908.0
+margin_bottom = 891.0
+
+[node name="CoolRolePerson3" parent="VBoxContainer" instance=ExtResource( 5 )]
+margin_top = 895.0
+margin_right = 1908.0
+margin_bottom = 934.0
+
+[node name="Spacer5" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 938.0
+margin_right = 1908.0
+margin_bottom = 1018.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_vertical = 0
+
+[node name="CoolRole4" parent="VBoxContainer" instance=ExtResource( 1 )]
+self_modulate = Color( 0.0431373, 0.541176, 0.121569, 1 )
+margin_top = 1022.0
+margin_right = 1908.0
+margin_bottom = 1056.0
+
+[node name="CoolRolePerson4" parent="VBoxContainer" instance=ExtResource( 5 )]
+margin_top = 1060.0
+margin_right = 1908.0
+margin_bottom = 1099.0
+
+[node name="Spacer6" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 1103.0
+margin_right = 1908.0
+margin_bottom = 1183.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_vertical = 0
+
+[node name="CoolRole5" parent="VBoxContainer" instance=ExtResource( 1 )]
+self_modulate = Color( 0.0431373, 0.541176, 0.121569, 1 )
+margin_top = 1187.0
+margin_right = 1908.0
+margin_bottom = 1221.0
+
+[node name="CoolRolePerson5" parent="VBoxContainer" instance=ExtResource( 5 )]
+margin_top = 1225.0
+margin_right = 1908.0
+margin_bottom = 1264.0
+
+[node name="Spacer7" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 1268.0
+margin_right = 1908.0
+margin_bottom = 1348.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 1352.0
+margin_right = 1908.0
+margin_bottom = 1386.0
+custom_constants/separation = 20
+
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 7 )]
+margin_bottom = 34.0
+
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 8 )]
+margin_bottom = 34.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 1390.0
+margin_right = 1908.0
+margin_bottom = 1424.0
+custom_constants/separation = 20
+
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 7 )]
+margin_bottom = 34.0
+
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 8 )]
+margin_bottom = 34.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 1428.0
+margin_right = 1908.0
+margin_bottom = 1462.0
+custom_constants/separation = 20
+
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer3" instance=ExtResource( 7 )]
+margin_bottom = 34.0
+
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer3" instance=ExtResource( 8 )]
+margin_bottom = 34.0
+
+[node name="Spacer8" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 1466.0
+margin_right = 1908.0
+margin_bottom = 1546.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_vertical = 0
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 1550.0
+margin_right = 1908.0
+margin_bottom = 1584.0
+custom_constants/separation = 20
+
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer6" instance=ExtResource( 7 )]
+margin_bottom = 34.0
+
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer6" instance=ExtResource( 8 )]
+margin_bottom = 34.0
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 1588.0
+margin_right = 1908.0
+margin_bottom = 1622.0
+custom_constants/separation = 20
+
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer5" instance=ExtResource( 7 )]
+margin_bottom = 34.0
+
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer5" instance=ExtResource( 8 )]
+margin_bottom = 34.0
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 1626.0
+margin_right = 1908.0
+margin_bottom = 1660.0
+custom_constants/separation = 20
+
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer4" instance=ExtResource( 7 )]
+margin_bottom = 34.0
+
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer4" instance=ExtResource( 8 )]
+margin_bottom = 34.0
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 1664.0
+margin_right = 1908.0
+margin_bottom = 1698.0
+custom_constants/separation = 20
+
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer9" instance=ExtResource( 7 )]
+margin_bottom = 34.0
+text = ""
+
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer9" instance=ExtResource( 8 )]
+margin_bottom = 34.0
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 1702.0
+margin_right = 1908.0
+margin_bottom = 1736.0
+custom_constants/separation = 20
+
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer8" instance=ExtResource( 7 )]
+margin_bottom = 34.0
+text = ""
+
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer8" instance=ExtResource( 8 )]
+margin_bottom = 34.0
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 1740.0
+margin_right = 1908.0
+margin_bottom = 1774.0
+custom_constants/separation = 20
+
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer7" instance=ExtResource( 7 )]
+margin_bottom = 34.0
+
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer7" instance=ExtResource( 8 )]
+margin_bottom = 34.0
+
+[node name="Spacer9" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 1778.0
+margin_right = 1908.0
+margin_bottom = 1858.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_vertical = 0
+
+[node name="GroupRole" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_bottom = 1907.0
+bbcode_text = "[center][u]Group Role"
+text = "Group Role"
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 1911.0
+margin_right = 1908.0
+margin_bottom = 2181.0
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer10"]
+margin_left = 751.0
+margin_right = 944.0
+margin_bottom = 270.0
+size_flags_horizontal = 8
+
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 7 )]
+margin_right = 193.0
+margin_bottom = 34.0
+align = 1
+
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 8 )]
+margin_left = 0.0
+margin_top = 38.0
+margin_right = 193.0
+margin_bottom = 72.0
+align = 1
+
+[node name="UssualRolePerson2" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 8 )]
+margin_left = 0.0
+margin_top = 76.0
+margin_right = 193.0
+margin_bottom = 110.0
+align = 1
+
+[node name="Spacer10" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 114.0
+margin_right = 193.0
+margin_bottom = 194.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_vertical = 0
+
+[node name="UssualRole3" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 198.0
+margin_right = 193.0
+margin_bottom = 232.0
+align = 1
+
+[node name="UssualRolePerson5" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 8 )]
+margin_left = 0.0
+margin_top = 236.0
+margin_right = 193.0
+margin_bottom = 270.0
+align = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer10"]
+margin_left = 964.0
+margin_right = 1157.0
+margin_bottom = 270.0
+
+[node name="UssualRole2" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 7 )]
+margin_right = 193.0
+margin_bottom = 34.0
+align = 1
+
+[node name="UssualRolePerson4" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 8 )]
+margin_left = 0.0
+margin_top = 38.0
+margin_right = 193.0
+margin_bottom = 72.0
+align = 1
+
+[node name="Spacer11" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 2 )]
+margin_top = 76.0
+margin_right = 193.0
+margin_bottom = 156.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_vertical = 0
+
+[node name="UssualRole3" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 7 )]
+margin_top = 160.0
+margin_right = 193.0
+margin_bottom = 194.0
+align = 1
+
+[node name="UssualRolePerson5" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 8 )]
+margin_left = 0.0
+margin_top = 198.0
+margin_right = 193.0
+margin_bottom = 232.0
+align = 1
+
+[node name="UssualRolePerson3" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 8 )]
+margin_left = 0.0
+margin_top = 236.0
+margin_right = 193.0
+margin_bottom = 270.0
+align = 1
+
+[node name="Spacer10" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 2185.0
+margin_right = 1908.0
+margin_bottom = 2265.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_vertical = 0

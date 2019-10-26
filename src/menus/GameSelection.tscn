@@ -1,13 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://menus/GameSelection.gd" type="Script" id=1]
 [ext_resource path="res://screens/img/Titlescreen_4k.png" type="Texture" id=2]
-[ext_resource path="res://fonts/FifthCenturyCaps.ttf" type="DynamicFontData" id=3]
-
-
-[sub_resource type="DynamicFont" id=1]
-size = 27
-font_data = ExtResource( 3 )
+[ext_resource path="res://menus/MenuButton.tscn" type="PackedScene" id=3]
 
 [node name="gameSelection" type="Node2D"]
 script = ExtResource( 1 )
@@ -21,22 +16,28 @@ position = Vector2( 960, 540 )
 scale = Vector2( 0.51, 0.51 )
 texture = ExtResource( 2 )
 
-[node name="NewGameBtn" type="Button" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 790.0
-margin_top = 590.0
-margin_right = 1170.0
-margin_bottom = 720.0
-focus_neighbour_bottom = NodePath("../ContinueBtn")
-custom_fonts/font = SubResource( 1 )
-text = "New Game"
-flat = true
+margin_top = 595.0
+margin_right = 1171.0
+margin_bottom = 987.0
+custom_constants/separation = 0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="ContinueBtn" type="Button" parent="."]
-margin_left = 790.0
-margin_top = 770.0
-margin_right = 1170.0
-margin_bottom = 900.0
-focus_neighbour_top = NodePath("../NewGameBtn")
-custom_fonts/font = SubResource( 1 )
+[node name="NewGameBtn" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 0.0
+margin_bottom = 130.0
+text = "New Game"
+
+[node name="ContinueBtn" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 130.0
+margin_bottom = 260.0
 text = "Continue"
-flat = true
+
+[node name="CreditsBtn" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 260.0
+margin_bottom = 392.0
+text = "Credits"

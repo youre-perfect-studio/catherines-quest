@@ -6,15 +6,20 @@ project root folder for more information.
 extends Node2D
 
 func _ready():
-	$NewGameBtn.grab_focus()
-	$NewGameBtn.connect("pressed", self, "new_game")
-	$ContinueBtn.connect("pressed", self, "continue_game")
+	$VBoxContainer/NewGameBtn.grab_focus()
+	$VBoxContainer/NewGameBtn.connect("pressed", self, "new_game")
+	$VBoxContainer/ContinueBtn.connect("pressed", self, "continue_game")
+	$VBoxContainer/CreditsBtn.connect("pressed", self, "roll_credits")
 
 func new_game():
 	print("New game")
 	get_tree().change_scene("res://menus/SelectPlayer.tscn")
-	
+
 func continue_game():
 	print("continue")
 	SaveFunctions.set_continuing()
 	get_tree().change_scene("res://screens/Episode1.tscn")
+	
+func roll_credits():
+	get_tree().change_scene("res://menus/credits/Credits.tscn")
+

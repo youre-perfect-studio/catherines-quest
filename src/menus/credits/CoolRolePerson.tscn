@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://fonts/OswaldBold_28.tres" type="DynamicFont" id=1]
+
+[node name="CoolRolePerson" type="Label"]
+self_modulate = Color( 0.0431373, 0.541176, 0.121569, 1 )
+margin_top = 445.0
+margin_right = 1920.0
+margin_bottom = 484.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dumdum Allroles"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
