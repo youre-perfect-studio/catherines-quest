@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://fonts/OswaldBold_28.tres" type="DynamicFont" id=1]
+
+[node name="GroupRole" type="RichTextLabel"]
+self_modulate = Color( 0.0431373, 0.541176, 0.121569, 1 )
+margin_top = 1862.0
+margin_right = 1908.0
+margin_bottom = 1905.0
+rect_min_size = Vector2( 0, 45 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center][u]Group Role"
+text = "Group Role"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}

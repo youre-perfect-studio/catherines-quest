@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://menus/credits/CreditsText.tscn" type="PackedScene" id=1]
+[ext_resource path="res://menus/credits/CreditsManager.gd" type="Script" id=3]
+[ext_resource path="res://menus/MenuButton.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+render_mode skip_vertex_transform;
+
+void vertex() {
+    VERTEX = (EXTRA_MATRIX * (WORLD_MATRIX * vec4(VERTEX, 0.0, 1.0))).xy;
+}
+
+void fragment() {
+	COLOR = vec4(0.,0.,0.,1.);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[node name="Credits" type="Panel"]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" parent="ScrollContainer" instance=ExtResource( 1 )]
+margin_bottom = 2265.0
+
+[node name="BackBtn" parent="." instance=ExtResource( 6 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -88.0
+margin_right = 281.0
+margin_bottom = 0.0
+size_flags_vertical = 1
+text = "Back"
