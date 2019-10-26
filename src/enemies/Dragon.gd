@@ -9,7 +9,7 @@ extends "res://engine/Entity.gd"
 # Vector2 Room Size (960, 540)
 
 onready var player = get_node("../player")
-onready var bitebox =  get_node("../dragon/bitebox")
+onready var bitebox =  get_node("../" + self.name +"/bitebox")
 onready var cam = get_node("../cam")
 
 var moveTimerLength
