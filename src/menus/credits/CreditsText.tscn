@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://menus/credits/Spacer.tscn" type="PackedScene" id=1]
-[ext_resource path="res://menus/credits/TextBlock.tscn" type="PackedScene" id=2]
-[ext_resource path="res://menus/credits/CoolRole.tscn" type="PackedScene" id=3]
-[ext_resource path="res://menus/credits/GroupRole.tscn" type="PackedScene" id=4]
-[ext_resource path="res://menus/credits/CoolRolePerson.tscn" type="PackedScene" id=5]
-[ext_resource path="res://menus/credits/UssualRole.tscn" type="PackedScene" id=6]
-[ext_resource path="res://menus/credits/UssualRolePerson.tscn" type="PackedScene" id=7]
+[ext_resource path="res://menus/credits/CoolRole.tscn" type="PackedScene" id=1]
+[ext_resource path="res://menus/credits/UssualRole.tscn" type="PackedScene" id=2]
+[ext_resource path="res://menus/credits/Spacer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://menus/credits/CoolRolePerson.tscn" type="PackedScene" id=4]
+[ext_resource path="res://menus/credits/UssualRolePerson.tscn" type="PackedScene" id=5]
+[ext_resource path="res://menus/credits/TextBlock.tscn" type="PackedScene" id=6]
+[ext_resource path="res://menus/credits/GroupRole.tscn" type="PackedScene" id=7]
 
 [node name="MarginContainer" type="MarginContainer"]
 margin_right = 1908.0
@@ -19,459 +19,462 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 1908.0
-margin_bottom = 2960.0
+margin_bottom = 2997.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Spacer2" parent="VBoxContainer" instance=ExtResource( 1 )]
+[node name="Spacer2" parent="VBoxContainer" instance=ExtResource( 3 )]
 margin_top = 0.0
 margin_right = 1908.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 0, 50 )
 size_flags_vertical = 0
 
-[node name="TextBlock" parent="VBoxContainer" instance=ExtResource( 2 )]
+[node name="TextBlock" parent="VBoxContainer" instance=ExtResource( 6 )]
 margin_top = 54.0
 margin_right = 1908.0
-margin_bottom = 125.0
+margin_bottom = 162.0
+text = "Catherine's Quest
+(C) 2019 You're Perfect Studio - http://youreperfect.studio
+This game is free and open source software released under the MIT license"
 
-[node name="Spacer" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 129.0
+[node name="Spacer" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 166.0
 margin_right = 1908.0
-margin_bottom = 289.0
+margin_bottom = 326.0
 rect_min_size = Vector2( 0, 160 )
 size_flags_vertical = 0
 
-[node name="CoolRole" parent="VBoxContainer" instance=ExtResource( 3 )]
-margin_top = 293.0
+[node name="CoolRole" parent="VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 330.0
 margin_right = 1908.0
-margin_bottom = 327.0
+margin_bottom = 364.0
 text = "Directed by"
 
-[node name="CoolRolePerson" parent="VBoxContainer" instance=ExtResource( 5 )]
-margin_top = 331.0
+[node name="CoolRolePerson" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 368.0
 margin_right = 1908.0
-margin_bottom = 370.0
+margin_bottom = 407.0
 text = "Catherine Irkalla"
 
-[node name="Spacer3" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 374.0
+[node name="Spacer3" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 411.0
 margin_right = 1908.0
-margin_bottom = 534.0
+margin_bottom = 571.0
 rect_min_size = Vector2( 0, 160 )
 size_flags_vertical = 0
 
-[node name="CoolRole2" parent="VBoxContainer" instance=ExtResource( 3 )]
-margin_top = 538.0
+[node name="CoolRole2" parent="VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 575.0
 margin_right = 1908.0
-margin_bottom = 572.0
+margin_bottom = 609.0
 text = "Produced by"
 
-[node name="CoolRolePerson2" parent="VBoxContainer" instance=ExtResource( 5 )]
-margin_top = 576.0
+[node name="CoolRolePerson2" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 613.0
 margin_right = 1908.0
-margin_bottom = 615.0
+margin_bottom = 652.0
 text = "Katrina Niolet &"
 
-[node name="CoolRolePerson3" parent="VBoxContainer" instance=ExtResource( 5 )]
-margin_top = 619.0
+[node name="CoolRolePerson3" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 656.0
 margin_right = 1908.0
-margin_bottom = 658.0
+margin_bottom = 695.0
 text = "Our Supporters on Patreon"
 
-[node name="Spacer4" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 662.0
+[node name="Spacer4" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 699.0
 margin_right = 1908.0
-margin_bottom = 822.0
+margin_bottom = 859.0
 rect_min_size = Vector2( 0, 160 )
 size_flags_vertical = 0
 
-[node name="CoolRole5" parent="VBoxContainer" instance=ExtResource( 3 )]
-margin_top = 826.0
+[node name="CoolRole5" parent="VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 863.0
 margin_right = 1908.0
-margin_bottom = 860.0
+margin_bottom = 897.0
 text = "Programmers"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 864.0
+margin_top = 901.0
 margin_right = 1908.0
-margin_bottom = 898.0
+margin_bottom = 935.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Items"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "D. Anthony \"Cloud\" Lusich"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 902.0
+margin_top = 939.0
 margin_right = 1908.0
-margin_bottom = 936.0
+margin_bottom = 973.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Items"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Hong Luu"
 
 [node name="HBoxContainer11" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 940.0
+margin_top = 977.0
 margin_right = 1908.0
-margin_bottom = 974.0
+margin_bottom = 1011.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer11" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer11" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Player"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer11" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer11" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Damain Joseph"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 978.0
+margin_top = 1015.0
 margin_right = 1908.0
-margin_bottom = 1012.0
+margin_bottom = 1049.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer3" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer3" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Dragons"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer3" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer3" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "D. Anthony \"Cloud\" Lusich"
 
 [node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1016.0
+margin_top = 1053.0
 margin_right = 1908.0
-margin_bottom = 1050.0
+margin_bottom = 1087.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer6" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer6" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "User Interface"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer6" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer6" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Black Cat!"
 
 [node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1054.0
+margin_top = 1091.0
 margin_right = 1908.0
-margin_bottom = 1088.0
+margin_bottom = 1125.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer5" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer5" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Save/Load"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer5" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer5" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Damain Joseph"
 
 [node name="HBoxContainer14" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1092.0
+margin_top = 1129.0
 margin_right = 1908.0
-margin_bottom = 1126.0
+margin_bottom = 1163.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer14" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer14" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Dialog System"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer14" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer14" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Katrina Niolet"
 
-[node name="Spacer11" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 1130.0
+[node name="Spacer11" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 1167.0
 margin_right = 1908.0
-margin_bottom = 1210.0
+margin_bottom = 1247.0
 rect_min_size = Vector2( 0, 80 )
 size_flags_vertical = 0
 
-[node name="CoolRole6" parent="VBoxContainer" instance=ExtResource( 3 )]
-margin_top = 1214.0
+[node name="CoolRole6" parent="VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 1251.0
 margin_right = 1908.0
-margin_bottom = 1248.0
+margin_bottom = 1285.0
 text = "Artists"
 
 [node name="HBoxContainer13" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1252.0
+margin_top = 1289.0
 margin_right = 1908.0
-margin_bottom = 1286.0
+margin_bottom = 1323.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer13" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer13" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Background Concepts"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer13" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer13" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Damain Joseph"
 
 [node name="HBoxContainer9" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1290.0
+margin_top = 1327.0
 margin_right = 1908.0
-margin_bottom = 1324.0
+margin_bottom = 1361.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer9" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer9" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Character Portraits"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer9" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer9" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "mepavi"
 
 [node name="HBoxContainer12" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1328.0
+margin_top = 1365.0
 margin_right = 1908.0
-margin_bottom = 1362.0
+margin_bottom = 1399.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer12" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer12" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Character Portrats"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer12" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer12" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Twofaced Harley"
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1366.0
+margin_top = 1403.0
 margin_right = 1908.0
-margin_bottom = 1400.0
+margin_bottom = 1437.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer4" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer4" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Player Sprite"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer4" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer4" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Damain Joseph"
 
 [node name="HBoxContainer8" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1404.0
+margin_top = 1441.0
 margin_right = 1908.0
-margin_bottom = 1438.0
+margin_bottom = 1475.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer8" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer8" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Dragon Sprite"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer8" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer8" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Alex Perez"
 
 [node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1442.0
+margin_top = 1479.0
 margin_right = 1908.0
-margin_bottom = 1476.0
+margin_bottom = 1513.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer7" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer7" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Backgrounds"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer7" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer7" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Twofaced Harley"
 
-[node name="Spacer13" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 1480.0
+[node name="Spacer13" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 1517.0
 margin_right = 1908.0
-margin_bottom = 1560.0
+margin_bottom = 1597.0
 rect_min_size = Vector2( 0, 80 )
 size_flags_vertical = 0
 
-[node name="CoolRole8" parent="VBoxContainer" instance=ExtResource( 3 )]
-margin_top = 1564.0
+[node name="CoolRole8" parent="VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 1601.0
 margin_right = 1908.0
-margin_bottom = 1598.0
+margin_bottom = 1635.0
 text = "Audio"
 
 [node name="HBoxContainer22" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1602.0
+margin_top = 1639.0
 margin_right = 1908.0
-margin_bottom = 1636.0
+margin_bottom = 1673.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer22" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer22" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Robin Voice Actor"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer22" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer22" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Mako Ray"
 
 [node name="HBoxContainer21" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1640.0
+margin_top = 1677.0
 margin_right = 1908.0
-margin_bottom = 1674.0
+margin_bottom = 1711.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer21" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer21" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Catherine Voice Actor"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer21" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer21" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "mepavi"
 
 [node name="HBoxContainer18" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1678.0
+margin_top = 1715.0
 margin_right = 1908.0
-margin_bottom = 1712.0
+margin_bottom = 1749.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer18" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer18" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Roux Voice Actor"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer18" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer18" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "TBA"
 
 [node name="HBoxContainer17" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1716.0
+margin_top = 1753.0
 margin_right = 1908.0
-margin_bottom = 1750.0
+margin_bottom = 1787.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer17" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer17" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Dominella Voice Actor"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer17" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer17" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "TBA"
 
 [node name="HBoxContainer16" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1754.0
+margin_top = 1791.0
 margin_right = 1908.0
-margin_bottom = 1788.0
+margin_bottom = 1825.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer16" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer16" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Title Screen Music"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer16" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer16" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "TBD"
 
 [node name="HBoxContainer15" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1792.0
+margin_top = 1829.0
 margin_right = 1908.0
-margin_bottom = 1826.0
+margin_bottom = 1863.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer15" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer15" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Level 1 Music"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer15" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer15" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "TBD"
 
-[node name="Spacer12" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 1830.0
+[node name="Spacer12" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 1867.0
 margin_right = 1908.0
-margin_bottom = 1910.0
+margin_bottom = 1947.0
 rect_min_size = Vector2( 0, 80 )
 size_flags_vertical = 0
 
-[node name="CoolRole7" parent="VBoxContainer" instance=ExtResource( 3 )]
-margin_top = 1914.0
+[node name="CoolRole7" parent="VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 1951.0
 margin_right = 1908.0
-margin_bottom = 1948.0
+margin_bottom = 1985.0
 text = "Playtesters"
 
 [node name="HBoxContainer20" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 1952.0
+margin_top = 1989.0
 margin_right = 1908.0
-margin_bottom = 1986.0
+margin_bottom = 2023.0
 custom_constants/separation = 20
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer20" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer20" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_right = 944.0
 margin_bottom = 34.0
 text = "Kevin Arthur"
 align = 2
 
-[node name="UssualRolePerson2" parent="VBoxContainer/HBoxContainer20" instance=ExtResource( 7 )]
+[node name="UssualRolePerson2" parent="VBoxContainer/HBoxContainer20" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Catherine Irkalla"
 
-[node name="Spacer16" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 1990.0
+[node name="Spacer16" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 2027.0
 margin_right = 1908.0
-margin_bottom = 2070.0
+margin_bottom = 2107.0
 rect_min_size = Vector2( 0, 80 )
 size_flags_vertical = 0
 
-[node name="CoolRole9" parent="VBoxContainer" instance=ExtResource( 3 )]
-margin_top = 2074.0
+[node name="CoolRole9" parent="VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 2111.0
 margin_right = 1908.0
-margin_bottom = 2108.0
+margin_bottom = 2145.0
 text = "Writers"
 
 [node name="HBoxContainer25" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 2112.0
+margin_top = 2149.0
 margin_right = 1908.0
-margin_bottom = 2146.0
+margin_bottom = 2183.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer25" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer25" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Story, Dialog"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer25" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer25" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Catherine Irkalla"
 
 [node name="HBoxContainer24" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 2150.0
+margin_top = 2187.0
 margin_right = 1908.0
-margin_bottom = 2184.0
+margin_bottom = 2221.0
 custom_constants/separation = 20
 
-[node name="UssualRole" parent="VBoxContainer/HBoxContainer24" instance=ExtResource( 6 )]
+[node name="UssualRole" parent="VBoxContainer/HBoxContainer24" instance=ExtResource( 2 )]
 margin_bottom = 34.0
 text = "Editor"
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer24" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer24" instance=ExtResource( 5 )]
 margin_bottom = 34.0
 text = "Honey F. Ham"
 
-[node name="Spacer9" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 2188.0
+[node name="Spacer9" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 2225.0
 margin_right = 1908.0
-margin_bottom = 2268.0
+margin_bottom = 2305.0
 rect_min_size = Vector2( 0, 80 )
 size_flags_vertical = 0
 
-[node name="GroupRole" parent="VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 2272.0
-margin_bottom = 2317.0
+[node name="GroupRole" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 2309.0
+margin_bottom = 2354.0
 bbcode_text = "[center][u]Patreon Supporters"
 text = "Patreon Supporters"
 
 [node name="HBoxContainer10" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 2321.0
+margin_top = 2358.0
 margin_right = 1908.0
-margin_bottom = 2545.0
+margin_bottom = 2582.0
 custom_constants/separation = 20
 alignment = 1
 __meta__ = {
@@ -484,14 +487,14 @@ margin_right = 932.0
 margin_bottom = 224.0
 size_flags_horizontal = 8
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_right = 191.0
 margin_bottom = 34.0
 text = "Jesse Graves"
 align = 1
 
-[node name="UssualRolePerson2" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 7 )]
+[node name="UssualRolePerson2" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 38.0
 margin_right = 191.0
@@ -499,7 +502,7 @@ margin_bottom = 72.0
 text = "Lunatics! Project"
 align = 1
 
-[node name="UssualRolePerson3" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 7 )]
+[node name="UssualRolePerson3" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 76.0
 margin_right = 191.0
@@ -507,7 +510,7 @@ margin_bottom = 110.0
 text = "Badguy292"
 align = 1
 
-[node name="UssualRolePerson4" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 7 )]
+[node name="UssualRolePerson4" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 114.0
 margin_right = 191.0
@@ -515,7 +518,7 @@ margin_bottom = 148.0
 text = "Regan Foucha"
 align = 1
 
-[node name="UssualRolePerson5" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 7 )]
+[node name="UssualRolePerson5" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 152.0
 margin_right = 191.0
@@ -523,7 +526,7 @@ margin_bottom = 186.0
 text = "Blake Davis"
 align = 1
 
-[node name="UssualRolePerson6" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 7 )]
+[node name="UssualRolePerson6" parent="VBoxContainer/HBoxContainer10/VBoxContainer" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 190.0
 margin_right = 191.0
@@ -536,14 +539,14 @@ margin_left = 952.0
 margin_right = 1167.0
 margin_bottom = 224.0
 
-[node name="UssualRolePerson4" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 7 )]
+[node name="UssualRolePerson4" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_right = 215.0
 margin_bottom = 34.0
 text = "John Michael Zorko"
 align = 1
 
-[node name="UssualRolePerson5" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 7 )]
+[node name="UssualRolePerson5" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 38.0
 margin_right = 215.0
@@ -551,7 +554,7 @@ margin_bottom = 72.0
 text = "James Yeakey"
 align = 1
 
-[node name="UssualRolePerson6" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 7 )]
+[node name="UssualRolePerson6" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 76.0
 margin_right = 215.0
@@ -559,7 +562,7 @@ margin_bottom = 110.0
 text = "Black Cat!"
 align = 1
 
-[node name="UssualRolePerson7" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 7 )]
+[node name="UssualRolePerson7" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 114.0
 margin_right = 215.0
@@ -567,7 +570,7 @@ margin_bottom = 148.0
 text = "Karen West"
 align = 1
 
-[node name="UssualRolePerson8" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 7 )]
+[node name="UssualRolePerson8" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 152.0
 margin_right = 215.0
@@ -575,7 +578,7 @@ margin_bottom = 186.0
 text = "Anthony Wynn"
 align = 1
 
-[node name="UssualRolePerson9" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 7 )]
+[node name="UssualRolePerson9" parent="VBoxContainer/HBoxContainer10/VBoxContainer2" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 190.0
 margin_right = 215.0
@@ -583,23 +586,23 @@ margin_bottom = 224.0
 text = "Lucinda L'Enfant"
 align = 1
 
-[node name="Spacer15" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 2549.0
+[node name="Spacer15" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 2586.0
 margin_right = 1908.0
-margin_bottom = 2629.0
+margin_bottom = 2666.0
 rect_min_size = Vector2( 0, 80 )
 size_flags_vertical = 0
 
-[node name="GroupRole2" parent="VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 2633.0
-margin_bottom = 2678.0
+[node name="GroupRole2" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 2670.0
+margin_bottom = 2715.0
 bbcode_text = "[center][u]Special Thanks"
 text = "Special Thanks"
 
 [node name="HBoxContainer23" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 2682.0
+margin_top = 2719.0
 margin_right = 1908.0
-margin_bottom = 2792.0
+margin_bottom = 2829.0
 custom_constants/separation = 20
 alignment = 1
 __meta__ = {
@@ -612,14 +615,14 @@ margin_right = 937.0
 margin_bottom = 110.0
 size_flags_horizontal = 8
 
-[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer23/VBoxContainer" instance=ExtResource( 7 )]
+[node name="UssualRolePerson" parent="VBoxContainer/HBoxContainer23/VBoxContainer" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_right = 283.0
 margin_bottom = 34.0
 text = "You"
 align = 1
 
-[node name="UssualRolePerson2" parent="VBoxContainer/HBoxContainer23/VBoxContainer" instance=ExtResource( 7 )]
+[node name="UssualRolePerson2" parent="VBoxContainer/HBoxContainer23/VBoxContainer" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 38.0
 margin_right = 283.0
@@ -627,7 +630,7 @@ margin_bottom = 72.0
 text = "The Arts, Hancock County"
 align = 1
 
-[node name="UssualRolePerson3" parent="VBoxContainer/HBoxContainer23/VBoxContainer" instance=ExtResource( 7 )]
+[node name="UssualRolePerson3" parent="VBoxContainer/HBoxContainer23/VBoxContainer" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 76.0
 margin_right = 283.0
@@ -640,14 +643,14 @@ margin_left = 957.0
 margin_right = 1253.0
 margin_bottom = 110.0
 
-[node name="UssualRolePerson4" parent="VBoxContainer/HBoxContainer23/VBoxContainer2" instance=ExtResource( 7 )]
+[node name="UssualRolePerson4" parent="VBoxContainer/HBoxContainer23/VBoxContainer2" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_right = 296.0
 margin_bottom = 34.0
 text = "Our Discord Chat Members"
 align = 1
 
-[node name="UssualRolePerson5" parent="VBoxContainer/HBoxContainer23/VBoxContainer2" instance=ExtResource( 7 )]
+[node name="UssualRolePerson5" parent="VBoxContainer/HBoxContainer23/VBoxContainer2" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 38.0
 margin_right = 296.0
@@ -655,7 +658,7 @@ margin_bottom = 72.0
 text = "Karen and Gene Niolet"
 align = 1
 
-[node name="UssualRolePerson6" parent="VBoxContainer/HBoxContainer23/VBoxContainer2" instance=ExtResource( 7 )]
+[node name="UssualRolePerson6" parent="VBoxContainer/HBoxContainer23/VBoxContainer2" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_top = 76.0
 margin_right = 296.0
@@ -663,16 +666,16 @@ margin_bottom = 110.0
 text = "Matt Smith"
 align = 1
 
-[node name="Spacer14" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 2796.0
+[node name="Spacer14" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 2833.0
 margin_right = 1908.0
-margin_bottom = 2876.0
+margin_bottom = 2913.0
 rect_min_size = Vector2( 0, 80 )
 size_flags_vertical = 0
 
-[node name="Spacer10" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 2880.0
+[node name="Spacer10" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 2917.0
 margin_right = 1908.0
-margin_bottom = 2960.0
+margin_bottom = 2997.0
 rect_min_size = Vector2( 0, 80 )
 size_flags_vertical = 0
