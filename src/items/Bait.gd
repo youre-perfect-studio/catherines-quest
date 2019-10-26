@@ -10,6 +10,7 @@ var beingEaten = false
 onready var dragon = get_node("../dragon")
 
 func _ready():
+	item_name = "bait"
 	$dragonAttract.connect("area_entered", self, "onAttractEntered")
 	$dragonAttract.connect("area_exited", self, "onAttractExited")
 	$hitbox.connect("area_entered", self, "onHitboxEntered")
