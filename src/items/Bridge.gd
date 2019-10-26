@@ -6,6 +6,7 @@ project root folder for more information.
 extends "res://items/Item.gd"
 
 func _ready():
+	item_name = "bridge"
 	$walkway.connect("area_entered", self, "onAreaEntered")
 	$walkway.connect("area_exited", self, "onAreaExited")
 	print(type)

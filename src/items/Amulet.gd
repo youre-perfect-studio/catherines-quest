@@ -5,8 +5,9 @@ project root folder for more information.
 """
 extends "res://items/Item.gd"
 
-#func _ready():
-#	$hitbox.connect("area_entered", self, "area_entered")
+func _ready():
+	#$hitbox.connect("area_entered", self, "area_entered")
+	item_name = "amulet"
 #
 #func area_entered(area):
 #	var body = area.get_parent()
