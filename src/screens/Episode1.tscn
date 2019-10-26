@@ -12,26 +12,26 @@
 [ext_resource path="res://screens/img/black castle outside.png" type="Texture" id=10]
 [ext_resource path="res://screens/img/road_right_down.png" type="Texture" id=11]
 [ext_resource path="res://screens/img/road_right.png" type="Texture" id=12]
-[ext_resource path="res://characters/Catherine/Catherine.tscn" type="PackedScene" id=13]
+[ext_resource path="res://menus/RestartMenu.tscn" type="PackedScene" id=13]
 [ext_resource path="res://screens/img/yellow castle.png" type="Texture" id=14]
-[ext_resource path="res://engine/TPPoint.tscn" type="PackedScene" id=15]
-[ext_resource path="res://characters/Common/NPC.tscn" type="PackedScene" id=16]
-[ext_resource path="res://items/Amulet.tscn" type="PackedScene" id=17]
-[ext_resource path="res://story/engine/DialogController.tscn" type="PackedScene" id=18]
-[ext_resource path="res://items/SwordDrop.tscn" type="PackedScene" id=19]
-[ext_resource path="res://engine/Camera.tscn" type="PackedScene" id=20]
-[ext_resource path="res://menus/SaveMenu.tscn" type="PackedScene" id=21]
-[ext_resource path="res://particles/Barrier.tscn" type="PackedScene" id=22]
-[ext_resource path="res://items/Sign.tscn" type="PackedScene" id=23]
-[ext_resource path="res://items/Bait.tscn" type="PackedScene" id=24]
+[ext_resource path="res://engine/Camera.tscn" type="PackedScene" id=15]
+[ext_resource path="res://items/SwordDrop.tscn" type="PackedScene" id=16]
+[ext_resource path="res://menus/SaveMenu.tscn" type="PackedScene" id=17]
+[ext_resource path="res://particles/Barrier.tscn" type="PackedScene" id=18]
+[ext_resource path="res://items/Magnet.tscn" type="PackedScene" id=19]
+[ext_resource path="res://items/Sign.tscn" type="PackedScene" id=20]
+[ext_resource path="res://screens/YellowCastleOverlay.tscn" type="PackedScene" id=21]
+[ext_resource path="res://items/Amulet.tscn" type="PackedScene" id=22]
+[ext_resource path="res://enemies/Dragon.tscn" type="PackedScene" id=23]
+[ext_resource path="res://story/engine/DialogController.tscn" type="PackedScene" id=24]
 [ext_resource path="res://screens/Overlay.gd" type="Script" id=25]
-[ext_resource path="res://enemies/Dragon.tscn" type="PackedScene" id=26]
-[ext_resource path="res://items/Magnet.tscn" type="PackedScene" id=27]
+[ext_resource path="res://characters/Common/NPC.tscn" type="PackedScene" id=26]
+[ext_resource path="res://items/Bait.tscn" type="PackedScene" id=27]
 [ext_resource path="res://fonts/FifthCenturyCaps.ttf" type="DynamicFontData" id=28]
 [ext_resource path="res://testStuff/tiles/wall.tres" type="TileSet" id=29]
 [ext_resource path="res://characters/Common/Player.tscn" type="PackedScene" id=30]
-[ext_resource path="res://menus/RestartMenu.tscn" type="PackedScene" id=31]
-[ext_resource path="res://screens/YellowCastleOverlay.tscn" type="PackedScene" id=32]
+[ext_resource path="res://characters/Catherine/Catherine.tscn" type="PackedScene" id=31]
+[ext_resource path="res://engine/TPPoint.tscn" type="PackedScene" id=32]
 
 [sub_resource type="DynamicFont" id=1]
 size = 45
@@ -95,7 +95,7 @@ position = Vector2( 2879.42, 2704.93 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 12 )
 
-[node name="cam" parent="." instance=ExtResource( 20 )]
+[node name="cam" parent="." instance=ExtResource( 15 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -108,63 +108,63 @@ __meta__ = {
 position = Vector2( 961.478, 540.454 )
 texture = ExtResource( 14 )
 
-[node name="NPC" parent="." instance=ExtResource( 16 )]
+[node name="NPC" parent="." instance=ExtResource( 26 )]
 position = Vector2( -3133.01, -425.811 )
 scale = Vector2( 0.5, 0.5 )
 z_index = -1
 speed = 300
 
-[node name="Dragon2" parent="." instance=ExtResource( 26 )]
+[node name="Dragon2" parent="." instance=ExtResource( 23 )]
 position = Vector2( 3479.4, 2443.79 )
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
 subType = "dragon"
 speed = 200
 
-[node name="Dragon" parent="." instance=ExtResource( 26 )]
+[node name="Dragon" parent="." instance=ExtResource( 23 )]
 position = Vector2( 3457.33, 2869.84 )
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
 subType = "dragon"
 speed = 200
 
-[node name="amulet" parent="." instance=ExtResource( 17 )]
+[node name="amulet" parent="." instance=ExtResource( 22 )]
 position = Vector2( 1560.93, 288.127 )
 
-[node name="sword" parent="." instance=ExtResource( 19 )]
+[node name="sword" parent="." instance=ExtResource( 16 )]
 position = Vector2( 1409.9, 802.769 )
 
-[node name="magnet" parent="." instance=ExtResource( 27 )]
+[node name="magnet" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1215.32, 490.768 )
 
-[node name="bait" parent="." instance=ExtResource( 24 )]
+[node name="bait" parent="." instance=ExtResource( 27 )]
 position = Vector2( 2536.88, 2432.11 )
 
-[node name="Catherine" parent="." instance=ExtResource( 13 )]
+[node name="Catherine" parent="." instance=ExtResource( 31 )]
 position = Vector2( 351.831, 855.344 )
 scale = Vector2( 0.5, 0.5 )
 type = "NPC"
 
-[node name="Sign" parent="." instance=ExtResource( 23 )]
+[node name="Sign" parent="." instance=ExtResource( 20 )]
 position = Vector2( 1678.14, 1941.71 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="DialogController" parent="." instance=ExtResource( 18 )]
+[node name="DialogController" parent="." instance=ExtResource( 24 )]
 
-[node name="yellow castle overlay" parent="." instance=ExtResource( 32 )]
+[node name="yellow castle overlay" parent="." instance=ExtResource( 21 )]
 script = ExtResource( 25 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 pause_mode = 2
 
-[node name="SaveMenu" parent="UI" instance=ExtResource( 21 )]
+[node name="SaveMenu" parent="UI" instance=ExtResource( 17 )]
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 
-[node name="RestartMenu" parent="UI" instance=ExtResource( 31 )]
+[node name="RestartMenu" parent="UI" instance=ExtResource( 13 )]
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -185,7 +185,7 @@ custom_fonts/font = SubResource( 1 )
 [node name="StatusTimer" type="Timer" parent="UI"]
 one_shot = true
 
-[node name="Sign2" parent="." instance=ExtResource( 23 )]
+[node name="Sign2" parent="." instance=ExtResource( 20 )]
 position = Vector2( -2452.54, -614.81 )
 scale = Vector2( 0.3, 0.3 )
 
@@ -204,149 +204,149 @@ position = Vector2( 713.57, 1892.86 )
 scale = Vector2( 0.5, 0.5 )
 speed = 400
 
-[node name="Barrier" parent="." instance=ExtResource( 22 )]
+[node name="Barrier" parent="." instance=ExtResource( 18 )]
 position = Vector2( 3728.66, 2705.79 )
 
-[node name="Barrier2" parent="." instance=ExtResource( 22 )]
+[node name="Barrier2" parent="." instance=ExtResource( 18 )]
 position = Vector2( -1770.21, 2684.21 )
 scale = Vector2( -1, 1 )
 
-[node name="Barrier3" parent="." instance=ExtResource( 22 )]
+[node name="Barrier3" parent="." instance=ExtResource( 18 )]
 position = Vector2( -1927.25, 2691.65 )
 
 [node name="TeleportPositions" type="Node2D" parent="."]
 
-[node name="A1" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="A1" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -3830.06, 1995.3 )
 teleport_to = "A2"
 
-[node name="A2" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="A2" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -6.10144, 1990.02 )
 rotation = 3.14159
 teleport_to = "A1"
 
-[node name="J1" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="J1" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -3825.36, 189.261 )
 teleport_to = "J2"
 
-[node name="J2" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="J2" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -1915.44, 2348.68 )
 rotation = 3.14159
 teleport_to = "J1"
 
-[node name="K1" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="K1" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -1920.93, 3061.86 )
 rotation = 3.14159
 teleport_to = "K2"
 
-[node name="C1" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="C1" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -6.32129, 1267.94 )
 rotation = 3.14159
 teleport_to = "C2"
 
-[node name="B1" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="B1" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -6.32129, 1630.02 )
 rotation = 3.14159
 teleport_to = "B2"
 
-[node name="K2" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="K2" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -3835.88, 906.891 )
 teleport_to = "K1"
 
-[node name="C2" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="C2" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -3841.37, 1268.97 )
 teleport_to = "C1"
 
-[node name="B2" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="B2" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -3835.88, 1636.53 )
 teleport_to = "B1"
 
-[node name="L1" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="L1" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -1912.73, 185.075 )
 rotation = -3.14159
 teleport_to = "L2"
 
-[node name="L2" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="L2" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -5766.94, 2349.7 )
 teleport_to = "L1"
 
-[node name="M1" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="M1" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -1918.22, 898.252 )
 rotation = 3.14159
 teleport_to = "M2"
 
-[node name="I1" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="I1" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -1449.09, 1079.29 )
 rotation = 1.5708
 scale = Vector2( 1, 0.6 )
 teleport_to = "I2"
 
-[node name="I2" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="I2" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -5305.46, 3256.97 )
 rotation = -1.5708
 scale = Vector2( 1, 0.6 )
 teleport_to = "I1"
 
-[node name="H2" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="H2" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -5116.88, 3252.28 )
 rotation = -1.5708
 scale = Vector2( 1, 0.6 )
 teleport_to = "H1"
 
-[node name="G2" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="G2" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -4941.61, 3253.06 )
 rotation = -1.5708
 scale = Vector2( 1, 0.6 )
 teleport_to = "G1"
 
-[node name="F2" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="F2" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -4666.17, 3252.28 )
 rotation = -1.5708
 scale = Vector2( 1, 0.6 )
 teleport_to = "F1"
 
-[node name="E2" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="E2" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -4485.42, 3252.28 )
 rotation = -1.5708
 scale = Vector2( 1, 0.6 )
 teleport_to = "E1"
 
-[node name="D2" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="D2" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -4315.62, 3252.28 )
 rotation = -1.5708
 scale = Vector2( 1, 0.6 )
 teleport_to = "D1"
 
-[node name="H1" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="H1" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -1270.97, 1072.39 )
 rotation = 1.5708
 scale = Vector2( 1, 0.6 )
 teleport_to = "H2"
 
-[node name="G1" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="G1" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -1085.61, 1069.65 )
 rotation = 1.5708
 scale = Vector2( 1, 0.6 )
 teleport_to = "H2"
 
-[node name="F1" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="F1" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -855.176, 1072.23 )
 rotation = 1.5708
 scale = Vector2( 1, 0.6 )
 teleport_to = "F2"
 
-[node name="E1" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="E1" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -646.617, 1069.49 )
 rotation = 1.5708
 scale = Vector2( 1, 0.6 )
 teleport_to = "E2"
 
-[node name="D1" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="D1" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -462.756, 1072.23 )
 rotation = 1.5708
 scale = Vector2( 1, 0.6 )
 teleport_to = "D2"
 
-[node name="M2" parent="TeleportPositions" instance=ExtResource( 15 )]
+[node name="M2" parent="TeleportPositions" instance=ExtResource( 32 )]
 position = Vector2( -5766.94, 3062.88 )
 teleport_to = "M1"
