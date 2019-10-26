@@ -6,6 +6,7 @@ project root folder for more information.
 extends RigidBody2D
 
 var speed = 35
+var item_name = ""
 
 const type = "item"
 
