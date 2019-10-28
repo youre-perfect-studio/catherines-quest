@@ -26,9 +26,9 @@ var has_accepted_quest:bool = false
 var has_seen_a_dragon:bool = false
 
 onready var catherine_node = $"../Catherine"
-onready var roux_node = $"../NPC"
+onready var roux_node = $"../Roux"
 onready var catherine_talk_area = $"../Catherine/talkZone"
-onready var roux_talk_area = $"../NPC/talkZone"
+onready var roux_talk_area = $"../Roux/talkZone"
 onready var dialog_controller_node = $"../DialogController"
 
 func _ready():
@@ -155,7 +155,7 @@ func talk_to_npc( npc_name:String ):
 		"Catherine":
 			catherine_node.begin_dialog(self)
 		"Roux":
-			roux_node.follow_player = true
+			roux_node.begin_dialog(self)
 
 func show_opening_dialog(sequence:int = 0):
 	var openingDialog:Array

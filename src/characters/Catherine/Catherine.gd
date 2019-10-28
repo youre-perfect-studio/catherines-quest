@@ -11,7 +11,7 @@ onready var charlist = CharactersList.new()
 
 func begin_dialog( player:Player ):	
 
-	if not roux_node.follow_player:
+	if not follow_player:
 		#Globals.MusicPlayer.fade(preload("res://music/A_Darkness_Opus_by_Alexandr_Zhelanov_ccby4.ogg"),1.0,1.0)
 		Globals.MusicPlayer.stop_all()
 		Globals.MusicPlayer.play(preload("res://music/A_Darkness_Opus_by_Alexandr_Zhelanov_ccby4.ogg"))
