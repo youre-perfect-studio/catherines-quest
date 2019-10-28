@@ -13,7 +13,7 @@ radius = 525.0
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 50.0
 
-[node name="bait" index="0" instance=ExtResource( 1 )]
+[node name="bait" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 
 [node name="Sprite" parent="." index="0"]

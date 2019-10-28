@@ -24,7 +24,8 @@ func _ready():
 #	$hitbox.connect("area_exited", self, "onAreaExited")
 
 func _physics_process(delta):
-	if name != "magnet" && name != "bait" && magOnScreen == true:
+	var magnetic_items = ["amulet", "bridge", "swordDrop"]
+	if magOnScreen == true && item_name in magnetic_items:
 		if inMagnet == false:
 			var magPos = get_node("../magnet/pullZone").global_position
 			var direction = get_node("../" + name + "/magnetic").global_position - magPos
