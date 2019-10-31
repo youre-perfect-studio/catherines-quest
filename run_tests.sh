@@ -10,7 +10,8 @@ GODOT_MAC_TEMPLATES=https://archive.hugo.pro/builds/godot/master/templates/godot
 GAME_NAME="CatherinesQuest"
 
 curl ${GODOT_URL} --output ${GODOT_ZIP}
-unzip ${GODOT_ZIP}
+#unzip ${GODOT_ZIP}
+tar -xovf ${GODOT_ZIP}
 chmod +x ${GODOT_BIN}
 ./${GODOT_BIN} -d -s --path ./src addons/gut/gut_cmdln.gd -gdir=res://test -ginclude_subdirs -gexit
 

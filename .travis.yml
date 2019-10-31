@@ -1,2 +1,4 @@
+before_install:
+  - sudo apt-get -y install xz-utils
 language: minimal
 script: ./run_tests.sh
