@@ -1,7 +1,8 @@
 GODOT_VERSION=nightly
-GODOT_BIN=Godot_${GODOT_VERSION}_linux_headless.64
+#GODOT_BIN=Godot_${GODOT_VERSION}_linux_headless.64
 #GODOT_ZIP=${GODOT_BIN}.zip
 #GODOT_URL=https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/${GODOT_ZIP}
+GODOT_BIN=godot-headless
 GODOT_ZIP=godot-linux-headless-nightly-x86_64.tar.xz
 GODOT_URL=https://archive.hugo.pro/builds/godot/master/server/godot-linux-headless-nightly-x86_64.tar.xz
 #GODOT_TEMPLATES=https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/Godot_v${GODOT_VERSION}-stable_export_templates.tpz
