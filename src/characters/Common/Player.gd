@@ -14,7 +14,8 @@ export var buttonPickup = false
 
 var character_info:Character = null
 var state = "default"
-var useItem = "none"
+var useItemName = "none"
+var useItem = null
 export var base_health = 2
 var respawn_point_x = 1200
 var respawn_point_y = 800
@@ -30,6 +31,8 @@ onready var roux_node = $"../Roux"
 onready var catherine_talk_area = $"../Catherine/talkZone"
 onready var roux_talk_area = $"../Roux/talkZone"
 onready var dialog_controller_node = $"../DialogController"
+
+var utilities = load("res://engine/Utilities.gd")
 
 func _ready():
 	assert(catherine_node != null)
@@ -73,7 +76,7 @@ func controlLoop():
 			emit_signal("open_menu")
 		
 	if Input.is_action_just_pressed("attack"):
-		match useItem:
+		match useItemName:
 
 			"none":
 				if buttonPickup == true:
@@ -88,9 +91,9 @@ func controlLoop():
 #								$"../cam".magnetPickedUp() #idea to allow dropped items to have magnetism, still going to work with it later
 							if area.get_parent().name == "amulet":
 								hasAmulet = true
-							useItem = area.get_parent().name
+							useItemName = area.get_parent().name
 							area.get_parent().queue_free()
-							print(useItem)
+							print(useItemName)
 						else:
 							pass
 
@@ -98,33 +101,35 @@ func controlLoop():
 				use_item(preload("res://items/Sword.tscn"))
 				
 			"bridge":
-				$"../".dropItem(load("res://items/" + useItem + ".tscn"))
-				var drop = get_node("../" + useItem)
+				$"../".dropItem(load("res://items/" + useItemName + ".tscn"))
+				var drop = get_node("../" + useItemName)
 				drop.position = get_node("../player").global_position - movedir
-				useItem = "none"
+				useItemName = "none"
 				$"../cam/useItem".visible = false
 				
 			"bait":
-				$"../".dropItem(load("res://items/" + useItem + ".tscn"))
-				var drop = get_node("../" + useItem)
+				$"../".dropItem(load("res://items/" + useItemName + ".tscn"))
+				var drop = get_node("../" + useItemName)
 				drop.position = get_node("../player").global_position - get_node("../player/followerSpace").position * 2
-				useItem = "none"
+				useItemName = "none"
 				$"../cam/useItem".visible = false
 				
-	if Input.is_action_just_pressed("drop") && useItem != "none":
-		if useItem == "sword":
-			$"../".dropItem(load("res://items/" + useItem + "Drop.tscn"))
-		else:
-			if useItem == "amulet":
-				hasAmulet = false
-			$"../".dropItem(load("res://items/" + useItem + ".tscn"))
-		var poop = get_node("../" + useItem)
-		poop.position = get_node("../player").global_position + get_node("../player/followerSpace").position
-		get_node("../" + useItem).dropped = true  
-		useItem = "none"
-		$"../cam/useItem".visible = false
-		
-	
+	if Input.is_action_just_pressed("drop") && useItemName != "none":
+		drop_item()
+
+func drop_item():
+	if useItemName == "sword":
+		$"../".dropItem(load("res://items/" + useItemName + "Drop.tscn"))
+	else:
+		if useItemName == "amulet":
+			hasAmulet = false
+		$"../".dropItem(load("res://items/" + useItemName + ".tscn"))
+	var poop = get_node("../" + useItemName)
+	poop.position = get_node("../player").global_position + get_node("../player/followerSpace").position
+	get_node("../" + useItemName).dropped = true  
+	useItemName = "none"
+	$"../cam/useItem".visible = false
+
 func state_default():
 	controlLoop()
 	movementLoop()
@@ -217,19 +222,41 @@ func save():
 	}
 	return save_dict
 	
+# handles when player collides with an area object
 func onAreaEntered(area):
-	if useItem == "none":
-		if area.get_parent().get("type") == "item" && area.name == "hitbox" && area.get_parent().dropped == false:
-			if area.get_parent().name == "sword":
-				$"../cam/useItem".texture = load("res://items/img/" + area.get_parent().name + "Drop.png")
-			else:
-				$"../cam/useItem".texture = load("res://items/img/" + area.get_parent().name + ".png")
-			$"../cam/useItem".visible = true
-#			if area.get_parent().name == "magnet":
-#					$"../cam".magnetPickedUp()
-			if area.get_parent().name == "amulet":
-				hasAmulet = true
-			area.get_parent().queue_free()
-			useItem = area.get_parent().name
+	# handles if object is an item type
+	if area.get_parent().get("type") == "item":
+		# if player is holding an item, then drop it
+		if useItemName != "none":
+			drop_item()
+		# if player is not holding an item, then process acquiring it
 		else:
-			pass
+			useItem = area.get_parent()
+			useItemName = useItem.name
+			acquire_item(useItem)
+	# if not an item, then pass and handle elsewhere
+	else:
+		pass
+
+func acquire_item(item):
+	# update sprite on camera useItem
+	var item_sprite_texture = item.get_node("Sprite").texture
+	$"../cam/useItem".texture = item_sprite_texture
+
+	# resize texture
+	var texture_scale = utilities.resize_texture(item_sprite_texture)
+	$"../cam/useItem".scale = texture_scale
+	
+	# have useItem appear
+	$"../cam/useItem".visible = true
+	
+	# update logic after acquiring item
+	var lower_case_item_name = item.name.to_lower()
+	match lower_case_item_name:
+		"amulet":
+			hasAmulet = true
+		"magnet":
+			$"../cam".magnetPickedUp()
+	
+	# remove item from scene
+	item.queue_free()
