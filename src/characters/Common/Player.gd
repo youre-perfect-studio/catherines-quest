@@ -67,8 +67,6 @@ func controlLoop():
 	if Input.is_action_just_pressed("interact"):
 		if $DamageArea.overlaps_area(catherine_talk_area) && catherine_node.follow_player != true:
 			talk_to_npc("Catherine")
-		if $DamageArea.overlaps_area(roux_talk_area) && roux_node.follow_player != true:
-			talk_to_npc("Roux")
 	
 	if Input.is_action_just_pressed("attack"):
 		# if player close to the sign and attack pressed then open the menu

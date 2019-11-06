@@ -9,9 +9,9 @@ onready var dialog_controller_node:DialogController = $"../DialogController"
 onready var roux_node = $"../NPC"
 onready var charlist = CharactersList.new()
 
-func begin_dialog( player:Player ):	
+func begin_dialog( player:Player ):
 
-	if not follow_player:
+	if not player.useItemName == "Roux":
 		#Globals.MusicPlayer.fade(preload("res://music/A_Darkness_Opus_by_Alexandr_Zhelanov_ccby4.ogg"),1.0,1.0)
 		Globals.MusicPlayer.stop_all()
 		Globals.MusicPlayer.play(preload("res://music/A_Darkness_Opus_by_Alexandr_Zhelanov_ccby4.ogg"))
