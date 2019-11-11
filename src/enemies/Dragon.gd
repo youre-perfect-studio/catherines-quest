@@ -9,17 +9,19 @@ extends "res://engine/Entity.gd"
 # Vector2 Room Size (960, 540)
 
 onready var player = get_node("../player")
-onready var bitebox =  get_node("../" + self.name +"/bitebox")
+onready var bitebox =  get_node("../" + self.name +"/bitebox/CollisionShape2D")
 onready var cam = get_node("../cam")
 
 var moveTimerLength
 var moveTimer = 0
 var baitChase = false
+var eating = false
 
 func _ready():
 	moveTimerLength = randi() % 800 + 100
 	moveTimer = moveTimerLength
-	$bitebox.connect("area_entered", self, "onAreaEntered")
+	subType = "dragon"
+	speed = 200
 	anim_switch("walk")
 	
 func _physics_process(delta):
@@ -34,9 +36,10 @@ func _physics_process(delta):
 			moveTimer = moveTimerLength
 			if is_on_wall():
 				movedir = -movedir
-	elif baitChase == true:
-		movedir = (get_node("../bait/dragonAttract").global_position - bitebox.global_position).normalized()
-	elif chasing == true && baitChase == false:
+	elif baitChase == true && eating == false:
+		movedir = (get_node("../bait").global_position - bitebox.global_position).normalized()
+
+	elif chasing == true && baitChase == false && eating == false:
 			movedir = (player.global_position - bitebox.global_position).normalized()
 	else:
 		pass
@@ -44,10 +47,3 @@ func _physics_process(delta):
 	spritedirLoop()
 	anim_switch("walk")
 		
-		#unless there is a specific plan for below, it's useless now with DamageLoop() in place
-func onAreaEntered(area):
-	pass
-	#if area.get_parent().get("type") == "player":
-		#if area.get_parent().get("hasAmulet") == false:
-			#player.set_physics_process(false)
-			#player.set_visible(false)

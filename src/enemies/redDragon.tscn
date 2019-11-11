@@ -259,7 +259,6 @@ tracks/4/keys = {
 }
 
 [node name="dragon" type="KinematicBody2D"]
-position = Vector2( -231.264, 214.94 )
 collision_layer = 4
 collision_mask = 2
 script = ExtResource( 2 )

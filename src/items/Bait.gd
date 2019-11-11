@@ -6,8 +6,9 @@ project root folder for more information.
 extends "res://items/Item.gd"
 
 var beingEaten = false
+var dragon
 
-onready var dragon = get_node("../dragon")
+#onready var dragon = get_node("../dragon")
 
 func _ready():
 	item_name = "bait"
@@ -27,9 +28,12 @@ func onAttractExited(area):
 
 func onHitboxEntered(area):
 	if area.name == "bitebox":
+		dragon = area.get_parent()
+		dragon.eating = true
 		$Timer.start(4)
-	
+
 func baitEaten():
-	if $"../dragon" != null:
+	if dragon != null:
+		dragon.eating = false
 		dragon.baitChase = false
 		queue_free()
