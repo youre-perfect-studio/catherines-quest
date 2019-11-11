@@ -7,6 +7,9 @@ extends Node
 var Players = []
 var MusicPlayer:MusicManager
 
+enum DiffucultyLevel { EASY = 0, NORMAL = 1, HARD = 2 }
+var difficulty = DiffucultyLevel.NORMAL
+
 func _ready():
 	MusicPlayer = MusicManager.new()
 	$"/root".call_deferred("add_child",MusicPlayer)

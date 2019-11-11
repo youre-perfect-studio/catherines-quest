@@ -13,7 +13,7 @@ func _ready():
 
 func new_game():
 	print("New game")
-	get_tree().change_scene("res://menus/SelectPlayer.tscn")
+	get_tree().change_scene("res://menus/select_difficulty/SelectDifficulty.tscn")
 
 func continue_game():
 	print("continue")
