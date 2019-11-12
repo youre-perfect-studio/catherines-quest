@@ -71,8 +71,8 @@ func damageLoop():
 	if health <= 0:
 		if type == "player":
 			if is_alive:
-				get_tree().paused = true
-				$"../UI/RestartMenu".show()
+				$"../UI/InGameMenu".death_mode = true
+				$"../UI/InGameMenu".toggle()
 				is_alive = false
 		else:
 			queue_free()

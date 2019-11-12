@@ -16,6 +16,8 @@ reset_button_path = NodePath("InGameMenuContainer/CenterContainer/PanelContainer
 title_button_path = NodePath("InGameMenuContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/TitleBtn")
 quit_button_path = NodePath("InGameMenuContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/QuitBtn")
 resume_button_path = NodePath("InGameMenuContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ResumeBtn")
+restart_button_path = NodePath("InGameMenuContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/RestartBtn")
+death_reset_button_path = NodePath("InGameMenuContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/DeathResetBtn")
 are_you_sure_dialog_path = NodePath("AreYouSureDialog")
 
 [node name="InGameMenuContainer" type="ColorRect" parent="."]
@@ -43,7 +45,7 @@ margin_bottom = 547.0
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 468.0
-margin_bottom = 619.0
+margin_bottom = 795.0
 custom_constants/margin_right = 40
 custom_constants/margin_top = 80
 custom_constants/margin_left = 40
@@ -53,7 +55,7 @@ custom_constants/margin_bottom = 80
 margin_left = 40.0
 margin_top = 80.0
 margin_right = 421.0
-margin_bottom = 532.0
+margin_bottom = 708.0
 custom_constants/separation = 40
 
 [node name="ResetBtn" parent="InGameMenuContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
@@ -61,25 +63,35 @@ margin_top = 0.0
 margin_bottom = 48.0
 text = "Last Checkpoint"
 
-[node name="TitleBtn" parent="InGameMenuContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
+[node name="RestartBtn" parent="InGameMenuContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
 margin_top = 88.0
 margin_bottom = 136.0
+text = "Restart Game"
+
+[node name="TitleBtn" parent="InGameMenuContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 176.0
+margin_bottom = 224.0
 text = "Title Screen"
 
 [node name="QuitBtn" parent="InGameMenuContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 176.0
-margin_bottom = 224.0
+margin_top = 264.0
+margin_bottom = 312.0
 text = "Quit"
 
 [node name="Spacer" type="Control" parent="InGameMenuContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
-margin_top = 264.0
+margin_top = 352.0
 margin_right = 381.0
-margin_bottom = 364.0
+margin_bottom = 452.0
 rect_min_size = Vector2( 0, 100 )
 
+[node name="DeathResetBtn" parent="InGameMenuContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 492.0
+margin_bottom = 540.0
+text = "Last Checkpoint"
+
 [node name="ResumeBtn" parent="InGameMenuContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 404.0
-margin_bottom = 452.0
+margin_top = 580.0
+margin_bottom = 628.0
 text = "Resume"
 
 [node name="AreYouSureDialog" type="ConfirmationDialog" parent="."]
