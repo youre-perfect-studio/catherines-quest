@@ -4,7 +4,6 @@
 [ext_resource path="res://screens/img/Titlescreen_4k.png" type="Texture" id=2]
 [ext_resource path="res://fonts/FifthCenturyCaps.ttf" type="DynamicFontData" id=3]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 86
 font_data = ExtResource( 3 )
@@ -76,6 +75,9 @@ margin_right = 2324.0
 margin_bottom = 1229.0
 custom_fonts/font = SubResource( 3 )
 text = "Name:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="DescriptionLbl" type="Label" parent="."]
 margin_left = 2106.25

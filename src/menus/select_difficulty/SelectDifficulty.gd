@@ -14,6 +14,7 @@ func _ready():
 
 	for panel in difficulty_panels:
 		panel.connect('selected', self, 'on_difficulty_panel_selected', [panel])
+		panel.connect('double_clicked', self, 'on_difficulty_panel_double_clicked', [panel])
 
 	start_button.connect('pressed', self, 'start')
 
@@ -27,6 +28,10 @@ func on_difficulty_panel_selected(selected_panel):
 	for panel in difficulty_panels:
 		if panel != selected_panel:
 			panel.currently_selected = false
+
+func on_difficulty_panel_double_clicked(clicked_panel):
+	selected_difficulty = clicked_panel.difficulty
+	start()
 
 func start():
 	Globals.difficulty = selected_difficulty
