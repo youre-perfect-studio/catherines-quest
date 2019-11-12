@@ -1,6 +1,7 @@
 extends PanelContainer
 
 signal selected
+signal double_clicked
 
 export(StyleBoxFlat) var selected_style
 export(StyleBoxFlat) var not_selected_style
@@ -21,6 +22,9 @@ func set_selected(value):
 		emit_signal('selected')
 
 func _gui_input(event):
-	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-		self.currently_selected = true
-		accept_event()
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
+		if event.pressed:
+			self.currently_selected = true
+			accept_event()
+		if event.doubleclick:
+			emit_signal('double_clicked')
