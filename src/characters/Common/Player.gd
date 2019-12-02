@@ -223,15 +223,15 @@ func save():
 # handles when player collides with an area object
 func onAreaEntered(area):
 	# handles if object is an item type
-	if area.get_parent().get("type") == "item":
+	if area.name == "hitbox" and area.get_parent().get("type") == "item":
 		# if player is holding an item, then drop it
 		if useItemName != "none":
 			drop_item()
+
 		# if player is not holding an item, then process acquiring it
-		else:
-			useItem = area.get_parent()
-			useItemName = useItem.name
-			acquire_item(useItem)
+		useItem = area.get_parent()
+		useItemName = useItem.name
+		acquire_item(useItem)
 	# if not an item, then pass and handle elsewhere
 	else:
 		pass

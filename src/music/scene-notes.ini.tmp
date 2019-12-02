@@ -1,0 +1,4 @@
+[res://characters/Catherine/Catherine.tscn]
+
+note="This should probably be an inherited scene
+instead of duplicating nodes"
