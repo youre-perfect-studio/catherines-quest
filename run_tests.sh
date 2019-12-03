@@ -1,41 +1,29 @@
-GODOT_VERSION=nightly
-#GODOT_BIN=Godot_${GODOT_VERSION}_linux_headless.64
-#GODOT_ZIP=${GODOT_BIN}.zip
-#GODOT_URL=https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/${GODOT_ZIP}
-GODOT_BIN=godot-headless
-GODOT_ZIP=godot-linux-headless-nightly-x86_64.tar.xz
-GODOT_URL=https://archive.hugo.pro/builds/godot/master/server/godot-linux-headless-nightly-x86_64.tar.xz
-#GODOT_TEMPLATES=https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/Godot_v${GODOT_VERSION}-stable_export_templates.tpz
-GODOT_TEMPLATES=https://archive.hugo.pro/builds/godot/master/templates/godot-templates-android-html5-linux-windows-nightly.tpz
-GODOT_MAC_TEMPLATES=https://archive.hugo.pro/builds/godot/master/templates/godot-templates-ios-macos-nightly.tpz
+#!/bin/bash
+set +e
 
-GAME_NAME="CatherinesQuest"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-curl ${GODOT_URL} --output ${GODOT_ZIP}
-#unzip ${GODOT_ZIP}
-tar -xovf ${GODOT_ZIP}
-chmod +x ${GODOT_BIN}
-./${GODOT_BIN} -d -s --path ./src addons/gut/gut_cmdln.gd -gdir=res://test -ginclude_subdirs -gexit
+GODOT_FOLDER="${DIR}/../catherine_godot/"
+GODOT=${GODOT_FOLDER}godot-headless
 
-curl ${GODOT_TEMPLATES} --output Godot_v${GODOT_VERSION}_export_templates.tpz
-mkdir -p ~/.godot/templates
-unzip -q -d ~/.godot/templates Godot_v${GODOT_VERSION}_export_templates.tpz
-mv ~/.godot/templates/templates ~/.godot/templates/nightly
+if [ ! -f ${GODOT} ]; then
+	echo "Godot not found at ${GODOT}. Run update_headless_godot.sh first!"
+	exit 1
+fi
 
-curl ${GODOT_MAC_TEMPLATES} --output Godot_v${GODOT_VERSION}_mac_export_templates.tpz
-mkdir -p ~/.godot/mactemplates
-unzip -q -d ~/.godot/mactemplates Godot_v${GODOT_VERSION}_mac_export_templates.tpz
-mv ~/.godot/templates/mactemplates ~/.godot/templates/nightly
+PROJECT=${DIR}/src/
+BUILD=${DIR}/../catherine_build/
 
+mkdir -p ${BUILD}
 
-XDG_CACHE_HOMR=/tmp/cache
-XDG_DATA_HOME=/tmp/data
-XDG_CONFIG_HOME=/tmp/config
-mkdir -p /tmp/cache
-mkdir -p /tmp/data
-mkdir -p /tmp/config
+# Run Tests
+${GODOT} -d -s --path ${PROJECT} ${PROJECT}/addons/gut/gut_cmdln.gd -gdir=res://test -ginclude_subdirs -gexit
+TEST_RESULT=$?
+if [ ${TEST_RESULT} != 0 ]; then
+	echo "Default test has failed, abandoning ship"
+	exit ${TEST_RESULT}
+fi
 
-OUTPUT_FILENAME=index.html
+# Export file
+${GODOT} --export "Linux" --path ${PROJECT} ${BUILD}/catherine_quest
 
-mkdir build
-./${GODOT_BIN} --export "Linux" --path ./src ~/output_file
