@@ -1,4 +1,5 @@
 before_install:
   - sudo apt-get -y install xz-utils
+  - ./update_headless_godot.sh
 language: minimal
 script: ./run_tests.sh
